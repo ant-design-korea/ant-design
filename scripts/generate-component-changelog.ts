@@ -198,6 +198,7 @@ const miscKeys = [
     fs.writeFileSync(path.join(output, targetFile), JSON.stringify(componentChangelog), 'utf-8');
   }
 
+  syncChangelog('CHANGELOG.en-US.md', 'components-changelog-en.json');
   syncChangelog('CHANGELOG.ko-KR.md', 'components-changelog-ko.json');
   fs.writeFileSync(
     path.join(output, 'misc-changelog.json'),
