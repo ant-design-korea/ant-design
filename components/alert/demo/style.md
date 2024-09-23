@@ -8,4 +8,4 @@ There are 4 types of Alert: `success`, `info`, `warning`, `error`.
 
 ## ko-KR
 
-There are 4 types of Alert: `success`, `info`, `warning`, `error`.
+알림에는 `success`, `info`, `warning`, `error` 네 가지 유형이 있습니다.

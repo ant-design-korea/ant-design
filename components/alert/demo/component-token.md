@@ -8,4 +8,4 @@ Custom component token.
 
 ## ko-KR
 
-Custom component token.
+컴포넌트 토큰 사용자 정의

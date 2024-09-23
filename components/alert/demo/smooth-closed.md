@@ -8,4 +8,4 @@ Smoothly unmount Alert upon close.
 
 ## ko-KR
 
-Smoothly unmount Alert upon close.
+닫을 때 알림을 부드럽게 제거합니다.

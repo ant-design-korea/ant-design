@@ -8,4 +8,4 @@ To show close button.
 
 ## ko-KR
 
-To show close button.
+닫기 버튼을 표시하고, 클릭하면 경고 메시지를 닫을 수 있습니다.

@@ -8,4 +8,4 @@ A relevant icon makes information clearer and more friendly.
 
 ## ko-KR
 
-A relevant icon makes information clearer and more friendly.
+관련된 아이콘은 정보를 더 명확하고 두드러지게 만듭니다.
