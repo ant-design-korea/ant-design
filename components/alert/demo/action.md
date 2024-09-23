@@ -5,3 +5,7 @@
 ## en-US
 
 Custom action.
+
+## ko-KR
+
+커스텀 액션.

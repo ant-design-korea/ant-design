@@ -5,3 +5,7 @@
 ## en-US
 
 Custom component token.
+
+## ko-KR
+
+Custom component token.

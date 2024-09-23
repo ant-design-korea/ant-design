@@ -5,3 +5,7 @@
 ## en-US
 
 To show close button.
+
+## ko-KR
+
+To show close button.

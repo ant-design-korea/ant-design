@@ -5,3 +5,7 @@
 ## en-US
 
 There are 4 types of Alert: `success`, `info`, `warning`, `error`.
+
+## ko-KR
+
+There are 4 types of Alert: `success`, `info`, `warning`, `error`.

@@ -5,3 +5,7 @@
 ## en-US
 
 A relevant icon makes information clearer and more friendly.
+
+## ko-KR
+
+A relevant icon makes information clearer and more friendly.

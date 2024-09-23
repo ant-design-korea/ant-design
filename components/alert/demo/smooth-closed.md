@@ -5,3 +5,7 @@
 ## en-US
 
 Smoothly unmount Alert upon close.
+
+## ko-KR
+
+Smoothly unmount Alert upon close.

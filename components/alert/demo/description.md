@@ -5,3 +5,7 @@
 ## en-US
 
 Additional description for alert message.
+
+## ko-KR
+
+Additional description for alert message.

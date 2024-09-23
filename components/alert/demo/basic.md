@@ -5,3 +5,7 @@
 ## en-US
 
 The simplest usage for short messages.
+
+## ko-KR
+
+The simplest usage for short messages.
