@@ -20,7 +20,7 @@ group:
 
 <!-- prettier-ignore -->
 <code src="./demo/basic.tsx">기본</code>
-<code src="./demo/style.tsx">4가지 스타일</code>
+<code src="./demo/style.tsx">네 가지 스타일</code>
 <code src="./demo/closable.tsx">닫힘</code>
 <code src="./demo/description.tsx">설명문</code>
 <code src="./demo/icon.tsx">아이콘</code>
