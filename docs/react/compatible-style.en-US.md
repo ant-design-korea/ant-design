@@ -227,7 +227,7 @@ global.css에서 `@layer`를 조정하여 스타일 오버라이드의 순서를
 
 ### reset.css
 
-If you use antd's `reset.css` style, you need to specify `@layer` for it to prevent the style from overriding antd:
+antd의 `reset.css` 스타일을 사용하는 경우, `antd` 스타일이 덮어씌워지는 것을 방지하기 위해 `@layer`를 지정해야 합니다.
 
 ```less
 @layer reset, antd;
