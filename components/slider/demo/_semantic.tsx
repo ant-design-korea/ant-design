@@ -17,6 +17,12 @@ const locales = {
     rail: 'Background rail element',
     handle: 'Grab handle element',
   },
+  ko: {
+    track: '범위 선택 아래 점과 점 사이의 선택 막대',
+    tracks: '범위 선택 아래 범위 전체 선택 막대',
+    rail: '배경 레일 요소',
+    handle: '잡기 핸들 요소',
+  },
 };
 
 const App: React.FC = () => {

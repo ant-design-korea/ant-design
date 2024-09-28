@@ -19,6 +19,13 @@ const locales = {
     body: 'Body element',
     footer: 'Footer element',
   },
+  ko: {
+    mask: '마스크 요소',
+    content: 'Drawer 컨테이너 요소',
+    header: '헤더 요소',
+    body: '내용 요소',
+    footer: '푸터 요소',
+  },
 };
 
 const App: React.FC = () => {

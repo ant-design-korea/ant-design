@@ -35,6 +35,12 @@ const locales = {
     more: '',
     link: '',
   },
+  ko: {
+    message: '',
+    shortMessage: '',
+    more: '',
+    link: '',
+  },
 };
 
 const useStyle = createStyles(({ token, css }) => {

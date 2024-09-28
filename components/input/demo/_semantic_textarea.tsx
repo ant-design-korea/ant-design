@@ -13,6 +13,10 @@ const locales = {
     textarea: 'textarea element',
     count: 'count element',
   },
+  ko: {
+    textarea: '텍스트 영역 요소',
+    count: '글자 수 요소',
+  },
 };
 
 const App: React.FC = () => {

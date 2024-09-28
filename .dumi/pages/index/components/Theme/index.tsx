@@ -88,6 +88,24 @@ const locales = {
     toDef: 'More',
     toUse: 'Apply',
   },
+  ko: {
+    themeTitle: '유연한 테마 사용자 정의',
+    themeDesc:
+      'Ant Design 5.0은 확장 가능한 알고리즘을 제공하여 사용자 정의 테마를 쉽게 만들 수 있습니다',
+
+    customizeTheme: '테마 사용자 정의',
+    myTheme: '내 테마',
+    titlePrimaryColor: '기본 색상',
+    titleBorderRadius: '테두리 반경',
+    titleCompact: '콤팩트',
+    titleTheme: '테마',
+    default: '기본',
+    compact: '콤팩트',
+    light: '밝은',
+    dark: '어두운',
+    toDef: '더 보기',
+    toUse: '적용',
+  },
 };
 
 // ============================= Style =============================

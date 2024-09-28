@@ -1,11 +1,11 @@
-/* eslint-disable no-await-in-loop */
-/* eslint-disable no-restricted-syntax */
 import type http from 'http';
 import type https from 'https';
 import { join } from 'path';
 // import { load } from 'cheerio';
 // import { globSync } from 'glob';
 import { createServer } from 'http-server';
+import { describe, it } from 'node:test';
+import { expect } from 'expect';
 // import fetch from 'isomorphic-fetch';
 // import uniq from 'lodash/uniq';
 
@@ -92,3 +92,12 @@ describe('site test', () => {
   //   }
   // }
 });
+function beforeAll(_arg0: () => void) {
+  throw new Error('Function not implemented.');
+}
+
+function afterAll(_arg0: () => void) {
+  throw new Error('Function not implemented.');
+}
+
+// Removed the incorrect expect function implementation

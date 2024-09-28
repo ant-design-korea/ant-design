@@ -13,6 +13,10 @@ const locales = {
     root: 'Root element',
     indicator: 'Indicator element',
   },
+  ko: {
+    root: '루트 요소',
+    indicator: '지시 요소',
+  },
 };
 
 const App: React.FC = () => {

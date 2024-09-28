@@ -27,6 +27,15 @@ const locales = {
     edit: 'Edit this page',
     version: 'Version',
   },
+  ko: {
+    import: '가져오기',
+    copy: '복사',
+    copied: '복사됨',
+    source: '소스',
+    docs: '문서',
+    edit: '이 페이지 수정',
+    version: '버전',
+  },
 };
 
 const branchUrl = 'https://github.com/ant-design/ant-design/edit/master/';

@@ -24,6 +24,10 @@ const locales = {
     enableCssVar: 'Enable CSS Var',
     disableCssVar: 'Disable CSS Var',
   },
+  ko: {
+    enableCssVar: 'CSS 변수 사용',
+    disableCssVar: 'CSS 변수 사용 안 함',
+  },
 };
 
 const DemoWrapper: typeof DumiDemoGrid = ({ items }) => {

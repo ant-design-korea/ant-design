@@ -30,6 +30,13 @@ const locales = {
     comic: 'Blossom',
     v4: 'V4 Theme',
   },
+  ko: {
+    default: '기본',
+    dark: '다크',
+    lark: '문서',
+    comic: '꽃',
+    v4: 'V4 테마',
+  },
 };
 
 const useStyle = createStyles(({ token, css }) => ({

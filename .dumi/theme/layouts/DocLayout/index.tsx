@@ -5,6 +5,8 @@ import 'dayjs/locale/zh-cn';
 
 import React, { useContext, useEffect, useLayoutEffect, useRef } from 'react';
 import ConfigProvider from 'antd/es/config-provider';
+import enUS from 'antd/es/locale/en_US';
+import koKR from 'antd/es/locale/ko_KR';
 import zhCN from 'antd/es/locale/zh_CN';
 import { Helmet, useOutlet, useSiteData } from 'dumi';
 
@@ -30,6 +32,22 @@ const locales = {
     description:
       'An enterprise-class UI design language and React UI library with a set of high-quality React components, one of best React UI library for enterprises',
   },
+  ko: {
+    title: 'Ant Design - 세계에서 두 번째로 인기 있는 React UI 프레임워크',
+    description:
+      '고품질의 React 컴포넌트를 갖춘 기업급 UI 디자인 언어 및 React UI 라이브러리, 기업을 위한 최고의 React UI 라이브러리 중 하나',
+  },
+};
+
+const getLocaleConfig = (lang: 'cn' | 'en' | 'ko') => {
+  switch (lang) {
+    case 'cn':
+      return zhCN;
+    case 'ko':
+      return koKR;
+    default:
+      return enUS;
+  }
 };
 
 const DocLayout: React.FC = () => {
@@ -44,6 +62,8 @@ const DocLayout: React.FC = () => {
   useLayoutEffect(() => {
     if (lang === 'cn') {
       dayjs.locale('zh-cn');
+    } else if (lang === 'ko') {
+      dayjs.locale('ko');
     } else {
       dayjs.locale('en');
     }
@@ -110,7 +130,7 @@ const DocLayout: React.FC = () => {
           content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
         />
       </Helmet>
-      <ConfigProvider direction={direction} locale={lang === 'cn' ? zhCN : undefined}>
+      <ConfigProvider direction={direction} locale={getLocaleConfig(lang)}>
         <GlobalStyles />
         <Header />
         {content}

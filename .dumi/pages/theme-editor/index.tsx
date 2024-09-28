@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react';
-import { Button, App, Skeleton } from 'antd';
+import { App, Button, Skeleton } from 'antd';
 import { enUS, zhCN } from 'antd-token-previewer';
 import type { ThemeConfig } from 'antd/es/config-provider/context';
 import { Helmet } from 'dumi';
@@ -30,6 +30,17 @@ const locales = {
     editSuccessfully: 'Edited successfully',
     saveSuccessfully: 'Saved successfully',
     initialEditor: 'Initializing Editor...',
+  },
+  ko: {
+    title: '테마 편집기',
+    save: '저장',
+    edit: '편집',
+    export: '내보내기',
+    editModelTitle: '테마 구성 편집',
+    editJsonContentTypeError: 'JSON 형식의 테마가 잘못되었습니다',
+    editSuccessfully: '성공적으로 편집되었습니다',
+    saveSuccessfully: '성공적으로 저장되었습니다',
+    initialEditor: '편집기 초기화 중...',
   },
 };
 

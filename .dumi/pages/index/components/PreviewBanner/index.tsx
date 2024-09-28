@@ -24,6 +24,12 @@ const locales = {
     start: 'Getting Started',
     designLanguage: 'Design Language',
   },
+  ko: {
+    slogan:
+      '디자이너/개발자가 제품을 더 유연하게 만들 수 있고 더 행복하게 일할 수 있도록 도와줍니다',
+    start: '시작하기',
+    designLanguage: '디자인 언어',
+  },
 };
 
 const useStyle = () => {

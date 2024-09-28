@@ -29,6 +29,9 @@ const { _InternalPanelDoNotUseOrYouWillBeFired: FloatButtonDoNotUseOrYouWillBeFi
 const SAMPLE_CONTENT_EN =
   'Ant Design 5.0 use CSS-in-JS technology to provide dynamic & mix theme ability. And which use component level CSS-in-JS solution get your application a better performance.';
 
+const SAMPLE_CONTENT_KO =
+  'Ant Design 5.0은 동적 및 혼합 테마 기능을 제공하기 위해 CSS-in-JS 기술을 사용합니다. 동시에, 우리는 컴포넌트 수준의 CSS-in-JS 솔루션을 사용하여 애플리케이션의 성능을 향상시킵니다.';
+
 const SAMPLE_CONTENT_CN =
   'Ant Design 5.0 使用 CSS-in-JS 技术以提供动态与混合主题的能力。与此同时，我们使用组件级别的 CSS-in-JS 解决方案，让你的应用获得更好的性能。';
 
@@ -58,6 +61,19 @@ const locales = {
     success: 'Success',
     taskFailed: 'Task Failed',
     tour: 'A quick guide for new come user about how to use app.',
+  },
+  ko: {
+    yesterday: '어제',
+    lastWeek: '지난 주',
+    lastMonth: '지난 달',
+    lastYear: '작년',
+    new: '신규',
+    update: '업데이트',
+    sampleContent: SAMPLE_CONTENT_KO,
+    inProgress: '진행 중',
+    success: '성공',
+    taskFailed: '작업 실패',
+    tour: '새로운 사용자에게 앱 사용 방법에 대한 빠른 안내',
   },
 };
 

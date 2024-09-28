@@ -68,6 +68,27 @@ const locales = {
     hello: 'Hello, Ant Design!',
     release: 'Ant Design 5.0 is released!',
   },
+  ko: {
+    range: '범위 설정',
+    text: 'Ant Design 5.0은 동적 및 혼합 테마 기능을 제공하기 위해 CSS-in-JS 기술을 사용합니다. 그리고 구성 요소 수준의 CSS-in-JS 솔루션을 사용하여 응용 프로그램의 성능을 향상시킵니다.',
+    infoText: '정보 텍스트',
+    dropdown: '드롭다운',
+    finished: '완료',
+    inProgress: '진행 중',
+    waiting: '대기 중',
+    option: '옵션',
+    apple: '사과',
+    banana: '바나나',
+    orange: '오렌지',
+    watermelon: '수박',
+    primary: '기본',
+    danger: '위험',
+    default: '기본',
+    dashed: '대시',
+    icon: '아이콘',
+    hello: '안녕하세요, Ant Design!',
+    release: 'Ant Design 5.0이 출시되었습니다!',
+  },
 };
 
 const useStyle = createStyles(({ token, css }) => {

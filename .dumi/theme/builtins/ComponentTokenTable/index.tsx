@@ -51,6 +51,19 @@ const locales = {
     customizeTokenLink: '/docs/react/customize-theme#customize-design-token',
     customizeComponentTokenLink: 'docs/react/customize-theme#customize-component-token',
   },
+  ko: {
+    token: '토큰 이름',
+    description: '설명',
+    type: '타입',
+    value: '기본값',
+    componentToken: '컴포넌트 토큰',
+    globalToken: '전역 토큰',
+    componentComment: '여기에 컴포넌트 토큰이 있습니다',
+    globalComment: '여기에 전역 토큰이 있습니다',
+    help: '어떻게 사용하나요?',
+    customizeTokenLink: '/docs/react/customize-theme#customize-design-token',
+    customizeComponentTokenLink: 'docs/react/customize-theme#customize-component-token',
+  },
 };
 
 const useStyle = createStyles(({ token }) => ({
@@ -111,8 +124,10 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
     .sort(component ? undefined : compare)
     .map<TokenData>((name) => {
       const meta = component
-        ? tokenMeta.components[component].find((item) => item.token === name)
-        : tokenMeta.global[name];
+        ? tokenMeta.components[component as keyof typeof tokenMeta.components].find(
+            (item) => item.token === name,
+          )
+        : tokenMeta.global[name as keyof typeof tokenMeta.global];
 
       if (!meta) {
         return null as unknown as TokenData;
@@ -122,7 +137,11 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
         name,
         desc: lang === 'cn' ? meta.desc : meta.descEn,
         type: meta.type,
-        value: component ? tokenData[component].component[name] : defaultToken[name],
+        value: component
+          ? (tokenData[component as keyof typeof tokenData] as any).component[
+              name as keyof (typeof tokenData)[keyof typeof tokenData]['component']
+            ]
+          : defaultToken[name as keyof typeof defaultToken],
       };
     })
     .filter(Boolean);
@@ -194,7 +213,7 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
 };
 
 export interface ComponentTokenTableProps {
-  component: string;
+  component: keyof typeof tokenMeta.components;
 }
 
 const ComponentTokenTable: React.FC<ComponentTokenTableProps> = ({ component }) => {
@@ -202,7 +221,7 @@ const ComponentTokenTable: React.FC<ComponentTokenTableProps> = ({ component }) 
   const [mergedGlobalTokens] = useMemo(() => {
     const globalTokenSet = new Set<string>();
 
-    component.split(',').forEach((comp) => {
+    (component.split(',') as (keyof typeof tokenData)[]).forEach((comp) => {
       const { global: globalTokens = [] } = tokenData[comp] || {};
 
       globalTokens.forEach((token: string) => {

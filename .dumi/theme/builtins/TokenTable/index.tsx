@@ -36,6 +36,12 @@ const locales = {
     type: 'Type',
     value: 'Default Value',
   },
+  ko: {
+    token: '토큰 이름',
+    description: '설명',
+    type: '타입',
+    value: '기본값',
+  },
 };
 
 const useStyle = createStyles(({ token, css }) => ({
@@ -99,7 +105,7 @@ const TokenTable: FC<TokenTableProps> = ({ type }) => {
           name: token,
           desc: lang === 'cn' ? meta.desc : meta.descEn,
           type: meta.type,
-          value: defaultToken[token],
+          value: defaultToken[token as keyof typeof defaultToken],
         })),
     [type, lang],
   );

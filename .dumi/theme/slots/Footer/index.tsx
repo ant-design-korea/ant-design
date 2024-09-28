@@ -32,6 +32,9 @@ const locales = {
   en: {
     owner: 'Ant Group and Ant Design Community',
   },
+  ko: {
+    owner: 'Ant Group and Ant Design Community',
+  },
 };
 
 const useStyle = () => {

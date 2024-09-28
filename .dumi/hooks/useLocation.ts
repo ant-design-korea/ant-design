@@ -27,7 +27,7 @@ export default function useLocation() {
       if (hash) {
         let hashStr: string;
         if (typeof hash === 'object') {
-          hashStr = hash[localeType];
+          hashStr = hash[localeType as keyof typeof hash];
         } else {
           hashStr = hash;
         }

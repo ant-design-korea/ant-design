@@ -57,6 +57,11 @@ const locales = {
     thirdPart: 'Third Party',
     thirdPartDesc: 'Unofficial product, please take care confirm availability',
   },
+  ko: {
+    official: '공식',
+    thirdPart: '제3자 서비스',
+    thirdPartDesc: '제3자 서비스 제품, 사용 가능유무를 확인하십시오',
+  },
 };
 
 export type ResourceCardProps = {

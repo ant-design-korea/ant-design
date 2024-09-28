@@ -22,6 +22,14 @@ const locales = {
     body: 'Body element',
     footer: 'Footer element',
   },
+  ko: {
+    mask: '마스크 요소',
+    wrapper: 'Wrapper 요소. 주로 애니메이션 컨테이너로 사용됩니다',
+    content: '모달 컨테이너 요소',
+    header: '헤더 요소',
+    body: '본문 요소',
+    footer: '푸터 요소',
+  },
 };
 
 const BlockModal = (props: ModalProps) => {

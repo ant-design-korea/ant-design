@@ -87,6 +87,13 @@ const locales = {
     empty: 'Nothing update',
     bugList: 'Bug Versions',
   },
+  ko: {
+    full: '전체 변경 로그',
+    changelog: '변경 로그',
+    loading: '로딩 중...',
+    empty: '업데이트 없음',
+    bugList: '버그 버전',
+  },
 };
 
 const ParseChangelog: React.FC<{ changelog: string; refs: string[]; styles: any }> = (props) => {
@@ -140,7 +147,7 @@ interface ChangelogInfo {
   refs: string[];
 }
 
-const useChangelog = (componentPath: string, lang: 'cn' | 'en'): ChangelogInfo[] => {
+const useChangelog = (componentPath: string, lang: 'cn' | 'en' | 'ko'): ChangelogInfo[] => {
   const logFileName = `components-changelog-${lang}.json`;
 
   const data = useFetch({

@@ -1,10 +1,9 @@
 import React from 'react';
+import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
+import { Avatar, List, Space } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
 import useLocale from '../../../.dumi/hooks/useLocale';
-
-import { Avatar, List, Space } from 'antd';
-import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
 
 const locales = {
   cn: {
@@ -14,6 +13,10 @@ const locales = {
   en: {
     extra: 'set `extra` of List.Item',
     actions: 'set `actions` of List.Item',
+  },
+  ko: {
+    extra: 'List.Item의 `추가` 설정',
+    actions: 'List.Item의 `작업` 설정',
   },
 };
 

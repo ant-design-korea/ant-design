@@ -55,6 +55,7 @@ export type Recommendations = {
 export type Extras = {
   cn: Extra[];
   en: Extra[];
+  ko: Extra[];
 };
 
 export type Icons = Icon[];

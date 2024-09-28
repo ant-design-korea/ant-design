@@ -138,7 +138,7 @@ const BannerRecommends: React.FC = () => {
   const [, lang] = useLocale();
   const { isMobile } = React.useContext(SiteContext);
   const data = useSiteData();
-  const extras = data?.extras?.[lang];
+  const extras = data?.extras?.[lang as keyof typeof data.extras];
   const icons = data?.icons || [];
   const first3 = !extras || extras.length === 0 ? new Array(3).fill(null) : extras.slice(0, 3);
 
