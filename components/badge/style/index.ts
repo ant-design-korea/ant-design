@@ -9,42 +9,42 @@ export interface ComponentToken {
   // Component token here
   /**
    * @desc 徽标 z-index
-   * @descEN z-index of badge
+   * @descEN 배지의 z-index
    */
   indicatorZIndex: number | string;
   /**
    * @desc 徽标高度
-   * @descEN Height of badge
+   * @descEN 배지의 높이
    */
   indicatorHeight: number | string;
   /**
    * @desc 小号徽标高度
-   * @descEN Height of small badge
+   * @descEN 작은 배지의 높이
    */
   indicatorHeightSM: number | string;
   /**
    * @desc 点状徽标尺寸
-   * @descEN Size of dot badge
+   * @descEN 도트 배지의 크기
    */
   dotSize: number;
   /**
    * @desc 徽标文本尺寸
-   * @descEN Font size of badge text
+   * @descEN 배지 텍스트의 글씨 크기
    */
   textFontSize: number;
   /**
    * @desc 小号徽标文本尺寸
-   * @descEN Font size of small badge text
+   * @descEN 작은 배지 텍스트의 글씨 크기
    */
   textFontSizeSM: number;
   /**
    * @desc 徽标文本粗细
-   * @descEN Font weight of badge text
+   * @descEN 배지 텍스트의 글씨 굵기
    */
   textFontWeight: number | string;
   /**
    * @desc 状态徽标尺寸
-   * @descEN Size of status badge
+   * @descEN 상태 배지의 크기
    */
   statusSize: number;
 }
