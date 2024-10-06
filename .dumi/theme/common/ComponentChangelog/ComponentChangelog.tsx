@@ -140,11 +140,11 @@ interface ChangelogInfo {
   refs: string[];
 }
 
-const useChangelog = (componentPath: string, lang: 'cn' | 'en'): ChangelogInfo[] => {
-  const logFileName = `components-changelog-${lang}.json`;
+const useChangelog = (componentPath: string): ChangelogInfo[] => {
+  const logFileName = `components-changelog-ko.json`;
 
   const data = useFetch({
-    key: `component-changelog-${lang}`,
+    key: `component-changelog-ko`,
     request: () => import(`../../../preset/${logFileName}`),
   });
   return React.useMemo(() => {
@@ -165,7 +165,7 @@ const ComponentChangelog: React.FC<ComponentChangelogProps> = (props) => {
 
   const componentPath = pathname.match(/\/components\/([^/]+)/)?.[1] || '';
 
-  const list = useChangelog(componentPath, lang);
+  const list = useChangelog(componentPath);
 
   const timelineItems = React.useMemo<TimelineItemProps[]>(() => {
     const changelogMap: Record<string, ChangelogInfo[]> = {};

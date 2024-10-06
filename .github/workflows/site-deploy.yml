@@ -38,10 +38,22 @@ jobs:
         run: echo "VERSION=$(echo ${{ github.ref_name }} | sed 's/\./-/g')" >> $GITHUB_OUTPUT
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          publish_dir: ./_site
-          external_repository: ant-design-korea/ant-design-korea
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
-          force_orphan: true
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name "antd-kr"
+          git config --global user.email "antd-kr@example.com"
+
+          mkdir deploy
+          cd deploy
+          git init
+          git remote add origin git@github.com:ant-design-korea/ant-design-korea.github.io.git
+          git fetch origin
+          git checkout -b gh-pages
+          cp -r ../_site/* .
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push --force origin gh-pages
     timeout-minutes: 30
