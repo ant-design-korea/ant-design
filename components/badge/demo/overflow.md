@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-超过 `overflowCount` 的会显示为 `${overflowCount}+`，默认的 `overflowCount` 为 `99`。
-
-## en-US
-
-`${overflowCount}+` is displayed when count is larger than `overflowCount`. The default value of `overflowCount` is `99`.
+`overflowCount`보다 카운트가 클 경우 `${overflowCount}+`가 표시됩니다. 기본 `overflowCount`값은 `99`입니다.

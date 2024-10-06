@@ -1,7 +1,7 @@
 ---
 category: Components
 title: Badge
-description: Small numerical value or status descriptor for UI elements.
+description: UI 요소에 대한 작은 숫자 값 또는 상태 설명자입니다.
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*e0qITYqF394AAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*v8EQT7KoGbcAAAAAAAAAAAAADrJ8AQ/original
 demo:
@@ -11,7 +11,7 @@ group: Data Display
 
 ## When To Use
 
-Badge normally appears in proximity to notifications or user avatars with eye-catching appeal, typically displaying unread messages count.
+배지는 일반적으로 알림 또는 프로필 사진에 근접하여 눈길을 끌도록 표시되며, 보통 읽지 않은 메시지 수가 표시됩니다.
 
 ## Examples
 
@@ -39,28 +39,28 @@ Common props ref：[Common props](/docs/react/common-props)
 
 ### Badge
 
-| Property | Description | Type | Default | Version |
+| 프로퍼티 | 설명 | 타입 | 기본값 | 버전 |
 | --- | --- | --- | --- | --- |
-| color | Customize Badge dot color | string | - |  |
-| count | Number to show in badge | ReactNode | - |  |
-| classNames | Semantic DOM class | [Record<SemanticDOM, string>](#semantic-dom) | - | 5.7.0 |
-| dot | Whether to display a red dot instead of `count` | boolean | false |  |
-| offset | Set offset of the badge dot | \[number, number] | - |  |
-| overflowCount | Max count to show | number | 99 |  |
-| showZero | Whether to show badge when `count` is zero | boolean | false |  |
-| size | If `count` is set, `size` sets the size of badge | `default` \| `small` | - | - |
-| status | Set Badge as a status dot | `success` \| `processing` \| `default` \| `error` \| `warning` | - |  |
-| styles | Semantic DOM style | [Record<SemanticDOM, CSSProperties>](#semantic-dom) | - | 5.7.0 |
-| text | If `status` is set, `text` sets the display text of the status `dot` | ReactNode | - |  |
-| title | Text to show when hovering over the badge | string | - |  |
+| color | 배지 도트 색상의 사용자 지정 | string | - |  |
+| count | 배지에 표시할 숫자, overflowCount보다 큰 경우 `${overflowCount}+`로 표시되고, 0일 경우 숨김 | ReactNode | - |  |
+| classNames | 시맨틱 DOM 클래스 | [Record<SemanticDOM, string>](#semantic-dom) | - | 5.7.0 |
+| dot | `count` 대신 빨간 색 도트를 표시 여부 | boolean | false |  |
+| offset | 배지 도트의 오프셋 설정 | \[number, number] | - |  |
+| overflowCount | 표시할 최대 개수 | number | 99 |  |
+| showZero | `count`가 0일 때 배지를 표시할지에 대한 여부 | boolean | false |  |
+| size | `count`가 설정되어 있다면, `size`는 배지의 크기를 설정 | `default` \| `small` | - | - |
+| status | 배지를 상태 표시 도트로 설정 | `success` \| `processing` \| `default` \| `error` \| `warning` | - |  |
+| styles | 시멘틱 DOM 스타일 | [Record<SemanticDOM, CSSProperties>](#semantic-dom) | - | 5.7.0 |
+| text | `status`가 설정되어 있다면, `text`는 `dot` 상태 표시 내용을 설정 | ReactNode | - |  |
+| title | 배지 위에 커서가 올라갔을 때 표시할 내용 | string | - |  |
 
 ### Badge.Ribbon
 
-| Property | Description | Type | Default | Version |
+| 프로퍼티 | 설명 | 타입 | 기본값 | 버전 |
 | --- | --- | --- | --- | --- |
-| color | Customize Ribbon color | string | - |  |
-| placement | The placement of the Ribbon, `start` and `end` follow text direction (RTL or LTR) | `start` \| `end` | `end` |  |
-| text | Content inside the Ribbon | ReactNode | - |  |
+| color | 리본 색상의 사용자 지정 | string | - |  |
+| placement | 리본의 배치, `start` 와 `end`를 통한 텍스트 방향 설정 (RTL 혹은 LTR) | `start` \| `end` | `end` |  |
+| text | 리본 내의 콘텐츠 | ReactNode | - |  |
 
 ## Semantic DOM
 

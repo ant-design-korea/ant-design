@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-没有具体的数字。
-
-## en-US
-
-This will simply display a red badge, without a specific count. If count equals 0, it won't display the dot.
+특정 카운트 없이 빨간색 배지만 표시됩니다. 카운트가 0이면 점이 표시되지 않습니다.
