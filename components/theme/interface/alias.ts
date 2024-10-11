@@ -84,10 +84,8 @@ export interface AliasToken extends MapToken {
    */
   colorTextDisabled: string;
   /**
-   * @nameZH 标题字体颜色
-   * @nameEN Heading Text Color
-   * @desc 控制标题字体颜色。
-   * @descEN Control the font color of heading.
+   * @nameKR 제목 텍스트 색상
+   * @desc 제목 글꼴 색상을 제어합니다.
    */
   colorTextHeading: string;
   /**
@@ -114,19 +112,15 @@ export interface AliasToken extends MapToken {
 
   /**
   /**
-   * @nameZH 弱操作图标颜色
-   * @nameEN Weak action icon color
-   * @desc 控制弱操作图标的颜色，例如 allowClear 或 Alert 关闭按钮。
-   * @descEN Weak action. Such as `allowClear` or Alert close button
+   * @nameKR 미세한 동작 아이콘 색상
+   * @desc allowClear나 Alert 닫기 버튼과 같은 약한 동작 아이콘의 색상을 제어합니다.
    */
   colorIcon: string;
 
   /**  */
   /**
-   * @nameZH 弱操作图标悬浮态颜色
-   * @nameEN Weak action icon hover color
-   * @desc 控制弱操作图标在悬浮状态下的颜色，例如 allowClear 或 Alert 关闭按钮。
-   * @descEN Weak action hover color. Such as `allowClear` or Alert close button
+   * @nameKR 미세한 동작 아이콘 호버 색상
+   * @desc 미세한 동작 아이콘이 호버 상태일 때의 색상을 제어합니다. 예를 들어 allowClear 또는 Alert 닫기 버튼과 같은 경우입니다.
    */
   colorIconHover: string;
 
@@ -164,10 +158,8 @@ export interface AliasToken extends MapToken {
 
   // Font
   /**
-   * @nameZH 选择器、级联选择器等中的操作图标字体大小
-   * @nameEN Operation icon font size in Select, Cascader, etc.
-   * @desc 控制选择器、级联选择器等中的操作图标字体大小。正常情况下与 fontSizeSM 相同。
-   * @descEN Control the font size of operation icon in Select, Cascader, etc. Normally same as fontSizeSM.
+   * @nameKR Select, Cascader 등의 아이콘 글꼴 크기
+   * @desc Select, Cascader 등의 아이콘 글꼴 크기를 제어합니다. 일반적으로 fontSizeSM과 동일합니다.
    */
   fontSizeIcon: number;
 
@@ -342,17 +334,13 @@ export interface AliasToken extends MapToken {
    */
   marginXXS: number;
   /**
-   * @nameZH 外边距 XS
-   * @nameEN Margin XS
-   * @desc 控制元素外边距，小尺寸。
-   * @descEN Control the margin of an element, with a small size.
+   * @nameKR 마진 XS
+   * @desc 요소의 외부 여백을 제어하며, 작은 사이즈입니다.
    */
   marginXS: number;
   /**
-   * @nameZH 外边距 SM
-   * @nameEN Margin SM
-   * @desc 控制元素外边距，中小尺寸。
-   * @descEN Control the margin of an element, with a medium-small size.
+   * @nameKR 마진 SM
+   * @desc 요소의 외부 여백을 제어하며, 중간 사이즈입니다.
    */
   marginSM: number;
   /**

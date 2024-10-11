@@ -12,10 +12,8 @@ export interface ColorNeutralMapToken {
   // ----------   Text   ---------- //
 
   /**
-   * @nameZH 一级文本色
-   * @nameEN Text Color
-   * @desc 最深的文本色。为了符合W3C标准，默认的文本颜色使用了该色，同时这个颜色也是最深的中性色。
-   * @descEN Default text color which comply with W3C standards, and this color is also the darkest neutral color.
+   * @nameKR 텍스트 색상
+   * @desc 가장 깊은 텍스트 색상입니다. W3C 표준에 맞춰 기본 텍스트 색상으로 사용되며, 이 색상은 가장 어두운 중성 색상이기도 합니다.
    */
   colorText: string;
 
@@ -233,10 +231,8 @@ interface ColorPrimaryMapToken {
 
 interface ColorSuccessMapToken {
   /**
-   * @nameZH 成功色的浅色背景颜色
-   * @nameEN Light Background Color of Success Color
-   * @desc 成功色的浅色背景颜色，用于 Tag 和 Alert 的成功态背景色
-   * @descEN Light background color of success color, used for Tag and Alert success state background color
+   * @nameKR 성공 색상의 밝은 배경 색상
+   * @desc 성공 색상의 밝은 배경 색상으로, Tag와 Alert의 성공 상태 배경 색상에 사용됩니다.
    */
   colorSuccessBg: string; // 1
 
@@ -249,10 +245,8 @@ interface ColorSuccessMapToken {
   colorSuccessBgHover: string; // 2
 
   /**
-   * @nameZH 成功色的描边色
-   * @nameEN Border Color of Success Color
-   * @desc 成功色的描边色，用于 Tag 和 Alert 的成功态描边色
-   * @descEN Border color of success color, used for Tag and Alert success state border color
+   * @nameKR 성공 색상의 테두리 색상
+   * @desc 성공 색상의 테두리 색상으로, Tag와 Alert의 성공 상태 테두리 색상에 사용됩니다.
    */
   colorSuccessBorder: string; // 3
 
@@ -315,10 +309,8 @@ interface ColorSuccessMapToken {
 
 interface ColorWarningMapToken {
   /**
-   * @nameZH 警戒色的浅色背景颜色
-   * @nameEN Warning background color
-   * @desc 警戒色的浅色背景颜色
-   * @descEN The background color of the warning state.
+   * @nameKR 경고 배경 색상
+   * @desc 경고 상태의 배경 색상입니다.
    */
   colorWarningBg: string; // 1
 
@@ -331,10 +323,8 @@ interface ColorWarningMapToken {
   colorWarningBgHover: string; // 2
 
   /**
-   * @nameZH 警戒色的描边色
-   * @nameEN Warning border color
-   * @desc 警戒色的描边色
-   * @descEN The border color of the warning state.
+   * @nameKR 경고 테두리 색상
+   * @desc 경고 상태의 테두리 색상입니다.
    */
   colorWarningBorder: string; // 3
 
@@ -397,10 +387,8 @@ interface ColorWarningMapToken {
 
 interface ColorInfoMapToken {
   /**
-   * @nameZH 信息色的浅色背景颜色
-   * @nameEN Light background color of information color
-   * @desc 信息色的浅色背景颜色。
-   * @descEN Light background color of information color.
+   * @nameKR 정보 색상의 밝은 배경 색상
+   * @desc 정보 색상의 밝은 배경 색상입니다.
    */
   colorInfoBg: string; // 1
 
@@ -413,10 +401,8 @@ interface ColorInfoMapToken {
   colorInfoBgHover: string; // 2
 
   /**
-   * @nameZH 信息色的描边色
-   * @nameEN Border color of information color
-   * @desc 信息色的描边色。
-   * @descEN Border color of information color.
+   * @nameKR 정보 색상의 테두리 색상
+   * @desc 정보 색상의 테두리 색상입니다.
    */
   colorInfoBorder: string; // 3
 
@@ -479,10 +465,8 @@ interface ColorInfoMapToken {
 
 interface ColorErrorMapToken {
   /**
-   * @nameZH 错误色的浅色背景颜色
-   * @nameEN Error background color
-   * @desc 错误色的浅色背景颜色
-   * @descEN The background color of the error state.
+   * @nameKR 오류 배경색
+   * @desc 오류 상태의 배경색 입니다.
    */
   colorErrorBg: string; // 1
 
@@ -511,10 +495,8 @@ interface ColorErrorMapToken {
   colorErrorBgActive: string; // 3
 
   /**
-   * @nameZH 错误色的描边色
-   * @nameEN Error border color
-   * @desc 错误色的描边色
-   * @descEN The border color of the error state.
+   * @nameKR 오류 테두리 색상
+   * @desc 오류 상태의 테두리 색입니다
    */
   colorErrorBorder: string; // 3
 

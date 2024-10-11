@@ -25,10 +25,8 @@ export interface StyleMapToken {
    */
   borderRadiusSM: number;
   /**
-   * @nameZH LG号圆角
-   * @nameEN LG Border Radius
-   * @desc LG号圆角，用于组件中的一些大圆角，如 Card、Modal 等一些组件样式。
-   * @descEN LG size border radius, used in some large border radius components, such as Card, Modal and other components.
+   * @nameKR LG 크기 테두리 반경
+   * @desc LG 크기 테두리 반경으로, Card, Modal 등과 같은 일부 컴포넌트 스타일에서 사용됩니다.
    * @default 8
    */
   borderRadiusLG: number;
