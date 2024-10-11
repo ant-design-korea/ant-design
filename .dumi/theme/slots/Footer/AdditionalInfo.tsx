@@ -2,8 +2,6 @@ import * as React from 'react';
 import { createStyles } from 'antd-style';
 import { removeCSS, updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 
-import useLocale from '../../../hooks/useLocale';
-
 const whereCls = 'ant-where-checker';
 
 const locales = {
@@ -13,6 +11,12 @@ const locales = {
     whereDocUrl: '/docs/react/customize-theme-cn#兼容性调整',
   },
   en: {
+    whereNotSupport:
+      'Your browser not support modern CSS Selector. Please use modern browser to view (e.g. Chrome, Firefox, etc). If you want to compatible style with legacy browser, please refer to the configuration document:',
+    whereDocTitle: 'Compatible adjustment (Please use modern browser to visit)',
+    whereDocUrl: '/docs/react/customize-theme#compatible-adjustment',
+  },
+  ko: {
     whereNotSupport:
       'Your browser not support modern CSS Selector. Please use modern browser to view (e.g. Chrome, Firefox, etc). If you want to compatible style with legacy browser, please refer to the configuration document:',
     whereDocTitle: 'Compatible adjustment (Please use modern browser to visit)',
@@ -52,7 +56,7 @@ const useStyle = createStyles(({ css, token }) => ({
 // Check for browser support `:where` or not
 // Warning user if not support to modern browser
 const InfoNewVersion: React.FC = () => {
-  const [location] = useLocale(locales);
+  const location = locales.ko;
   const [supportWhere, setSupportWhere] = React.useState(true);
 
   React.useEffect(() => {

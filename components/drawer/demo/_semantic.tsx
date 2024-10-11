@@ -2,7 +2,6 @@ import React from 'react';
 import { Drawer, Typography } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
-import useLocale from '../../../.dumi/hooks/useLocale';
 
 const locales = {
   cn: {
@@ -19,10 +18,17 @@ const locales = {
     body: 'Body element',
     footer: 'Footer element',
   },
+  ko: {
+    mask: 'Mask element',
+    content: 'Drawer container element',
+    header: 'Header element',
+    body: 'Body element',
+    footer: 'Footer element',
+  },
 };
 
 const App: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <SemanticPreview
       semantics={[

@@ -4,7 +4,6 @@ import { createStyles, useTheme } from 'antd-style';
 import { useLocation } from 'dumi';
 
 import useDark from '../../../hooks/useDark';
-import useLocale from '../../../hooks/useLocale';
 import Link from '../../../theme/common/Link';
 import SiteContext from '../../../theme/slots/SiteContext';
 import * as utils from '../../../theme/utils';
@@ -61,6 +60,22 @@ const locales = {
     kitchen: 'Kitchen',
     kitchenDesc: 'Sketch Tool set for designers',
   },
+  ko: {
+    values: 'Design values',
+    valuesDesc: 'Certainty, Meaningfulness, Growth, Naturalness',
+    guide: 'Design guide',
+    guideDesc: 'Global style and design pattern',
+    lib: 'Components Libraries',
+    libDesc: 'Ant Design of React / Angular / Vue',
+
+    // Secondary
+    mobile: 'Ant Design Mobile',
+    mobileDesc: 'Mobile UI component library',
+    antv: 'AntV',
+    antvDesc: 'New generation of data visualization solutions',
+    kitchen: 'Kitchen',
+    kitchenDesc: 'Sketch Tool set for designers',
+  },
 };
 
 const useStyle = () => {
@@ -98,11 +113,10 @@ const useStyle = () => {
 };
 
 const DesignFramework: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const token = useTheme();
   const { styles } = useStyle();
-  const { pathname, search } = useLocation();
-  const isZhCN = utils.isZhCN(pathname);
+  const { search } = useLocation();
   const { isMobile } = useContext(SiteContext);
   const colSpan = isMobile ? 24 : 8;
 
@@ -110,17 +124,17 @@ const DesignFramework: React.FC = () => {
     {
       img: 'https://gw.alipayobjects.com/zos/bmw-prod/36a89a46-4224-46e2-b838-00817f5eb364.svg',
       key: 'values',
-      path: utils.getLocalizedPathname('/docs/spec/values/', isZhCN, search),
+      path: utils.getLocalizedPathname('/docs/spec/values/', search),
     },
     {
       img: 'https://gw.alipayobjects.com/zos/bmw-prod/8379430b-e328-428e-8a67-666d1dd47f7d.svg',
       key: 'guide',
-      path: utils.getLocalizedPathname('/docs/spec/colors/', isZhCN, search),
+      path: utils.getLocalizedPathname('/docs/spec/colors/', search),
     },
     {
       img: 'https://gw.alipayobjects.com/zos/bmw-prod/1c363c0b-17c6-4b00-881a-bc774df1ebeb.svg',
       key: 'lib',
-      path: utils.getLocalizedPathname('/docs/react/introduce/', isZhCN, search),
+      path: utils.getLocalizedPathname('/docs/react/introduce/', search),
     },
   ];
 

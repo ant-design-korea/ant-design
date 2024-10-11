@@ -6,8 +6,6 @@ import { createStyles } from 'antd-style';
 import tokenMeta from 'antd/es/version/token-meta.json';
 import classNames from 'classnames';
 
-import useLocale from '../../../hooks/useLocale';
-
 const useStyle = createStyles(({ token, css }) => {
   const height = token.controlHeightLG;
   const dotSize = height / 5;
@@ -78,7 +76,6 @@ export interface TokenCompareProps {
 
 const TokenCompare: React.FC<TokenCompareProps> = (props) => {
   const { tokenNames = '' } = props;
-  const [, lang] = useLocale();
   const { styles } = useStyle();
 
   const tokenList = React.useMemo(() => {
@@ -89,7 +86,7 @@ const TokenCompare: React.FC<TokenCompareProps> = (props) => {
 
     return list.map((tokenName) => {
       const meta = tokenMeta.global[tokenName];
-      const name = lang === 'cn' ? meta.name : meta.nameEn;
+      const name = meta.name;
 
       return {
         name: name.replace('颜色', '').replace('色', '').replace('Color', '').trim(),

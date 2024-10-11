@@ -17,7 +17,6 @@ import classNames from 'classnames';
 import dayjs from 'dayjs';
 
 import useDark from '../../../hooks/useDark';
-import useLocale from '../../../hooks/useLocale';
 import SiteContext from '../../../theme/slots/SiteContext';
 import { getCarouselStyle } from './util';
 
@@ -47,6 +46,19 @@ const locales = {
     tour: '漫游导览帮助用户对新加的功能进行快速了解',
   },
   en: {
+    yesterday: 'Yesterday',
+    lastWeek: 'Last Week',
+    lastMonth: 'Last Month',
+    lastYear: 'Last Year',
+    new: 'New',
+    update: 'Update',
+    sampleContent: SAMPLE_CONTENT_EN,
+    inProgress: 'In Progress',
+    success: 'Success',
+    taskFailed: 'Task Failed',
+    tour: 'A quick guide for new come user about how to use app.',
+  },
+  ko: {
     yesterday: 'Yesterday',
     lastWeek: 'Last Week',
     lastMonth: 'Last Month',
@@ -117,7 +129,7 @@ const useStyle = () => {
 
 const ComponentItem: React.FC<ComponentItemProps> = ({ title, node, type, index }) => {
   const tagColor = type === 'new' ? 'processing' : 'warning';
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const tagText = type === 'new' ? locale.new : locale.update;
   const { styles } = useStyle();
   const { isMobile } = useContext(SiteContext);
@@ -150,7 +162,7 @@ interface ComponentItemProps {
 
 const ComponentsList: React.FC = () => {
   const { styles } = useStyle();
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const { isMobile } = useContext(SiteContext);
   const COMPONENTS = React.useMemo<Omit<ComponentItemProps, 'index'>[]>(
     () => [

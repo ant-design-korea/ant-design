@@ -3,7 +3,6 @@ import { ConfigProvider, theme } from 'antd';
 import { createStyles, css } from 'antd-style';
 
 import useDark from '../../hooks/useDark';
-import useLocale from '../../hooks/useLocale';
 import BannerRecommends from './components/BannerRecommends';
 import Group from './components/Group';
 import PreviewBanner from './components/PreviewBanner';
@@ -34,10 +33,16 @@ const locales = {
     designTitle: 'Design and framework',
     designDesc: 'Supporting ecology, allowing you to quickly build website applications',
   },
+  ko: {
+    assetsTitle: 'Rich components',
+    assetsDesc: 'Practical components to meet your needs, flexible customization and expansion',
+    designTitle: 'Design and framework',
+    designDesc: 'Supporting ecology, allowing you to quickly build website applications',
+  },
 };
 
 const Homepage: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const { styles } = useStyle();
   const { token } = theme.useToken();
 

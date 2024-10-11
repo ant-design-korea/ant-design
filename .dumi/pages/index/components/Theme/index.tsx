@@ -26,7 +26,6 @@ import classNames from 'classnames';
 import { useLocation } from 'dumi';
 
 import useDark from '../../../../hooks/useDark';
-import useLocale from '../../../../hooks/useLocale';
 import LinkButton from '../../../../theme/common/LinkButton';
 import SiteContext from '../../../../theme/slots/SiteContext';
 import { getLocalizedPathname } from '../../../../theme/utils';
@@ -72,6 +71,23 @@ const locales = {
     toUse: '去使用',
   },
   en: {
+    themeTitle: 'Flexible theme customization',
+    themeDesc: 'Ant Design 5.0 enable extendable algorithm, make custom theme easier',
+
+    customizeTheme: 'Customize Theme',
+    myTheme: 'My Theme',
+    titlePrimaryColor: 'Primary Color',
+    titleBorderRadius: 'Border Radius',
+    titleCompact: 'Compact',
+    titleTheme: 'Theme',
+    default: 'Default',
+    compact: 'Compact',
+    light: 'Light',
+    dark: 'Dark',
+    toDef: 'More',
+    toUse: 'Apply',
+  },
+  ko: {
     themeTitle: 'Flexible theme customization',
     themeDesc: 'Ant Design 5.0 enable extendable algorithm, make custom theme easier',
 
@@ -345,8 +361,7 @@ function rgbToColorMatrix(color: string) {
 
 const Theme: React.FC = () => {
   const { styles } = useStyle();
-  const [locale, lang] = useLocale(locales);
-  const isZhCN = lang === 'cn';
+  const locale = locales.ko;
   const { search } = useLocation();
 
   const [themeData, setThemeData] = React.useState<ThemeData>(ThemeDefault);
@@ -519,12 +534,12 @@ const Theme: React.FC = () => {
                   title={locale.myTheme}
                   extra={
                     <Flex gap="small">
-                      <LinkButton to={getLocalizedPathname('/theme-editor', isZhCN, search)}>
+                      <LinkButton to={getLocalizedPathname('/theme-editor', search)}>
                         {locale.toDef}
                       </LinkButton>
                       <LinkButton
                         type="primary"
-                        to={getLocalizedPathname('/docs/react/customize-theme', isZhCN, search)}
+                        to={getLocalizedPathname('/docs/react/customize-theme', search)}
                       >
                         {locale.toUse}
                       </LinkButton>
