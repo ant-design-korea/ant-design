@@ -7,7 +7,7 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*gOTISoMFZV0AAA
 demo:
   cols: 2
 group:
-  title: 상호 작용
+  title: Feedback
   order: 6
 ---
 

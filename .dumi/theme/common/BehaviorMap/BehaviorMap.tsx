@@ -321,10 +321,10 @@ const BehaviorMap: React.FC<BehaviorMapProps> = ({ data }) => {
 
   return (
     <div ref={ref} className={styles.container}>
-      <div className={styles.title}>{`${meta.frontmatter.title} 行为模式地图`}</div>
+      <div className={styles.title}>{`${meta.frontmatter.title} 행동 패턴 지도`}</div>
       <div className={styles.tips}>
-        <div className={styles.mvp}>MVP 行为目的</div>
-        <div className={styles.extension}>拓展行为目的</div>
+        <div className={styles.mvp}>MVP 행동 목적</div>
+        <div className={styles.extension}>확장 행동 목적</div>
       </div>
     </div>
   );
