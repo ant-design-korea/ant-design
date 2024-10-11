@@ -6,12 +6,11 @@ import { createStyles } from 'antd-style';
 import { getDesignToken } from 'antd-token-previewer';
 import tokenMeta from 'antd/es/version/token-meta.json';
 
-import useLocale from '../../../hooks/useLocale';
 import ColorChunk from '../ColorChunk';
 
 type TokenTableProps = {
   type: 'seed' | 'map' | 'alias';
-  lang: 'zh' | 'en';
+  lang: 'ko';
 };
 
 export type TokenData = {
@@ -36,6 +35,12 @@ const locales = {
     type: 'Type',
     value: 'Default Value',
   },
+  ko: {
+    token: 'Token Name',
+    description: 'Description',
+    type: 'Type',
+    value: 'Default Value',
+  },
 };
 
 const useStyle = createStyles(({ token, css }) => ({
@@ -51,7 +56,7 @@ const useStyle = createStyles(({ token, css }) => ({
 }));
 
 export function useColumns(): Exclude<TableProps<TokenData>['columns'], undefined> {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const { styles } = useStyle();
 
   return [
@@ -88,7 +93,6 @@ export function useColumns(): Exclude<TableProps<TokenData>['columns'], undefine
 }
 
 const TokenTable: FC<TokenTableProps> = ({ type }) => {
-  const [, lang] = useLocale(locales);
   const columns = useColumns();
 
   const data = React.useMemo<TokenData[]>(
@@ -97,11 +101,11 @@ const TokenTable: FC<TokenTableProps> = ({ type }) => {
         .filter(([, meta]) => meta.source === type)
         .map(([token, meta]) => ({
           name: token,
-          desc: lang === 'cn' ? meta.desc : meta.descEn,
+          desc: meta.desc,
           type: meta.type,
           value: defaultToken[token],
         })),
-    [type, lang],
+    [type],
   );
 
   return <Table dataSource={data} columns={columns} pagination={false} bordered />;

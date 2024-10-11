@@ -3,7 +3,6 @@ import type { CollapseProps } from 'antd';
 import { Collapse } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
-import useLocale from '../../../.dumi/hooks/useLocale';
 
 const locales = {
   cn: {
@@ -11,6 +10,10 @@ const locales = {
     body: '内容元素',
   },
   en: {
+    header: 'Header element',
+    body: 'Body element',
+  },
+  ko: {
     header: 'Header element',
     body: 'Body element',
   },
@@ -34,7 +37,7 @@ const BlockCollapse: React.FC = (props) => {
 };
 
 const App: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <SemanticPreview
       semantics={[

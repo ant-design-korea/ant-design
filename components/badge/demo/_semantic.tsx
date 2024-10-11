@@ -2,7 +2,6 @@ import React from 'react';
 import { Avatar, Badge } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
-import useLocale from '../../../.dumi/hooks/useLocale';
 
 const locales = {
   cn: {
@@ -13,10 +12,14 @@ const locales = {
     root: 'Root element',
     indicator: 'Indicator element',
   },
+  ko: {
+    root: 'Root element',
+    indicator: 'Indicator element',
+  },
 };
 
 const App: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <SemanticPreview
       semantics={[

@@ -4,7 +4,6 @@ import { createStyles } from 'antd-style';
 import dayjs from 'dayjs';
 import { FormattedMessage } from 'dumi';
 
-import useLocale from '../../../hooks/useLocale';
 import type { Article, Authors, SiteData } from '../../../pages/index/components/util';
 import { useSiteData } from '../../../pages/index/components/util';
 
@@ -93,15 +92,12 @@ const ArticleList: React.FC<ArticleListProps> = ({ name, data = [], authors = []
 };
 
 const Articles: React.FC<{ data: Partial<SiteData> }> = ({ data }) => {
-  const [, lang] = useLocale();
-  const isZhCN = lang === 'cn';
-
-  const { articles = { cn: [], en: [] }, authors = [] } = data;
+  const { articles = { ko: [] }, authors = [] } = data;
 
   // ========================== Data ==========================
   const mergedData = React.useMemo(() => {
     const yearData: Record<number | string, Record<string, Article[]>> = {};
-    articles[lang]?.forEach((article) => {
+    articles.ko?.forEach((article) => {
       const year = dayjs(article.date).year();
       yearData[year] = yearData[year] || {};
       yearData[year][article.type] = [...(yearData[year][article.type] || []), article];
@@ -121,7 +117,7 @@ const Articles: React.FC<{ data: Partial<SiteData> }> = ({ data }) => {
       size="large"
       items={yearList.map((year) => ({
         key: year,
-        label: `${year}${isZhCN ? ' 年' : ''}`,
+        label: `${year}년`,
         children: (
           <table>
             <tbody>

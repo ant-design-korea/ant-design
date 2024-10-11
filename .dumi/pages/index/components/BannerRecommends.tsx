@@ -3,7 +3,6 @@ import { Badge, Carousel, Flex, Skeleton, Typography } from 'antd';
 import { createStyles } from 'antd-style';
 import classNames from 'classnames';
 
-import useLocale from '../../../hooks/useLocale';
 import SiteContext from '../../../theme/slots/SiteContext';
 import type { Extra, Icon } from './util';
 import { getCarouselStyle, useSiteData } from './util';
@@ -135,10 +134,9 @@ export const BannerRecommendsFallback: React.FC = () => {
 
 const BannerRecommends: React.FC = () => {
   const { styles } = useStyle();
-  const [, lang] = useLocale();
   const { isMobile } = React.useContext(SiteContext);
   const data = useSiteData();
-  const extras = data?.extras?.[lang];
+  const extras = data?.extras?.ko;
   const icons = data?.icons || [];
   const first3 = !extras || extras.length === 0 ? new Array(3).fill(null) : extras.slice(0, 3);
 

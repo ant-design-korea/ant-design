@@ -5,10 +5,9 @@ import 'dayjs/locale/zh-cn';
 
 import React, { useContext, useEffect, useLayoutEffect, useRef } from 'react';
 import ConfigProvider from 'antd/es/config-provider';
-import zhCN from 'antd/es/locale/zh_CN';
+import koKR from 'antd/es/locale/ko_KR';
 import { Helmet, useOutlet, useSiteData } from 'dumi';
 
-import useLocale from '../../../hooks/useLocale';
 import useLocation from '../../../hooks/useLocation';
 import GlobalStyles from '../../common/GlobalStyles';
 import Header from '../../slots/Header';
@@ -30,23 +29,24 @@ const locales = {
     description:
       'An enterprise-class UI design language and React UI library with a set of high-quality React components, one of best React UI library for enterprises',
   },
+  ko: {
+    title: "Ant Design - The world's second most popular React UI framework",
+    description:
+      'An enterprise-class UI design language and React UI library with a set of high-quality React components, one of best React UI library for enterprises',
+  },
 };
 
 const DocLayout: React.FC = () => {
   const outlet = useOutlet();
   const location = useLocation();
   const { pathname, search, hash } = location;
-  const [locale, lang] = useLocale(locales);
+  const locale = locales.ko;
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
   const { direction } = useContext(SiteContext);
   const { loading } = useSiteData();
 
   useLayoutEffect(() => {
-    if (lang === 'cn') {
-      dayjs.locale('zh-cn');
-    } else {
-      dayjs.locale('en');
-    }
+    dayjs.locale('ko');
   }, []);
 
   useEffect(() => {
@@ -95,7 +95,7 @@ const DocLayout: React.FC = () => {
     <>
       <Helmet encodeSpecialCharacters={false}>
         <html
-          lang={lang === 'cn' ? 'zh-CN' : lang}
+          lang="ko-KR"
           data-direction={direction}
           className={classNames({ rtl: direction === 'rtl' })}
         />
@@ -110,7 +110,7 @@ const DocLayout: React.FC = () => {
           content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
         />
       </Helmet>
-      <ConfigProvider direction={direction} locale={lang === 'cn' ? zhCN : undefined}>
+      <ConfigProvider direction={direction} locale={koKR}>
         <GlobalStyles />
         <Header />
         {content}

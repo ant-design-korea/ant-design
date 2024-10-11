@@ -5,7 +5,6 @@ import { Menu } from 'antd';
 import { createStyles, css } from 'antd-style';
 import { FormattedMessage, useFullSidebarData, useLocation } from 'dumi';
 
-import useLocale from '../../../hooks/useLocale';
 import Link from '../../common/Link';
 import * as utils from '../../utils';
 import type { SharedProps } from './interface';
@@ -20,6 +19,13 @@ const locales = {
     blog: '博客',
   },
   en: {
+    design: 'Design',
+    development: 'Development',
+    components: 'Components',
+    resources: 'Resources',
+    blog: 'Blog',
+  },
+  ko: {
     design: 'Design',
     development: 'Development',
     components: 'Components',
@@ -77,9 +83,9 @@ export interface NavigationProps extends SharedProps {
 }
 
 const HeaderNavigation: React.FC<NavigationProps> = (props) => {
-  const { isZhCN, isMobile, responsive, directionText, onLangChange, onDirectionChange } = props;
+  const { isMobile, responsive, directionText, onLangChange, onDirectionChange } = props;
   const { pathname, search } = useLocation();
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
 
   const sidebarData = useFullSidebarData();
   const blogList = sidebarData['/docs/blog']?.[0]?.children || [];
@@ -138,15 +144,13 @@ const HeaderNavigation: React.FC<NavigationProps> = (props) => {
   const items: MenuProps['items'] = [
     {
       label: (
-        <Link to={utils.getLocalizedPathname('/docs/spec/introduce', isZhCN, search)}>
-          {locale.design}
-        </Link>
+        <Link to={utils.getLocalizedPathname('/docs/spec/introduce', search)}>{locale.design}</Link>
       ),
       key: 'docs/spec',
     },
     {
       label: (
-        <Link to={utils.getLocalizedPathname('/docs/react/introduce', isZhCN, search)}>
+        <Link to={utils.getLocalizedPathname('/docs/react/introduce', search)}>
           {locale.development}
         </Link>
       ),
@@ -154,7 +158,7 @@ const HeaderNavigation: React.FC<NavigationProps> = (props) => {
     },
     {
       label: (
-        <Link to={utils.getLocalizedPathname('/components/overview/', isZhCN, search)}>
+        <Link to={utils.getLocalizedPathname('/components/overview/', search)}>
           {locale.components}
         </Link>
       ),
@@ -167,7 +171,6 @@ const HeaderNavigation: React.FC<NavigationProps> = (props) => {
               to={utils.getLocalizedPathname(
                 blogList.sort((a, b) => (a.frontmatter?.date > b.frontmatter?.date ? -1 : 1))[0]
                   .link,
-                isZhCN,
                 search,
               )}
             >
@@ -179,22 +182,10 @@ const HeaderNavigation: React.FC<NavigationProps> = (props) => {
       : null,
     {
       label: (
-        <Link to={utils.getLocalizedPathname('/docs/resources', isZhCN, search)}>
-          {locale.resources}
-        </Link>
+        <Link to={utils.getLocalizedPathname('/docs/resources', search)}>{locale.resources}</Link>
       ),
       key: 'docs/resources',
     },
-    isZhCN
-      ? {
-          key: 'mirror',
-          label: (
-            <a href="https://ant-design.antgroup.com" target="_blank" rel="noreferrer">
-              国内镜像
-            </a>
-          ),
-        }
-      : null,
     ...(additional ?? []),
   ].filter(Boolean);
 

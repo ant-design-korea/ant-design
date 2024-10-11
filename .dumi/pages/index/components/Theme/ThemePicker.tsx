@@ -3,8 +3,6 @@ import { Flex } from 'antd';
 import { createStyles } from 'antd-style';
 import classNames from 'classnames';
 
-import useLocale from '../../../../hooks/useLocale';
-
 export const THEMES = {
   default: 'https://gw.alipayobjects.com/zos/bmw-prod/ae669a89-0c65-46db-b14b-72d1c7dd46d6.svg',
   dark: 'https://gw.alipayobjects.com/zos/bmw-prod/0f93c777-5320-446b-9bb7-4d4b499f346d.svg',
@@ -24,6 +22,13 @@ const locales = {
     v4: 'V4 主题',
   },
   en: {
+    default: 'Default',
+    dark: 'Dark',
+    lark: 'Document',
+    comic: 'Blossom',
+    v4: 'V4 Theme',
+  },
+  ko: {
     default: 'Default',
     dark: 'Dark',
     lark: 'Document',
@@ -81,7 +86,7 @@ export interface ThemePickerProps {
 const ThemePicker: React.FC<ThemePickerProps> = (props) => {
   const { value, id, onChange } = props;
   const { styles } = useStyle();
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <Flex gap="large" wrap>
       {(Object.keys(THEMES) as (keyof typeof THEMES)[]).map<React.ReactNode>((theme, index) => (

@@ -4,7 +4,6 @@ import { Button, Card, Divider } from 'antd';
 import { createStyles } from 'antd-style';
 import classNames from 'classnames';
 
-import useLocale from '../../../hooks/useLocale';
 import JuejinLogo from './JuejinLogo';
 
 const ANTD_IMG_URL =
@@ -102,6 +101,13 @@ const locales = {
     junjin: 'Ant Design Open Source Column',
     buttonText: 'Go to discuss',
   },
+  ko: {
+    bigTitle: 'Articles are included in the column:',
+    zhiHu: 'A UI design system',
+    yuQue: 'Ant Design official column',
+    junjin: 'Ant Design Open Source Column',
+    buttonText: 'Go to discuss',
+  },
 };
 
 interface Props {
@@ -111,7 +117,7 @@ interface Props {
 }
 
 const ColumnCard: React.FC<Props> = ({ zhihuLink, yuqueLink, juejinLink }) => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const {
     styles: {
       card,

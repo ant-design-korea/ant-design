@@ -2,13 +2,14 @@ import React from 'react';
 import { PictureOutlined } from '@ant-design/icons';
 import { Image, Tooltip, Typography } from 'antd';
 
-import useLocale from '../../../hooks/useLocale';
-
 const locales = {
   cn: {
     tip: '预览',
   },
   en: {
+    tip: 'Preview',
+  },
+  ko: {
     tip: 'Preview',
   },
 };
@@ -20,7 +21,7 @@ export interface InlinePopoverProps {
 // 鼠标悬浮弹出 Popover 组件，用于帮助用户更快看到一些属性对应的预览效果
 const InlinePopover: React.FC<InlinePopoverProps> = (props) => {
   const { previewURL } = props;
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const [visible, setVisible] = React.useState(false);
 
   return (

@@ -3,8 +3,6 @@ import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Card, Col, Row, Tooltip, Typography } from 'antd';
 import { createStyles } from 'antd-style';
 
-import useLocale from '../../../hooks/useLocale';
-
 const { Paragraph } = Typography;
 
 const useStyle = createStyles(({ token, css }) => ({
@@ -57,6 +55,11 @@ const locales = {
     thirdPart: 'Third Party',
     thirdPartDesc: 'Unofficial product, please take care confirm availability',
   },
+  ko: {
+    official: 'Official',
+    thirdPart: 'Third Party',
+    thirdPartDesc: 'Unofficial product, please take care confirm availability',
+  },
 };
 
 export type ResourceCardProps = {
@@ -65,7 +68,7 @@ export type ResourceCardProps = {
 
 const ResourceCard: React.FC<ResourceCardProps> = ({ resource }) => {
   const { styles } = useStyle();
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
 
   const { title, description, cover, src, official } = resource;
 
