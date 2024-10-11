@@ -23,23 +23,11 @@ export type TokenData = {
 const defaultToken = getDesignToken();
 
 const locales = {
-  cn: {
-    token: 'Token 名称',
-    description: '描述',
-    type: '类型',
-    value: '默认值',
-  },
-  en: {
-    token: 'Token Name',
-    description: 'Description',
-    type: 'Type',
-    value: 'Default Value',
-  },
   ko: {
-    token: 'Token Name',
-    description: 'Description',
-    type: 'Type',
-    value: 'Default Value',
+    token: 'Token 이름',
+    description: '설명',
+    type: '타입',
+    value: '기본값',
   },
 };
 
