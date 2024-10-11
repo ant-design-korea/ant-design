@@ -8,43 +8,35 @@ import { genPresetColor, genStyleHooks, mergeToken } from '../../theme/internal'
 export interface ComponentToken {
   // Component token here
   /**
-   * @desc 徽标 z-index
-   * @descEN 배지의 z-index
+   * @desc 배지의 z-index
    */
   indicatorZIndex: number | string;
   /**
-   * @desc 徽标高度
-   * @descEN 배지의 높이
+   * @desc 배지의 높이
    */
   indicatorHeight: number | string;
   /**
-   * @desc 小号徽标高度
-   * @descEN 작은 배지의 높이
+   * @desc 작은 배지의 높이
    */
   indicatorHeightSM: number | string;
   /**
-   * @desc 点状徽标尺寸
-   * @descEN 도트 배지의 크기
+   * @desc 도트 배지의 크기
    */
   dotSize: number;
   /**
-   * @desc 徽标文本尺寸
-   * @descEN 배지 텍스트의 글씨 크기
+   * @desc 배지 텍스트의 글씨 크기
    */
   textFontSize: number;
   /**
-   * @desc 小号徽标文本尺寸
-   * @descEN 작은 배지 텍스트의 글씨 크기
+   * @desc 작은 배지 텍스트의 글씨 크기
    */
   textFontSizeSM: number;
   /**
-   * @desc 徽标文本粗细
-   * @descEN 배지 텍스트의 글씨 굵기
+   * @desc 배지 텍스트의 글씨 굵기
    */
   textFontWeight: number | string;
   /**
-   * @desc 状态徽标尺寸
-   * @descEN 상태 배지의 크기
+   * @desc 상태 배지의 크기
    */
   statusSize: number;
 }
