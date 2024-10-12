@@ -42,58 +42,47 @@ export interface ComponentToken {
 }
 
 /**
- * @desc Badge 组件的 Token
- * @descEN Token for Badge component
+ * @desc 배지 컴포넌트의 토큰
  */
 export interface BadgeToken extends FullToken<'Badge'> {
   /**
-   * @desc 徽标字体高度
-   * @descEN Font height of badge
+   * @desc 배지의 글꼴 높이
    */
   badgeFontHeight: number;
   /**
-   * @desc 徽标文本颜色
-   * @descEN Text color of badge
+   * @desc 배지의 텍스트 색상
    */
   badgeTextColor: string;
   /**
-   * @desc 徽标颜色
-   * @descEN Color of badge
+   * @desc 배지의 색상
    */
   badgeColor: string;
   /**
-   * @desc 徽标悬停颜色
-   * @descEN Hover color of badge
+   * @desc Hover시 배지의 색상
    */
   badgeColorHover: string;
   /**
-   * @desc 徽标阴影尺寸
-   * @descEN Shadow size of badge
+   * @desc 배지 그림자의 크기
    */
   badgeShadowSize: number;
   /**
-   * @desc 徽标阴影颜色
-   * @descEN Shadow color of badge
+   * @desc 배지의 그림자 색상
    */
   badgeShadowColor: string;
   /**
-   * @desc 徽标处理持续时间
-   * @descEN Processing duration of badge
+   * @desc 배지의 처리 기간
    */
   badgeProcessingDuration: string;
   /**
-   * @desc 徽标丝带偏移量
-   * @descEN Ribbon offset of badge
+   * @desc 배지의 리본 오프셋
    */
   badgeRibbonOffset: number;
   /**
-   * @desc 徽标丝带角变换
-   * @descEN Ribbon corner transform of badge
+   * @desc 배지의 리본 모서리 변경
    */
   badgeRibbonCornerTransform: string;
   /**
-   * @desc 徽标丝带角滤镜
-   * @descEN Ribbon corner filter of badge
+   * @desc 배지의 리본 모서리 필터
    */
   badgeRibbonCornerFilter: string;
 }
