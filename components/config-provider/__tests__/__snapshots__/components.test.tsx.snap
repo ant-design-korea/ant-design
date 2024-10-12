@@ -1727,7 +1727,7 @@ exports[`ConfigProvider components Calendar configProvider 1`] = `
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -1746,7 +1746,7 @@ exports[`ConfigProvider components Calendar configProvider 1`] = `
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -2607,7 +2607,7 @@ exports[`ConfigProvider components Calendar configProvider 1`] = `
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -2627,7 +2627,7 @@ exports[`ConfigProvider components Calendar configProvider 1`] = `
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -3018,7 +3018,7 @@ exports[`ConfigProvider components Calendar configProvider componentDisabled 1`]
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -3038,7 +3038,7 @@ exports[`ConfigProvider components Calendar configProvider componentDisabled 1`]
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -3901,7 +3901,7 @@ exports[`ConfigProvider components Calendar configProvider componentDisabled 1`]
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -3922,7 +3922,7 @@ exports[`ConfigProvider components Calendar configProvider componentDisabled 1`]
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -4310,7 +4310,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize large 1
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -4329,7 +4329,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize large 1
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -5190,7 +5190,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize large 1
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -5210,7 +5210,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize large 1
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -5598,7 +5598,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize middle 
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -5617,7 +5617,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize middle 
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -6478,7 +6478,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize middle 
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -6498,7 +6498,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize middle 
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -6886,7 +6886,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize small 1
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -6905,7 +6905,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize small 1
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -7766,7 +7766,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize small 1
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -7786,7 +7786,7 @@ exports[`ConfigProvider components Calendar configProvider componentSize small 1
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -8174,7 +8174,7 @@ exports[`ConfigProvider components Calendar normal 1`] = `
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -8193,7 +8193,7 @@ exports[`ConfigProvider components Calendar normal 1`] = `
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -9054,7 +9054,7 @@ exports[`ConfigProvider components Calendar normal 1`] = `
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -9074,7 +9074,7 @@ exports[`ConfigProvider components Calendar normal 1`] = `
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -9462,7 +9462,7 @@ exports[`ConfigProvider components Calendar prefixCls 1`] = `
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -9481,7 +9481,7 @@ exports[`ConfigProvider components Calendar prefixCls 1`] = `
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -10342,7 +10342,7 @@ exports[`ConfigProvider components Calendar prefixCls 1`] = `
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -10362,7 +10362,7 @@ exports[`ConfigProvider components Calendar prefixCls 1`] = `
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
