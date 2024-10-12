@@ -8,4 +8,4 @@ Basic Usage.
 
 ## ko-KR
 
-기본 사용 방법.
+기본 사용법

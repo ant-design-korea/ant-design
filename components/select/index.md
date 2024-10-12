@@ -2,25 +2,25 @@
 category: Components
 group: Data Entry
 title: Select
-description: A dropdown menu for displaying choices.
+description: 선택 항목을 표시하는 드롭다운 메뉴.
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*qGSbQJ0POEsAAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a6ggRInInJ4AAAAAAAAAAAAADrJ8AQ/original
 demo:
   cols: 2
 ---
 
-## When To Use
+## 사용 시기
 
-- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.
-- Utilizing [Radio](/components/radio/) is recommended when there are fewer total options (less than 5).
-- You probably need [AutoComplete](/components/auto-complete/) if you're looking for an input box that can be typed or selected.
+- 선택 항목을 표시하는 드롭다운 메뉴 - 기본 `<select>` 태그의 세련된 대안
+- 선택지가 5개 미만일 때 [Radio](/components/radio/) 컴포넌트가 권장 됩니다.
+- 입력이 가능하면서 선택할 수도 있는 입력 상자를 원한다면 [AutoComplete](/components/auto-complete/)가 필요할 수 있습니다.
 
-### Usage upgrade after 5.11.0
+### 버전 5.11.0 이후 사용 방식 업그레이드
 
 <!-- prettier-ignore -->
-:::info{title="Upgrade Tip"}
-After version 5.11.0, we provide a simpler usage `<Select options={[...]} />` with better performance and potential of writing simpler code style in your applications.
-Meanwhile, we deprecated the old usage in browser console, we will remove it in antd 6.0.
+:::info{title="업그레이드 팁"}
+5.11.0 버전 이후, 더 향상된 성능과 간소화된 코드 스타일을 만들 수 있는 `<Select options={[... ]}>` 을 제공합니다. 동시에 이전 버전은 더 이상 브라우저 콘솔에서 제공되지 않을 것이며, antd 6.0 버전에서 제거될 예정입니다.
+
 :::
 
 ```jsx
@@ -35,41 +35,43 @@ return (
 );
 ```
 
-## Examples
+## 사용 예시
 
 <!-- prettier-ignore -->
-<code src="./demo/basic.tsx">Basic Usage</code>
-<code src="./demo/search.tsx">Select with search field</code>
-<code src="./demo/search-filter-option.tsx">Custom Search</code>
-<code src="./demo/multiple.tsx">multiple selection</code>
-<code src="./demo/size.tsx">Sizes</code>
-<code src="./demo/option-render.tsx">Custom dropdown options</code>
-<code src="./demo/search-sort.tsx">Search with sort</code>
+<code src="./demo/basic.tsx">기본 사용법</code>
+<code src="./demo/search.tsx">검색 필드가 포함된 Select</code>
+<code src="./demo/search-filter-option.tsx">사용자 정의 검색</code>
+<code src="./demo/multiple.tsx">다중 선택</code>
+<code src="./demo/size.tsx">크기</code>
+<code src="./demo/option-render.tsx">사용자 정의 드롭다운 항목</code>
+<code src="./demo/search-sort.tsx">정렬 검색</code>
 <code src="./demo/tags.tsx">Tags</code>
-<code src="./demo/optgroup.tsx">Option Group</code>
-<code src="./demo/coordinate.tsx">coordinate</code>
-<code src="./demo/search-box.tsx">Search Box</code>
-<code src="./demo/label-in-value.tsx">Get value of selected item</code>
-<code src="./demo/automatic-tokenization.tsx">Automatic tokenization</code>
-<code src="./demo/select-users.tsx">Search and Select Users</code>
-<code src="./demo/suffix.tsx" debug>Suffix</code>
-<code src="./demo/custom-dropdown-menu.tsx">Custom dropdown</code>
-<code src="./demo/hide-selected.tsx">Hide Already Selected</code>
-<code src="./demo/variant.tsx" version="5.13.0">Variants</code>
-<code src="./demo/filled-debug.tsx" debug>Filled debug</code>
-<code src="./demo/custom-tag-render.tsx">Custom Tag Render</code>
-<code src="./demo/custom-label-render.tsx">Custom Selected Label Render</code>
-<code src="./demo/responsive.tsx">Responsive maxTagCount</code>
-<code src="./demo/big-data.tsx">Big Data</code>
-<code src="./demo/status.tsx">Status</code>
-<code src="./demo/placement.tsx">Placement</code>
-<code src="./demo/placement-debug.tsx" debug>Dynamic Height</code>
-<code src="./demo/debug.tsx" debug>4.0 Debug</code>
-<code src="./demo/render-panel.tsx" debug>\_InternalPanelDoNotUseOrYouWillBeFired</code>
-<code src="./demo/option-label-center.tsx" debug>Options label Centered</code>
+<code src="./demo/optgroup.tsx">그룹 항목</code>
+<code src="./demo/coordinate.tsx">조정</code>
+<code src="./demo/search-box.tsx">검색 상자</code>
+<code src="./demo/label-in-value.tsx">선택된 항목의 값 가져오기
+</code>
+<code src="./demo/automatic-tokenization.tsx">자동 토큰화</code>
+<code src="./demo/select-users.tsx">검색 및 유저 선택</code>
+<code src="./demo/suffix.tsx" debug>접미사</code>
+<code src="./demo/custom-dropdown-menu.tsx">사용자 정의 드롭다운</code>
+<code src="./demo/hide-selected.tsx">선택 항목 숨기기</code>
+<code src="./demo/variant.tsx" version="5.13.0">다형성</code>
+<code src="./demo/filled-debug.tsx" debug>디버그 항목 표시</code>
+<code src="./demo/custom-tag-render.tsx">사용자 정의 태그 렌더링</code>
+<code src="./demo/custom-label-render.tsx">사용자 정의 선택된 레이블 렌더링</code>
+<code src="./demo/responsive.tsx">반응형 Tags 갯수</code>
+<code src="./demo/big-data.tsx">빅데이터</code>
+<code src="./demo/status.tsx">상태</code>
+<code src="./demo/placement.tsx">배치</code>
+<code src="./demo/placement-debug.tsx" debug>동적 높이 설정</code>
+<code src="./demo/debug.tsx" debug>4.0 디버그</code>
+<code src="./demo/render-panel.tsx" debug>내부 패널(사용하지 마십시오, 그렇지 않으면 해고 될 수 있습니다)
+</code>
+<code src="./demo/option-label-center.tsx" debug>옵션 레이블 중앙 정렬</code>
 <code src="./demo/debug-flip-shift.tsx" iframe="200" debug>Flip + Shift</code>
-<code src="./demo/component-token.tsx" debug>Component Token</code>
-<code src="./demo/maxCount.tsx" version="5.13.0">Max Count</code>
+<code src="./demo/component-token.tsx" debug>컴포넌트 Token</code>
+<code src="./demo/maxCount.tsx" version="5.13.0">최대 갯수</code>
 
 ## API
 
