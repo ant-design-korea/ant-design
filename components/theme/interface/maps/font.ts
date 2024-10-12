@@ -64,8 +64,7 @@ export interface FontMapToken {
 
   // LineHeight
   /**
-   * @desc 文本行高
-   * @descEN Line height of text.
+   * @desc 텍스트의 라인 높이
    */
   lineHeight: number;
   /**

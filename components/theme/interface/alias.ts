@@ -54,10 +54,8 @@ export interface AliasToken extends MapToken {
 
   // Border
   /**
-   * @nameZH 背景边框颜色
-   * @nameEN Background border color
-   * @desc 控制元素背景边框的颜色。
-   * @descEN Control the color of background border of element.
+   * @nameKR 배경 테두리 색상
+   * @desc 요소의 배경 테두리 색상을 제어합니다.
    */
   colorBorderBg: string;
   /**
@@ -70,10 +68,8 @@ export interface AliasToken extends MapToken {
 
   // Text
   /**
-   * @nameZH 占位文本颜色
-   * @nameEN Placeholder Text Color
-   * @desc 控制占位文本的颜色。
-   * @descEN Control the color of placeholder text.
+   * @nameKR Placeholder 텍스트 색상
+   * @desc Placeholder의 텍스트 색상을 제어합니다.
    */
   colorTextPlaceholder: string;
   /**
@@ -247,10 +243,8 @@ export interface AliasToken extends MapToken {
    */
   paddingXXS: number;
   /**
-   * @nameZH 特小内间距
-   * @nameEN Extra small padding
-   * @desc 控制元素的特小内间距。
-   * @descEN Control the extra small padding of the element.
+   * @nameKR 특히 작은 패딩
+   * @desc 구성 요소의 특히 작은 패딩을 제어합니다.
    */
   paddingXS: number;
   /**
@@ -342,10 +336,9 @@ export interface AliasToken extends MapToken {
    */
   marginXXS: number;
   /**
-   * @nameZH 外边距 XS
+   * @nameKR 마진 XS
    * @nameEN Margin XS
-   * @desc 控制元素外边距，小尺寸。
-   * @descEN Control the margin of an element, with a small size.
+   * @desc 요소의 외부 여백을 제어하며, 작은 사이즈입니다.
    */
   marginXS: number;
   /**

@@ -17,34 +17,26 @@ export interface SeedToken extends PresetColorType {
   colorPrimary: string;
 
   /**
-   * @nameZH 成功色
-   * @nameEN Success Color
-   * @desc 用于表示操作成功的 Token 序列，如 Result、Progress 等组件会使用该组梯度变量。
-   * @descEN Used to represent the token sequence of operation success, such as Result, Progress and other components will use these map tokens.
+   * @nameKR 성공 컬러
+   * @desc 작업 성공을 나타내는 토큰 시퀀스에 사용됩니다. Result, Progress 등과 같은 컴포넌트에서 이 그라데이션 변수를 사용합니다.
    */
   colorSuccess: string;
 
   /**
-   * @nameZH 警戒色
-   * @nameEN Warning Color
-   * @desc 用于表示操作警告的 Token 序列，如 Notification、 Alert等警告类组件或 Input 输入类等组件会使用该组梯度变量。
-   * @descEN Used to represent the warning map token, such as Notification, Alert, etc. Alert or Control component(like Input) will use these map tokens.
+   * @nameKR 경고 색상
+   * @desc 작업 경고를 나타내는 토큰 시퀀스입니다. Notification, Alert 등과 같은 경고 클래스 컴포넌트나 Input과 같은 입력 클래스 컴포넌트에서 이 그라데이션 변수를 사용합니다.
    */
   colorWarning: string;
 
   /**
-   * @nameZH 错误色
-   * @nameEN Error Color
-   * @desc 用于表示操作失败的 Token 序列，如失败按钮、错误状态提示（Result）组件等。
-   * @descEN Used to represent the visual elements of the operation failure, such as the error Button, error Result component, etc.
+   * @nameKR 에러 컬러
+   * @desc 오류 버튼, 오류 결과 구성 요소 등 작업 실패의 시각적 요소를 나타내는 데 사용됩니다.
    */
   colorError: string;
 
   /**
-   * @nameZH 信息色
-   * @nameEN Info Color
-   * @desc 用于表示操作信息的 Token 序列，如 Alert 、Tag、 Progress 等组件都有用到该组梯度变量。
-   * @descEN Used to represent the operation information of the Token sequence, such as Alert, Tag, Progress, and other components use these map tokens.
+   * @nameKR 정보 색상
+   * @desc Alert, Tag, Progress 등과 같은 컴포넌트에서 사용하는 토큰 시퀀스의 작업 정보를 나타내는 데 사용됩니다. 해당 그룹의 그라데이션 변수가 사용됩니다.
    */
   colorInfo: string;
 
@@ -75,10 +67,8 @@ export interface SeedToken extends PresetColorType {
   //  ----------   Font   ---------- //
 
   /**
-   * @nameZH 字体
-   * @nameEN Font family for default text
-   * @desc Ant Design 的字体家族中优先使用系统默认的界面字体，同时提供了一套利于屏显的备用字体库，来维护在不同平台以及浏览器的显示下，字体始终保持良好的易读性和可读性，体现了友好、稳定和专业的特性。
-   * @descEN The font family of Ant Design prioritizes the default interface font of the system, and provides a set of alternative font libraries that are suitable for screen display to maintain the readability and readability of the font under different platforms and browsers, reflecting the friendly, stable and professional characteristics.
+   * @nameKR 기본 텍스트의 글꼴
+   * @desc Ant Design의 글꼴 패밀리는 시스템의 기본 인터페이스 글꼴을 우선적으로 사용하며, 다양한 플랫폼과 브라우저에서 글꼴의 가독성을 유지하기 위해 화면 표시에 적합한 대체 글꼴 라이브러리를 제공합니다. 이는 친숙하고 안정적이며 전문적인 특성을 반영합니다.
    */
   fontFamily: string;
 
@@ -91,10 +81,8 @@ export interface SeedToken extends PresetColorType {
   fontFamilyCode: string;
 
   /**
-   * @nameZH 默认字号
-   * @nameEN Default Font Size
-   * @desc 设计系统中使用最广泛的字体大小，文本梯度也将基于该字号进行派生。
-   * @descEN The most widely used font size in the design system, from which the text gradient will be derived.
+   * @nameKR 기본 폰트 크기
+   * @desc 디자인 시스템에서 가장 널리 사용되는 글꼴 크기로, 텍스트 그라데이션도 이 글꼴 크기를 기반으로 파생됩니다.
    * @default 14
    */
   fontSize: number;
@@ -102,10 +90,8 @@ export interface SeedToken extends PresetColorType {
   //  ----------   Line   ---------- //
 
   /**
-   * @nameZH 基础线宽
-   * @nameEN Base Line Width
-   * @desc 用于控制组件边框、分割线等的宽度
-   * @descEN Border width of base components
+   * @nameKR 기본 선 너비
+   * @desc 컴포넌트의 테두리, 구분선 등의 두너를 제어하는 데 사용됩니다.
    */
   lineWidth: number;
 
@@ -231,8 +217,7 @@ export interface SeedToken extends PresetColorType {
   motionEaseInOut: string;
 
   /**
-   * @desc 预设动效曲率
-   * @descEN Preset motion curve.
+   * @desc 기본 동작 곡선입니다.
    */
   motionEaseOutBack: string;
 

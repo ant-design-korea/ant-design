@@ -12,10 +12,8 @@ export interface ColorNeutralMapToken {
   // ----------   Text   ---------- //
 
   /**
-   * @nameZH 一级文本色
-   * @nameEN Text Color
-   * @desc 最深的文本色。为了符合W3C标准，默认的文本颜色使用了该色，同时这个颜色也是最深的中性色。
-   * @descEN Default text color which comply with W3C standards, and this color is also the darkest neutral color.
+   * @nameKR 텍스트 색상
+   * @desc 가장 깊은 텍스트 색상입니다. W3C 표준에 맞춰 기본 텍스트 색상으로 사용되며, 이 색상은 가장 어두운 중성 색상이기도 합니다.
    */
   colorText: string;
 
@@ -100,9 +98,8 @@ export interface ColorNeutralMapToken {
   colorBgLayout: string;
 
   /**
-   * @nameZH 组件容器背景色
-   * @desc 组件的容器背景色，例如：默认按钮、输入框等。务必不要将其与 `colorBgElevated` 混淆。
-   * @descEN Container background color, e.g: default button, input box, etc. Be sure not to confuse this with `colorBgElevated`.
+   * @nameKR 컨테이너 배경 색강
+   * @desc  컨테이너 배경 색상, 예: 기본 버튼, 입력 상자, 등. `colorBgElevated`와 혼동을 주의하세요.
    */
   colorBgContainer: string;
 
@@ -527,10 +524,8 @@ interface ColorErrorMapToken {
   colorErrorBorderHover: string; // 4
 
   /**
-   * @nameZH 错误色的深色悬浮态
-   * @nameEN Error hover color
-   * @desc 错误色的深色悬浮态
-   * @descEN The hover state of the error color.
+   * @nameKR 오류의 Hover 색상
+   * @desc 오류 색상의 Hover 상태입니다.
    */
   colorErrorHover: string; // 5
 
