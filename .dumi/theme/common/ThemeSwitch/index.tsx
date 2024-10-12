@@ -6,7 +6,7 @@ import { CompactTheme, DarkTheme } from 'antd-token-previewer/es/icons';
 import { FormattedMessage, useLocation } from 'dumi';
 
 import useThemeAnimation from '../../../hooks/useThemeAnimation';
-import { getLocalizedPathname, isZhCN } from '../../utils';
+import { getLocalizedPathname } from '../../utils';
 import Link from '../Link';
 import ThemeIcon from './ThemeIcon';
 
@@ -19,7 +19,7 @@ export interface ThemeSwitchProps {
 
 const ThemeSwitch: React.FC<ThemeSwitchProps> = (props) => {
   const { value = ['light'], onChange } = props;
-  const { pathname, search } = useLocation();
+  const { search } = useLocation();
 
   // const isMotionOff = value.includes('motion-off');
   const isHappyWork = value.includes('happy-work');
@@ -34,10 +34,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = (props) => {
       aria-label="Theme Switcher"
       badge={{ dot: true }}
     >
-      <Link
-        to={getLocalizedPathname('/theme-editor', isZhCN(pathname), search)}
-        style={{ display: 'block' }}
-      >
+      <Link to={getLocalizedPathname('/theme-editor', search)} style={{ display: 'block' }}>
         <FloatButton
           icon={<BgColorsOutlined />}
           tooltip={<FormattedMessage id="app.footer.theme" />}
