@@ -783,7 +783,7 @@ exports[`renders components/calendar/demo/basic.tsx extend context correctly 1`]
           />
         </span>
         <span>
-          Month
+          월
         </span>
       </label>
       <label
@@ -802,7 +802,7 @@ exports[`renders components/calendar/demo/basic.tsx extend context correctly 1`]
           />
         </span>
         <span>
-          Year
+          년
         </span>
       </label>
     </div>
@@ -2368,7 +2368,7 @@ exports[`renders components/calendar/demo/card.tsx extend context correctly 1`] 
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -2387,7 +2387,7 @@ exports[`renders components/calendar/demo/card.tsx extend context correctly 1`] 
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -3952,7 +3952,7 @@ Array [
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -3971,7 +3971,7 @@ Array [
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -5530,7 +5530,7 @@ Array [
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -5549,7 +5549,7 @@ Array [
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>
@@ -8748,7 +8748,7 @@ exports[`renders components/calendar/demo/notice-calendar.tsx extend context cor
           />
         </span>
         <span>
-          Month
+          월
         </span>
       </label>
       <label
@@ -8767,7 +8767,7 @@ exports[`renders components/calendar/demo/notice-calendar.tsx extend context cor
           />
         </span>
         <span>
-          Year
+          년
         </span>
       </label>
     </div>
@@ -10743,7 +10743,7 @@ Array [
             />
           </span>
           <span>
-            Month
+            월
           </span>
         </label>
         <label
@@ -10762,7 +10762,7 @@ Array [
             />
           </span>
           <span>
-            Year
+            년
           </span>
         </label>
       </div>

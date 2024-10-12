@@ -102,11 +102,11 @@ const locales = {
     buttonText: 'Go to discuss',
   },
   ko: {
-    bigTitle: 'Articles are included in the column:',
-    zhiHu: 'A UI design system',
-    yuQue: 'Ant Design official column',
-    junjin: 'Ant Design Open Source Column',
-    buttonText: 'Go to discuss',
+    bigTitle: '아래 컬럼에 게시된 기사:',
+    zhiHu: 'UI 디자인 시스템',
+    yuQue: 'Ant Design 공식 컬럼',
+    junjin: 'Ant Design 오픈 소스 컬럼',
+    buttonText: '토론에 참여하러 가기',
   },
 };
 

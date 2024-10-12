@@ -30,9 +30,9 @@ const locales = {
       'An enterprise-class UI design language and React UI library with a set of high-quality React components, one of best React UI library for enterprises',
   },
   ko: {
-    title: "Ant Design - The world's second most popular React UI framework",
+    title: 'Ant Design - 세계에서 두 번째로 인기 있는 React UI 프레임워크',
     description:
-      'An enterprise-class UI design language and React UI library with a set of high-quality React components, one of best React UI library for enterprises',
+      '고품질의 React 컴포넌트를 갖춘 기업급 UI 디자인 언어 및 React UI 라이브러리, 기업을 위한 최고의 React UI 라이브러리 중 하나',
   },
 };
 

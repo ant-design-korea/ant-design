@@ -61,20 +61,20 @@ const locales = {
     kitchenDesc: 'Sketch Tool set for designers',
   },
   ko: {
-    values: 'Design values',
-    valuesDesc: 'Certainty, Meaningfulness, Growth, Naturalness',
-    guide: 'Design guide',
-    guideDesc: 'Global style and design pattern',
-    lib: 'Components Libraries',
+    values: '디자인 가치',
+    valuesDesc: '확신, 의미, 성장, 자연',
+    guide: '디자인 가이드',
+    guideDesc: '전역 스타일 및 디자인 패턴',
+    lib: '컴포넌트 라이브러리',
     libDesc: 'Ant Design of React / Angular / Vue',
 
     // Secondary
     mobile: 'Ant Design Mobile',
-    mobileDesc: 'Mobile UI component library',
+    mobileDesc: '모바일 UI 컴포넌트 라이브러리',
     antv: 'AntV',
-    antvDesc: 'New generation of data visualization solutions',
+    antvDesc: '데이터 시각화 솔루션의 새로운 세대',
     kitchen: 'Kitchen',
-    kitchenDesc: 'Sketch Tool set for designers',
+    kitchenDesc: '디자이너를 위한 Sketch 도구 세트',
   },
 };
 

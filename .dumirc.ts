@@ -153,8 +153,49 @@ export default defineConfig({
           location.pathname = getLocalizedPathname();
         }
       }
-
       // 首页无视链接里面的语言设置 https://github.com/ant-design/ant-design/issues/4552
+    (() => {
+     const isLocalStorageNameSupported = () => {
+     try {
+       return 'localStorage' in window && window.localStorage !== null;
+     } catch (e) {
+       return false;
+     }
+    };
+
+    const isZhCN = (pathname) => {
+     return pathname.includes('-cn');
+   };
+
+    const isKoKR = (pathname) => {
+      return pathname.includes('-kr');
+    };
+
+    const getLocalizedPathname = (pathname, isZhCN, isKoKR) => {
+     if (isZhCN) {
+        return pathname.replace('/en', '/zh-cn');
+     } else if (isKoKR) {
+       return pathname.replace('/en', '/ko-kr');
+     }
+     return pathname.replace('/zh-cn', '/en');
+    };
+
+    if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn' || pathname === '/index-kr')) {
+     const lang = 
+        (window.localStorage && localStorage.getItem('locale')) || 
+        ((navigator.language || navigator.browserLanguage).toLowerCase());
+
+      if (lang === 'zh-cn') {
+       location.pathname = getLocalizedPathname(pathname, true, false);
+      } else if (lang === 'ko-kr') {
+       location.pathname = getLocalizedPathname(pathname, false, true);
+      } else {
+       location.pathname = getLocalizedPathname(pathname, false, false);
+      }
+    }
+
+    document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : (isKoKR(pathname) ? 'ko-kr' : 'en-us');
+  })();
       if (isLocalStorageNameSupported() && pathname !== "/") {
         const lang =
           (window.localStorage && localStorage.getItem('locale')) ||

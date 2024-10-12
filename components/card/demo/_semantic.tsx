@@ -24,12 +24,12 @@ const locales = {
     cover: 'set `cover` of card',
   },
   ko: {
-    header: 'set `header` of card',
-    body: 'set `body` of card',
-    extra: 'set `extra` of card',
-    title: 'set `title` of card',
-    actions: 'set `actions` of card',
-    cover: 'set `cover` of card',
+    header: '카드의 `header`를 설정합니다',
+    body: '카드의 `body`를 설정합니다',
+    extra: '카드의 `extra`를 설정합니다',
+    title: '카드의 `title`를 설정합니다',
+    actions: '카드의 `actions`를 설정합니다',
+    cover: '카드의 `cover`를 설정합니다',
   },
 };
 

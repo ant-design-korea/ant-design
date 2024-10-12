@@ -11,7 +11,7 @@ const locales = {
     item: 'Wrapped item element',
   },
   ko: {
-    item: 'Wrapped item element',
+    item: '랩핑된 아이템 요소',
   },
 };
 

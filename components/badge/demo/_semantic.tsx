@@ -13,8 +13,8 @@ const locales = {
     indicator: 'Indicator element',
   },
   ko: {
-    root: 'Root element',
-    indicator: 'Indicator element',
+    root: '루트 요소',
+    indicator: '지시 요소',
   },
 };
 

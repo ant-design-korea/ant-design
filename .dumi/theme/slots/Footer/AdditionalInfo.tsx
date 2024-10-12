@@ -17,9 +17,8 @@ const locales = {
     whereDocUrl: '/docs/react/customize-theme#compatible-adjustment',
   },
   ko: {
-    whereNotSupport:
-      'Your browser not support modern CSS Selector. Please use modern browser to view (e.g. Chrome, Firefox, etc). If you want to compatible style with legacy browser, please refer to the configuration document:',
-    whereDocTitle: 'Compatible adjustment (Please use modern browser to visit)',
+    whereNotSupport: `당신의 브라우저는 현대 CSS 선택자를 지원하지 않습니다. 현대 브라우저를 사용하여 보세요 (예: Chrome, Firefox 등). 레거시 브라우저와의 스타일 호환성이 필요한 경우 설정 문서를 참조하세요:`,
+    whereDocTitle: '호환성 조정 (현대 브라우저를 사용하여 방문하십시오)',
     whereDocUrl: '/docs/react/customize-theme#compatible-adjustment',
   },
 };

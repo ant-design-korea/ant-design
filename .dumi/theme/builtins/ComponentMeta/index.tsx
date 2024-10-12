@@ -26,13 +26,13 @@ const locales = {
     version: 'Version',
   },
   ko: {
-    import: 'Import',
-    copy: 'Copy',
-    copied: 'Copied',
-    source: 'Source',
-    docs: 'Docs',
-    edit: 'Edit this page',
-    version: 'Version',
+    import: '가져오기',
+    copy: '복사',
+    copied: '복사됨',
+    source: '소스',
+    docs: '문서',
+    edit: '이 페이지 수정',
+    version: '버전',
   },
 };
 

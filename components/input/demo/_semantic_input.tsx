@@ -18,10 +18,10 @@ const locales = {
     count: 'count element',
   },
   ko: {
-    input: 'input element',
-    prefix: 'prefix element',
-    suffix: 'suffix element',
-    count: 'count element',
+    input: '입력 요소',
+    prefix: '접두사 요소',
+    suffix: '접미사 요소',
+    count: '카운트 요소',
   },
 };
 

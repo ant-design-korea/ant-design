@@ -24,8 +24,8 @@ const locales = {
     disableCssVar: 'Disable CSS Var',
   },
   ko: {
-    enableCssVar: 'Enable CSS Var',
-    disableCssVar: 'Disable CSS Var',
+    enableCssVar: 'CSS 변수 사용',
+    disableCssVar: 'CSS 변수 사용 안 함',
   },
 };
 
