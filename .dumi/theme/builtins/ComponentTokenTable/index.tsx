@@ -6,8 +6,8 @@ import { getDesignToken } from 'antd-token-previewer';
 import tokenMeta from 'antd/es/version/token-meta.json';
 import tokenData from 'antd/es/version/token.json';
 
-import useLocale from '../../../hooks/useLocale';
 import { useColumns } from '../TokenTable';
+import type { TokenData } from '../TokenTable';
 
 const compare = (token1: string, token2: string) => {
   const hasColor1 = token1.toLowerCase().includes('color');
@@ -38,6 +38,19 @@ const locales = {
     customizeComponentTokenLink: '/docs/react/customize-theme-cn#修改组件变量',
   },
   en: {
+    token: 'Token Name',
+    description: 'Description',
+    type: 'Type',
+    value: 'Default Value',
+    componentToken: 'Component Token',
+    globalToken: 'Global Token',
+    componentComment: 'here is your component tokens',
+    globalComment: 'here is your global tokens',
+    help: 'How to use?',
+    customizeTokenLink: '/docs/react/customize-theme#customize-design-token',
+    customizeComponentTokenLink: 'docs/react/customize-theme#customize-component-token',
+  },
+  ko: {
     token: 'Token Name',
     description: 'Description',
     type: 'Type',
@@ -94,7 +107,6 @@ interface SubTokenTableProps {
 
 const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
   const { defaultOpen, tokens, title, helpText, helpLink, component, comment } = props;
-  const [, lang] = useLocale(locales);
   const token = useTheme();
   const columns = useColumns();
 
@@ -108,18 +120,18 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
 
   const data = tokens
     .sort(component ? undefined : compare)
-    .map((name) => {
+    .map<TokenData>((name) => {
       const meta = component
         ? tokenMeta.components[component].find((item) => item.token === name)
         : tokenMeta.global[name];
 
       if (!meta) {
-        return null;
+        return null as unknown as TokenData;
       }
 
       return {
         name,
-        desc: lang === 'cn' ? meta.desc : meta.descEn,
+        desc: meta.desc,
         type: meta.type,
         value: component ? tokenData[component].component[name] : defaultToken[name],
       };
@@ -177,7 +189,7 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
       </div>
       {open && (
         <ConfigProvider theme={{ token: { borderRadius: 0 } }}>
-          <Table
+          <Table<TokenData>
             size="middle"
             columns={columns}
             bordered
@@ -197,7 +209,7 @@ export interface ComponentTokenTableProps {
 }
 
 const ComponentTokenTable: React.FC<ComponentTokenTableProps> = ({ component }) => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const [mergedGlobalTokens] = useMemo(() => {
     const globalTokenSet = new Set<string>();
 

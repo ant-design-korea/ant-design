@@ -25,17 +25,9 @@ function getTokenList(list?: DeclarationReflection[], source?: string) {
         item.comment?.blockTags
           ?.find((tag) => tag.tag === '@desc')
           ?.content.reduce((result, str) => result.concat(str.text), '') || '',
-      descEn:
-        item.comment?.blockTags
-          ?.find((tag) => tag.tag === '@descEN')
-          ?.content.reduce((result, str) => result.concat(str.text), '') || '',
       name:
         item.comment?.blockTags
-          ?.find((tag) => tag.tag === '@nameZH')
-          ?.content.reduce((result, str) => result.concat(str.text), '') || '',
-      nameEn:
-        item.comment?.blockTags
-          ?.find((tag) => tag.tag === '@nameEN')
+          ?.find((tag) => tag.tag === '@nameKR')
           ?.content.reduce((result, str) => result.concat(str.text), '') || '',
     }));
 }
@@ -63,7 +55,6 @@ const main = async () => {
       components: {},
     };
 
-    // eslint-disable-next-line no-restricted-syntax
     project?.children?.forEach((file: any) => {
       // Global Token
       if (file.name === 'theme/interface') {
@@ -128,7 +119,7 @@ const main = async () => {
     }, {});
 
     fs.writeJsonSync(output, finalMeta, 'utf8');
-    // eslint-disable-next-line no-console
+
     console.log(`✅  Token Meta has been written to ${output}`);
   }
 };

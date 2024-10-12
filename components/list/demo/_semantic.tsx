@@ -1,10 +1,8 @@
 import React from 'react';
+import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
+import { Avatar, List, Space } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
-import useLocale from '../../../.dumi/hooks/useLocale';
-
-import { Avatar, List, Space } from 'antd';
-import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
 
 const locales = {
   cn: {
@@ -12,6 +10,10 @@ const locales = {
     actions: '设置列表操作组',
   },
   en: {
+    extra: 'set `extra` of List.Item',
+    actions: 'set `actions` of List.Item',
+  },
+  ko: {
     extra: 'set `extra` of List.Item',
     actions: 'set `actions` of List.Item',
   },
@@ -74,7 +76,7 @@ const BlockList: React.FC<React.PropsWithChildren> = (props) => {
 };
 
 const App: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <SemanticPreview
       height={300}

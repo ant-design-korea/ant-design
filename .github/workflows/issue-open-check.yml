@@ -21,25 +21,25 @@ jobs:
           require: 'write'
           check-bot: true
 
-      - name: add unconfirmed label
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: 'add-labels'
-          issue-number: ${{ github.event.issue.number }}
-          labels: 'unconfirmed'
-
-      - name: check invalid
-        if: (contains(github.event.issue.body, 'ant-design-issue-helper') == false) && (steps.checkUser.outputs.require-result == 'false')
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: 'create-comment,add-labels,close-issue'
-          issue-number: ${{ github.event.issue.number }}
-          labels: 'Invalid'
-          body: |
-            Hello @${{ github.event.issue.user.login }}, your issue has been closed because it does not conform to our issue requirements. Please use the [Issue Helper](http://new-issue.ant.design) to create an issue, thank you!
-
-            你好 @${{ github.event.issue.user.login }}，为了能够进行高效沟通，我们对 issue 有一定的格式要求，你的 issue 因为不符合要求而被自动关闭。你可以通过 [issue 助手](http://new-issue.ant.design) 来创建 issue 以方便我们定位错误。谢谢配合！
-
+#      - name: add unconfirmed label
+#        uses: actions-cool/issues-helper@v3
+#        with:
+#          actions: 'add-labels'
+#          issue-number: ${{ github.event.issue.number }}
+#          labels: 'unconfirmed'
+#
+#      - name: check invalid
+#        if: (contains(github.event.issue.body, 'ant-design-issue-helper') == false) && (steps.checkUser.outputs.require-result == 'false')
+#        uses: actions-cool/issues-helper@v3
+#        with:
+#          actions: 'create-comment,add-labels,close-issue'
+#          issue-number: ${{ github.event.issue.number }}
+#          labels: 'Invalid'
+#          body: |
+#            Hello @${{ github.event.issue.user.login }}, your issue has been closed because it does not conform to our issue requirements. Please use the [Issue Helper](http://new-issue.ant.design) to create an issue, thank you!
+#
+#            你好 @${{ github.event.issue.user.login }}，为了能够进行高效沟通，我们对 issue 有一定的格式要求，你的 issue 因为不符合要求而被自动关闭。你可以通过 [issue 助手](http://new-issue.ant.design) 来创建 issue 以方便我们定位错误。谢谢配合！
+#
       - name: check website
         uses: actions-cool/issues-helper@v3
         id: checkid
@@ -93,16 +93,3 @@ jobs:
           body: |
             Hello @${{ github.event.issue.user.login }}, v4 only support IE11 and above.
 
-      - name: send to dingtalk
-        uses: visiky/dingtalk-release-notify@main
-        with:
-          DING_TALK_TOKEN: |
-            ${{ secrets.DINGDING_BOT_TOKEN }}
-            ${{ secrets.DINGDING_BOT_COLLABORATOR_TOKEN }}
-          notify_title: '🔥 @${{ github.event.issue.user.login }} 创建了 issue：${{ github.event.issue.title }} ${{ github.event.issue.html_url }}'
-          notify_body: |
-            ### 🔥 [@${{ github.event.issue.user.login }}](https://github.com/${{ github.event.issue.user.login }}) 创建了 issue：
-            [${{ github.event.issue.title }}](${{ github.event.issue.html_url }})
-            <hr />
-          notify_footer: '> 🫵🏻 欢迎前往 GitHub 进行讨论，社区需要你的帮助！'
-          at_all: false # whether to ding everybody

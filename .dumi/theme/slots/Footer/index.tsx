@@ -20,7 +20,6 @@ import { FormattedMessage, Link } from 'dumi';
 import RcFooter from 'rc-footer';
 import type { FooterColumn } from 'rc-footer/lib/column';
 
-import useLocale from '../../../hooks/useLocale';
 import useLocation from '../../../hooks/useLocation';
 import SiteContext from '../SiteContext';
 import AdditionalInfo from './AdditionalInfo';
@@ -30,6 +29,9 @@ const locales = {
     owner: '蚂蚁集团和 Ant Design 开源社区',
   },
   en: {
+    owner: 'Ant Group and Ant Design Community',
+  },
+  ko: {
     owner: 'Ant Group and Ant Design Community',
   },
 };
@@ -90,20 +92,18 @@ const useStyle = () => {
 
 const Footer: React.FC = () => {
   const location = useLocation();
-  const [locale, lang] = useLocale(locales);
+  const locale = locales.ko;
   const { styles } = useStyle();
 
   const { getLink } = location;
 
   const getColumns = React.useMemo<FooterColumn[]>(() => {
-    const isZhCN = lang === 'cn';
-
     const col1 = {
       title: <FormattedMessage id="app.footer.resources" />,
       items: [
         {
           title: 'Ant Design Charts',
-          url: isZhCN ? 'https://ant-design-charts.antgroup.com' : 'https://charts.ant.design',
+          url: 'https://charts.ant.design',
           openExternal: true,
         },
         {
@@ -118,12 +118,12 @@ const Footer: React.FC = () => {
         },
         {
           title: 'Ant Design Mobile',
-          url: isZhCN ? 'https://ant-design-mobile.antgroup.com/zh' : 'https://mobile.ant.design',
+          url: 'https://mobile.ant.design',
           openExternal: true,
         },
         {
           title: 'Ant Design Mini',
-          url: isZhCN ? 'https://ant-design-mini.antgroup.com/' : 'https://mini.ant.design',
+          url: 'https://mini.ant.design',
           openExternal: true,
         },
         {
@@ -238,17 +238,16 @@ const Footer: React.FC = () => {
       ],
     };
 
-    if (isZhCN) {
-      col2.items.push({
-        icon: <UsergroupAddOutlined />,
-        title: <FormattedMessage id="app.footer.work_with_us" />,
-        url: getLink('/docs/resources', {
-          cn: '加入我们',
-          en: 'JoinUs',
-        }),
-        LinkComponent: Link,
-      } as unknown as (typeof col2)['items'][number]);
-    }
+    col2.items.push({
+      icon: <UsergroupAddOutlined />,
+      title: <FormattedMessage id="app.footer.work_with_us" />,
+      url: getLink('/docs/resources', {
+        // cn: '加入我们',
+        // en: 'JoinUs',
+        ko: 'JoinUs',
+      }),
+      LinkComponent: Link,
+    } as unknown as (typeof col2)['items'][number]);
 
     const col3 = {
       title: <FormattedMessage id="app.footer.help" />,
@@ -400,7 +399,7 @@ const Footer: React.FC = () => {
       ],
     };
     return [col1, col2, col3, col4];
-  }, [lang, location.search]);
+  }, [location.search]);
 
   return (
     <>

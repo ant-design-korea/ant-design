@@ -6,8 +6,6 @@ import { createStyles, css } from 'antd-style';
 import kebabCase from 'lodash/kebabCase';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-import useLocale from '../../../hooks/useLocale';
-
 const locales = {
   cn: {
     import: '使用',
@@ -19,6 +17,15 @@ const locales = {
     version: '版本',
   },
   en: {
+    import: 'Import',
+    copy: 'Copy',
+    copied: 'Copied',
+    source: 'Source',
+    docs: 'Docs',
+    edit: 'Edit this page',
+    version: 'Version',
+  },
+  ko: {
     import: 'Import',
     copy: 'Copy',
     copied: 'Copied',
@@ -82,8 +89,7 @@ export interface ComponentMetaProps {
 const ComponentMeta: React.FC<ComponentMetaProps> = (props) => {
   const { component, source, filename, version } = props;
   const { token } = theme.useToken();
-  const [locale, lang] = useLocale(locales);
-  const isZhCN = lang === 'cn';
+  const locale = locales.ko;
   const { styles } = useStyle();
 
   // ========================= Copy =========================
@@ -192,9 +198,7 @@ const ComponentMeta: React.FC<ComponentMetaProps> = (props) => {
           isVersionNumber(version) && {
             label: locale.version,
             children: (
-              <Typography.Text className={styles.code}>
-                {isZhCN ? `自 ${version} 后支持` : `supported since ${version}`}
-              </Typography.Text>
+              <Typography.Text className={styles.code}>{version} 이후 지원됨</Typography.Text>
             ),
           },
         ].filter(Boolean) as GetProp<typeof Descriptions, 'items'>

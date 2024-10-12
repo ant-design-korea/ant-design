@@ -14,7 +14,9 @@
 
 [Changelog](./CHANGELOG.ko-KR.md) [원본 Changelog](https://github.com/ant-design/ant-design/blob/master/CHANGELOG.en-US.md) · [Report Bug][github-issues-url] · [Request Feature][github-issues-url] · Korean · [원본](https://github.com/ant-design-korea/ant-design.git)
 
-![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+## ❤️ 후원자 [![](https://opencollective.com/ant-design/tiers/sponsors/badge.svg?label=Sponsors&color=brightgreen)](https://opencollective.com/ant-design#support) [![](https://opencollective.com/ant-design/tiers/backers/badge.svg?label=Backers&color=brightgreen)](https://opencollective.com/ant-design#support)
+
+[![](https://opencollective.com/ant-design/tiers/sponsors.svg?avatarHeight=72)](https://opencollective.com/ant-design/contribute/sponsors-218/checkout) [![](https://opencollective.com/ant-design/tiers/backers.svg?avatarHeight=72)](https://opencollective.com/ant-design/contribute/backers-217/checkout)
 
 [npm-image]: http://img.shields.io/npm/v/antd.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/antd
@@ -119,11 +121,7 @@ export default () => (
 
 ## ⌨️ 개발
 
-GitHub용 무료 온라인 개발 환경인 Gitpod를 사용하세요.
-
-[![Gitpod 열기](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ant-design/ant-design)
-
-혹은 opensumi.run 을 사용하세요, 무료 온라인 순수 프런트엔드 개발 환경입니다.
+[opensumi.run](https://opensumi.run)을 사용해보세요, 무료 온라인 프런트엔드 개발 환경입니다.
 
 [![opensumi.run](https://custom-icon-badges.demolab.com/badge/opensumi-run-blue.svg?logo=opensumi)](https://opensumi.run/ide/ant-design/ant-design)
 
@@ -177,10 +175,10 @@ $ npm start
 
 만약 당신이 콜라보레이터라면, 우리의 [Pull Request Principle](https://github.com/ant-design/ant-design/wiki/PR-principle) 을 따라 [Pull Request Template](https://github.com/ant-design/ant-design/wiki/PR-principle#pull-request-template)을 사용하여 Pull Request를 생성해주세요.
 
+## 이슈 발견
+
+우리는 [Polar.sh](https://polar.sh/ant-design)와 [Issuehunt](https://issuehunt.io/repos/3452688)를 사용하여 보고 구현하고 싶은 특정 기능에 투표할 수 있고 홍보할 수 있습니다. 우리의 백로그를 확인하고 우리를 도와주세요:
+
+<a href="https://polar.sh/ant-design"><img src="https://polar.sh/embed/fund-our-backlog.svg?org=ant-design" /></a>
+
 [![이 리포지토리의 이슈를 찾아 봅시다.](https://raw.githubusercontent.com/BoostIO/issuehunt-materials/master/v1/issuehunt-button-v1.svg)](https://issuehunt.io/repos/34526884)
-
-## ❤️ 스폰서 및 후원자 [![](https://opencollective.com/ant-design/tiers/sponsors/badge.svg?label=Sponsors&color=brightgreen)](https://opencollective.com/ant-design#support) [![](https://opencollective.com/ant-design/tiers/backers/badge.svg?label=Backers&color=brightgreen)](https://opencollective.com/ant-design#support)
-
-[![](https://opencollective.com/ant-design/tiers/sponsors.svg?avatarHeight=36)](https://opencollective.com/ant-design#support)
-
-[![](https://opencollective.com/ant-design/tiers/backers.svg?avatarHeight=36)](https://opencollective.com/ant-design#support)

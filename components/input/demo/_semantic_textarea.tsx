@@ -2,7 +2,6 @@ import React from 'react';
 import { Input } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
-import useLocale from '../../../.dumi/hooks/useLocale';
 
 const locales = {
   cn: {
@@ -13,10 +12,14 @@ const locales = {
     textarea: 'textarea element',
     count: 'count element',
   },
+  ko: {
+    textarea: 'textarea element',
+    count: 'count element',
+  },
 };
 
 const App: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <SemanticPreview
       semantics={[

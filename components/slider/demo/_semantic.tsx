@@ -2,7 +2,6 @@ import React from 'react';
 import { Slider } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
-import useLocale from '../../../.dumi/hooks/useLocale';
 
 const locales = {
   cn: {
@@ -17,10 +16,16 @@ const locales = {
     rail: 'Background rail element',
     handle: 'Grab handle element',
   },
+  ko: {
+    track: 'The selection bar between points and points under the range selection',
+    tracks: 'The entire range selection bar under the range selection',
+    rail: 'Background rail element',
+    handle: 'Grab handle element',
+  },
 };
 
 const App: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <SemanticPreview
       semantics={[

@@ -3,7 +3,6 @@ import type { ModalProps } from 'antd';
 import { Modal } from 'antd';
 
 import SemanticPreview from '../../../.dumi/components/SemanticPreview';
-import useLocale from '../../../.dumi/hooks/useLocale';
 
 const locales = {
   cn: {
@@ -15,6 +14,14 @@ const locales = {
     footer: '底部元素',
   },
   en: {
+    mask: 'Mask element',
+    wrapper: 'Wrapper element. Used for motion container',
+    content: 'Modal container element',
+    header: 'Header element',
+    body: 'Body element',
+    footer: 'Footer element',
+  },
+  ko: {
     mask: 'Mask element',
     wrapper: 'Wrapper element. Used for motion container',
     content: 'Modal container element',
@@ -52,7 +59,7 @@ const BlockModal = (props: ModalProps) => {
 };
 
 const App: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   return (
     <SemanticPreview
       semantics={[

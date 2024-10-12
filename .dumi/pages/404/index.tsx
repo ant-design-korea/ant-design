@@ -21,14 +21,12 @@ const DIRECT_MAP: Record<string, string> = {
 const NotFoundPage: React.FC<NotFoundProps> = ({ router }) => {
   const { pathname } = useLocation();
 
-  const isZhCN = utils.isZhCN(pathname);
-
   useEffect(() => {
     const directLinks = Object.keys(DIRECT_MAP);
     for (let i = 0; i < directLinks.length; i += 1) {
       const matchPath = directLinks[i];
       if (pathname.includes(matchPath)) {
-        router.replace(utils.getLocalizedPathname(`/${DIRECT_MAP[matchPath]}`, isZhCN).pathname);
+        router.replace(utils.getLocalizedPathname(`/${DIRECT_MAP[matchPath]}`).pathname);
       }
     }
 
@@ -44,11 +42,11 @@ const NotFoundPage: React.FC<NotFoundProps> = ({ router }) => {
     <Result
       status="404"
       title="404"
-      subTitle={isZhCN ? '你访问的页面貌似不存在？' : 'Sorry, the page you visited does not exist.'}
+      subTitle="Sorry, the page you visited does not exist."
       extra={
-        <Link to={utils.getLocalizedPathname('/', isZhCN)}>
+        <Link to="/">
           <Button type="primary" icon={<HomeOutlined />}>
-            {isZhCN ? '返回 Ant Design 首页' : 'Back to home page'}
+            Back to home page
           </Button>
         </Link>
       }

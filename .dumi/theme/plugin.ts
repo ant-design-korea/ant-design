@@ -37,7 +37,6 @@ export const getHash = (str: string, length = 8) =>
  * extends dumi internal tech stack, for customize previewer props
  */
 class AntdReactTechStack extends ReactTechStack {
-  // eslint-disable-next-line class-methods-use-this
   generatePreviewerProps(...[props, opts]: any) {
     props.pkgDependencyList = { ...devDependencies, ...dependencies };
     props.jsx ??= '';
@@ -48,7 +47,8 @@ class AntdReactTechStack extends ReactTechStack {
 
     if (opts.type === 'external') {
       // try to find md file with the same name as the demo tsx file
-      const locale = opts.mdAbsPath.match(/index\.([a-z-]+)\.md$/i)?.[1];
+      // const locale = opts.mdAbsPath.match(/index\.([a-z-]+)\.md$/i)?.[1];
+
       const mdPath = opts.fileAbsPath!.replace(/\.\w+$/, '.md');
       const md = fs.existsSync(mdPath) ? fs.readFileSync(mdPath, 'utf-8') : '';
 
@@ -116,7 +116,7 @@ class AntdReactTechStack extends ReactTechStack {
         // Last block
         fillBlock(blockName, cacheList);
 
-        props.description = blocks[locale];
+        props.description = blocks['ko-KR'];
         props.style = blocks.style;
       }
     }
@@ -164,7 +164,7 @@ const RoutesPlugin = (api: IApi) => {
         path: 'changelog',
         absPath: '/changelog',
         parentId: 'DocLayout',
-        file: resolve('../../CHANGELOG.ko-KR.md'),
+        file: resolve('../../CHANGELOG.md'),
       },
     ];
 

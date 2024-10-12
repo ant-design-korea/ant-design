@@ -12,7 +12,6 @@ import classNames from 'classnames';
 import { DumiDemoGrid, FormattedMessage } from 'dumi';
 
 import useLayoutState from '../../../hooks/useLayoutState';
-import useLocale from '../../../hooks/useLocale';
 import DemoContext from '../../slots/DemoContext';
 
 const locales = {
@@ -24,11 +23,15 @@ const locales = {
     enableCssVar: 'Enable CSS Var',
     disableCssVar: 'Disable CSS Var',
   },
+  ko: {
+    enableCssVar: 'Enable CSS Var',
+    disableCssVar: 'Disable CSS Var',
+  },
 };
 
 const DemoWrapper: typeof DumiDemoGrid = ({ items }) => {
   const { showDebug, setShowDebug } = useContext(DemoContext);
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
 
   const [expandAll, setExpandAll] = useLayoutState(false);
   const [enableCssVar, setEnableCssVar] = useLayoutState(true);
