@@ -3,7 +3,6 @@ import { ColorPicker } from 'antd';
 import type { Color } from 'antd/es/color-picker';
 import { FormattedMessage } from 'dumi';
 
-import useLocale from '../../../hooks/useLocale';
 import ColorPatterns from './ColorPatterns';
 
 const primaryMinSaturation = 70; // 主色推荐最小饱和度
@@ -32,7 +31,7 @@ const ColorPaletteTool: React.FC = () => {
   const [primaryColor, setPrimaryColor] = React.useState<string>('#1890ff');
   const [primaryColorInstance, setPrimaryColorInstance] = React.useState<Color>();
 
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
 
   const handleChangeColor = (color: Color, hex: string) => {
     setPrimaryColor(hex);

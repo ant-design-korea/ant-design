@@ -43,6 +43,7 @@ export interface Icon {
 export type Articles = {
   cn: Article[];
   en: Article[];
+  ko: Article[];
 };
 
 export type Authors = Author[];

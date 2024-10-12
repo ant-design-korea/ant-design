@@ -18,7 +18,6 @@ import {
 } from 'antd';
 import { createStyles } from 'antd-style';
 
-import useLocale from '../../../../hooks/useLocale';
 import Tilt from './Tilt';
 
 const { _InternalPanelDoNotUseOrYouWillBeFired: ModalPanel } = Modal;
@@ -125,7 +124,7 @@ const useStyle = createStyles(({ token, css }) => {
 });
 
 const ComponentsBlock: React.FC = () => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const { styles } = useStyle();
 
   return (

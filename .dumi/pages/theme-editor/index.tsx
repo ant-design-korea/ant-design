@@ -1,10 +1,8 @@
 import React, { Suspense, useEffect } from 'react';
 import { App, Button, Skeleton } from 'antd';
-import { enUS, zhCN } from 'antd-token-previewer';
+import { enUS } from 'antd-token-previewer';
 import type { ThemeConfig } from 'antd/es/config-provider/context';
 import { Helmet } from 'dumi';
-
-import useLocale from '../../hooks/useLocale';
 
 const ThemeEditor = React.lazy(() => import('antd-token-previewer/lib/ThemeEditor'));
 
@@ -48,7 +46,7 @@ const ANT_DESIGN_V5_THEME_EDITOR_THEME = 'ant-design-v5-theme-editor-theme';
 
 const CustomTheme: React.FC = () => {
   const { message } = App.useApp();
-  const [locale, lang] = useLocale(locales);
+  const locale = locales.ko;
 
   const [theme, setTheme] = React.useState<ThemeConfig>({});
 
@@ -80,7 +78,7 @@ const CustomTheme: React.FC = () => {
           onThemeChange={(newTheme) => {
             setTheme(newTheme.config);
           }}
-          locale={lang === 'cn' ? zhCN : enUS}
+          locale={enUS}
           actions={
             <Button type="primary" onClick={handleSave}>
               {locale.save}

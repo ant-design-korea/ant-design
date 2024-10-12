@@ -25,17 +25,9 @@ function getTokenList(list?: DeclarationReflection[], source?: string) {
         item.comment?.blockTags
           ?.find((tag) => tag.tag === '@desc')
           ?.content.reduce((result, str) => result.concat(str.text), '') || '',
-      descEn:
-        item.comment?.blockTags
-          ?.find((tag) => tag.tag === '@descEN')
-          ?.content.reduce((result, str) => result.concat(str.text), '') || '',
       name:
         item.comment?.blockTags
-          ?.find((tag) => tag.tag === '@nameZH')
-          ?.content.reduce((result, str) => result.concat(str.text), '') || '',
-      nameEn:
-        item.comment?.blockTags
-          ?.find((tag) => tag.tag === '@nameEN')
+          ?.find((tag) => tag.tag === '@nameKR')
           ?.content.reduce((result, str) => result.concat(str.text), '') || '',
     }));
 }

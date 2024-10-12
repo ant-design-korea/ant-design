@@ -4,7 +4,6 @@ import { Button, Card, Divider } from 'antd';
 import { createStyles } from 'antd-style';
 import classNames from 'classnames';
 
-import useLocale from '../../../hooks/useLocale';
 import JuejinLogo from './JuejinLogo';
 
 const ANTD_IMG_URL =
@@ -118,7 +117,7 @@ interface Props {
 }
 
 const ColumnCard: React.FC<Props> = ({ zhihuLink, yuqueLink, juejinLink }) => {
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const {
     styles: {
       card,

@@ -4,7 +4,6 @@ import { createStyles } from 'antd-style';
 import classNames from 'classnames';
 import { useLocation } from 'dumi';
 
-import useLocale from '../../../../hooks/useLocale';
 import LinkButton from '../../../../theme/common/LinkButton';
 import SiteContext from '../../../../theme/slots/SiteContext';
 import * as utils from '../../../../theme/utils';
@@ -128,11 +127,10 @@ const useStyle = () => {
 
 const PreviewBanner: React.FC<Readonly<React.PropsWithChildren>> = (props) => {
   const { children } = props;
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const { styles } = useStyle();
   const { isMobile } = React.useContext(SiteContext);
-  const { pathname, search } = useLocation();
-  const isZhCN = utils.isZhCN(pathname);
+  const { search } = useLocation();
 
   return (
     <GroupMaskLayer>
@@ -169,14 +167,11 @@ const PreviewBanner: React.FC<Readonly<React.PropsWithChildren>> = (props) => {
           <LinkButton
             size="large"
             type="primary"
-            to={utils.getLocalizedPathname('/components/overview/', isZhCN, search)}
+            to={utils.getLocalizedPathname('/components/overview/', search)}
           >
             {locale.start}
           </LinkButton>
-          <LinkButton
-            size="large"
-            to={utils.getLocalizedPathname('/docs/spec/introduce/', isZhCN, search)}
-          >
+          <LinkButton size="large" to={utils.getLocalizedPathname('/docs/spec/introduce/', search)}>
             {locale.designLanguage}
           </LinkButton>
         </Flex>

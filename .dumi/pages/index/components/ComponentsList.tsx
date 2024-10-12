@@ -17,7 +17,6 @@ import classNames from 'classnames';
 import dayjs from 'dayjs';
 
 import useDark from '../../../hooks/useDark';
-import useLocale from '../../../hooks/useLocale';
 import SiteContext from '../../../theme/slots/SiteContext';
 import { getCarouselStyle } from './util';
 
@@ -133,7 +132,7 @@ const useStyle = () => {
 
 const ComponentItem: React.FC<ComponentItemProps> = ({ title, node, type, index }) => {
   const tagColor = type === 'new' ? 'processing' : 'warning';
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const tagText = type === 'new' ? locale.new : locale.update;
   const { styles } = useStyle();
   const { isMobile } = useContext(SiteContext);
@@ -166,7 +165,7 @@ interface ComponentItemProps {
 
 const ComponentsList: React.FC = () => {
   const { styles } = useStyle();
-  const [locale] = useLocale(locales);
+  const locale = locales.ko;
   const { isMobile } = useContext(SiteContext);
   const COMPONENTS = React.useMemo<Omit<ComponentItemProps, 'index'>[]>(
     () => [

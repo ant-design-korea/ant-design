@@ -2,8 +2,6 @@ import * as React from 'react';
 import { createStyles } from 'antd-style';
 import { removeCSS, updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 
-import useLocale from '../../../hooks/useLocale';
-
 const whereCls = 'ant-where-checker';
 
 const locales = {
@@ -57,7 +55,7 @@ const useStyle = createStyles(({ css, token }) => ({
 // Check for browser support `:where` or not
 // Warning user if not support to modern browser
 const InfoNewVersion: React.FC = () => {
-  const [location] = useLocale(locales);
+  const location = locales.ko;
   const [supportWhere, setSupportWhere] = React.useState(true);
 
   React.useEffect(() => {

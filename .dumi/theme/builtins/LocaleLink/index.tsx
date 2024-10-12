@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Link } from 'dumi';
 
-import useLocale from '../../../hooks/useLocale';
-
 type LinkProps = Parameters<typeof Link>[0];
 
 export interface LocaleLinkProps extends LinkProps {
@@ -16,8 +14,6 @@ const LocaleLink: React.FC<React.PropsWithChildren<LocaleLinkProps>> = ({
 }) => {
   const Component = sourceType === 'a' ? 'a' : Link;
 
-  const [, localeType] = useLocale();
-
   const localeTo = React.useMemo(() => {
     if (!to || typeof to !== 'string') {
       return to;
@@ -29,10 +25,10 @@ const LocaleLink: React.FC<React.PropsWithChildren<LocaleLinkProps>> = ({
       let path = cells[1].replace(/\/$/, '');
       const hash = cells[2] || '';
 
-      if (localeType === 'cn' && !path.endsWith('-cn')) {
-        path = `${path}-cn`;
-      } else if (localeType === 'en' && path.endsWith('-cn')) {
-        path = path.replace(/-cn$/, '');
+      if (!path.endsWith('-ko')) {
+        path = `${path}-ko`;
+      } else if (path.endsWith('-ko')) {
+        path = path.replace(/-ko$/, '');
       }
 
       return `${path}${hash}`;

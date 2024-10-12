@@ -7,10 +7,7 @@ const output = '.dumi/preset';
 
 // Collect components
 const componentNames = globSync(
-  path
-    .join(process.cwd(), 'components/!(version|icon|col|row)/index.zh-CN.md')
-    .split(path.sep)
-    .join('/'),
+  path.join(process.cwd(), 'components/!(version|icon|col|row)/index.md').split(path.sep).join('/'),
 )
   .map((filePath) => filePath.replace(/\\/g, '/').match(/components\/([^/]*)\//)![1])
   .filter((name) => name !== 'overview');
@@ -198,7 +195,7 @@ const miscKeys = [
     fs.writeFileSync(path.join(output, targetFile), JSON.stringify(componentChangelog), 'utf-8');
   }
 
-  syncChangelog('CHANGELOG.ko-KR.md', 'components-changelog-ko.json');
+  syncChangelog('CHANGELOG.md', 'components-changelog.json');
   fs.writeFileSync(
     path.join(output, 'misc-changelog.json'),
     JSON.stringify(miscChangelog),

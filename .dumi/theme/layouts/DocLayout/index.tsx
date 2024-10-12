@@ -5,12 +5,9 @@ import 'dayjs/locale/zh-cn';
 
 import React, { useContext, useEffect, useLayoutEffect, useRef } from 'react';
 import ConfigProvider from 'antd/es/config-provider';
-import enUS from 'antd/es/locale/en_US';
 import koKR from 'antd/es/locale/ko_KR';
-import zhCN from 'antd/es/locale/zh_CN';
 import { Helmet, useOutlet, useSiteData } from 'dumi';
 
-import useLocale from '../../../hooks/useLocale';
 import useLocation from '../../../hooks/useLocation';
 import GlobalStyles from '../../common/GlobalStyles';
 import Header from '../../slots/Header';
@@ -39,34 +36,17 @@ const locales = {
   },
 };
 
-const getLocaleConfig = (lang: 'cn' | 'en' | 'ko') => {
-  switch (lang) {
-    case 'cn':
-      return zhCN;
-    case 'ko':
-      return koKR;
-    default:
-      return enUS;
-  }
-};
-
 const DocLayout: React.FC = () => {
   const outlet = useOutlet();
   const location = useLocation();
   const { pathname, search, hash } = location;
-  const [locale, lang] = useLocale(locales);
+  const locale = locales.ko;
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
   const { direction } = useContext(SiteContext);
   const { loading } = useSiteData();
 
   useLayoutEffect(() => {
-    if (lang === 'cn') {
-      dayjs.locale('zh-cn');
-    } else if (lang === 'ko') {
-      dayjs.locale('ko');
-    } else {
-      dayjs.locale('en');
-    }
+    dayjs.locale('ko');
   }, []);
 
   useEffect(() => {
@@ -115,7 +95,7 @@ const DocLayout: React.FC = () => {
     <>
       <Helmet encodeSpecialCharacters={false}>
         <html
-          lang={lang === 'cn' ? 'zh-CN' : lang}
+          lang="ko-KR"
           data-direction={direction}
           className={classNames({ rtl: direction === 'rtl' })}
         />
@@ -130,7 +110,7 @@ const DocLayout: React.FC = () => {
           content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
         />
       </Helmet>
-      <ConfigProvider direction={direction} locale={getLocaleConfig(lang)}>
+      <ConfigProvider direction={direction} locale={koKR}>
         <GlobalStyles />
         <Header />
         {content}
