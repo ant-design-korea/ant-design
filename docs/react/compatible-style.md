@@ -16,7 +16,7 @@ Ant Design은 [최근 2개 버전의 브라우저](https://browsersl.ist/#q=defa
 
 만약 더 오래된 버전을 지원해야하는 경우, [StyleProvider](https://github.com/ant-design/cssinjs#styleprovider)를 사용하여 다운그레이드를 처리하세요.
 
-## 셀렉터 `:where`
+## 선택자 `:where`
 
 - antd 버전: `>=5.0.0`
 - MDN: [:where](https://developer.mozilla.org/en-US/docs/Web/CSS/:where)
@@ -24,7 +24,7 @@ Ant Design은 [최근 2개 버전의 브라우저](https://browsersl.ist/#q=defa
 - 최소 지원 Chrome버전: 88
 - 기본 활성화: Yes
 
-Ant Design의 CSS-in-JS기능은 기본적으로 우선순위를 낮추기 위해 ":where" 셀렉터를 사용합니다. 이것은 사용자가 업그레이드 시 커스텀 스타일을 조정하는 비용을 줄여줍니다. 그러나, ":where" 구문의 호환성은 구 버전의 브라우저에서 좋지 않습니다. ([compatibility](https://developer.mozilla.org/en-US/docs/Web/CSS/:where#browser_compatibility)) 특정 시나리오에서, 구 버전 지원이 필요하다면, `@ant-design/cssinjs`를 사용하여 기본 우선순위 낮추기를 비활성화할 수 있습니다. (antd와 버전이 일치하는지 확인하세요).
+Ant Design의 CSS-in-JS기능은 기본적으로 우선순위를 낮추기 위해 ":where" 선택자를 사용합니다. 이것은 사용자가 업그레이드 시 커스텀 스타일을 조정하는 비용을 줄여줍니다. 그러나, ":where" 구문의 호환성은 구 버전의 브라우저에서 좋지 않습니다. ([compatibility](https://developer.mozilla.org/en-US/docs/Web/CSS/:where#browser_compatibility)) 특정 시나리오에서, 구 버전 지원이 필요하다면, `@ant-design/cssinjs`를 사용하여 기본 우선순위 낮추기를 비활성화할 수 있습니다. (antd와 버전이 일치하는지 확인하세요).
 
 ```tsx
 import { StyleProvider } from '@ant-design/cssinjs';
@@ -197,7 +197,7 @@ root.render(
 
 ## 써드파티(타사) 스타일 라이브러리와 호환
 
-일부 경우, antd를 Tailwind CSS, Emotion, styled-components 등과 같은 스타일 라이브러리와 함께 사용해야 할 수 있습니다. 전통적인 CSS 솔루션과 달리, 이 써드파티(타사) 스타일 라이브러리들은 CSS셀렉터 우선순위를 높이는 것으로 antd 스타일을 오버라이드 하기 쉽지 않을 수 있습니다. antd 셀렉터의 가중치를 낮추기 위해 `@layer`를 구성할 수 있습니다. 그리고 스타일 오버라이드 문제를 해결하기 위해 `@layer` 순서를 조정할 수 있습니다:
+일부 경우, antd를 Tailwind CSS, Emotion, styled-components 등과 같은 스타일 라이브러리와 함께 사용해야 할 수 있습니다. 전통적인 CSS 솔루션과 달리, 이 써드파티(타사) 스타일 라이브러리들은 CSS선택자 우선순위를 높이는 것으로 antd 스타일을 오버라이드 하기 쉽지 않을 수 있습니다. antd 선택자의 가중치를 낮추기 위해 `@layer`를 구성할 수 있습니다. 그리고 스타일 오버라이드 문제를 해결하기 위해 `@layer` 순서를 조정할 수 있습니다:
 
 ### antd `@layer` 설정
 
