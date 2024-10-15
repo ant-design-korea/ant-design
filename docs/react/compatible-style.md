@@ -38,7 +38,7 @@ export default () => (
 );
 ```
 
-`:where`를 클래스 선택자로 변경됩니다:
+`:where`를 클래스 선택자로 변경합니다:
 
 ```diff
 --  :where(.css-bAMboO).ant-btn {
