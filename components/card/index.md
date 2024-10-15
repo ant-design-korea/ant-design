@@ -14,17 +14,17 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*5WDvQp_H7LUAAA
 ## 예시
 
 <!-- prettier-ignore -->
-<code src="./demo/basic.tsx">Basic card</code>
-<code src="./demo/border-less.tsx" background="grey">No border</code>
-<code src="./demo/simple.tsx">Simple card</code>
-<code src="./demo/flexible-content.tsx">Customized content</code>
-<code src="./demo/in-column.tsx" background="grey">Card in column</code>
-<code src="./demo/loading.tsx">Loading card</code>
-<code src="./demo/grid-card.tsx">Grid card</code>
-<code src="./demo/inner.tsx">Inner card</code>
-<code src="./demo/tabs.tsx">With tabs</code>
-<code src="./demo/meta.tsx">Support more content configuration</code>
-<code src="./demo/component-token.tsx" debug>Component Token</code>
+<code src="./demo/basic.tsx">기본 카드</code>
+<code src="./demo/border-less.tsx" background="grey">테두리 없는 카드</code>
+<code src="./demo/simple.tsx">간단한 카드</code>
+<code src="./demo/flexible-content.tsx">맞춤형 콘텐츠 카드</code>
+<code src="./demo/in-column.tsx" background="grey">열이 있는 카드</code>
+<code src="./demo/loading.tsx">로딩 카드</code>
+<code src="./demo/grid-card.tsx">그리드 카드</code>
+<code src="./demo/inner.tsx">내부 카드</code>
+<code src="./demo/tabs.tsx">탭이 있는 카드</code>
+<code src="./demo/meta.tsx">추가 콘텐츠 구성을 지원하는 카드</code>
+<code src="./demo/component-token.tsx" debug>컴포넌트 토큰</code>
 
 ## API
 
