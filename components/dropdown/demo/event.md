@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-点击菜单项后会触发事件，用户可以通过相应的菜单项 key 进行不同的操作。
-
-## en-US
-
-An event will be triggered when you click menu items, in which you can make different operations according to item's key.
+메뉴 요소를 클릭하면 이벤트가 트리거되며, 요소의 키에 따라 다른 작업을 수행할 수 있습니다.

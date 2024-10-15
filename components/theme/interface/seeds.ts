@@ -9,10 +9,8 @@ export interface SeedToken extends PresetColorType {
   //  ----------   Color   ---------- //
 
   /**
-   * @nameZH 品牌主色
-   * @nameEN Brand Color
-   * @desc 品牌色是体现产品特性和传播理念最直观的视觉元素之一。在你完成品牌主色的选取之后，我们会自动帮你生成一套完整的色板，并赋予它们有效的设计语义
-   * @descEN Brand color is one of the most direct visual elements to reflect the characteristics and communication of the product. After you have selected the brand color, we will automatically generate a complete color palette and assign it effective design semantics.
+   * @nameKR 브랜드 색상
+   * @desc 브랜드 색상은 제품의 특성과 커뮤니케이션을 반영하는 가장 직접적인 시각적 요소 중 하나입니다. 브랜드 색상을 선택하면, 자동으로 전체 색상 팔레트를 생성하고 효과적인 디자인 의미를 부여합니다.
    */
   colorPrimary: string;
 
@@ -29,8 +27,7 @@ export interface SeedToken extends PresetColorType {
   colorWarning: string;
 
   /**
-   * @nameKR 에러 컬러
-   * @desc 오류 버튼, 오류 결과 구성 요소 등 작업 실패의 시각적 요소를 나타내는 데 사용됩니다.
+   * @nameKR 오류 색상
    */
   colorError: string;
 
@@ -67,8 +64,8 @@ export interface SeedToken extends PresetColorType {
   //  ----------   Font   ---------- //
 
   /**
-   * @nameKR 기본 텍스트의 글꼴
-   * @desc Ant Design의 글꼴 패밀리는 시스템의 기본 인터페이스 글꼴을 우선적으로 사용하며, 다양한 플랫폼과 브라우저에서 글꼴의 가독성을 유지하기 위해 화면 표시에 적합한 대체 글꼴 라이브러리를 제공합니다. 이는 친숙하고 안정적이며 전문적인 특성을 반영합니다.
+   * @nameKR 기본 텍스트용 글꼴 모음
+   * @desc Ant Design의 글꼴 모음은 시스템의 기본 인터페이스 글꼴을 우선시하며, 친근하고 안정적이며 전문적인 특성을 반영하여 다양한 플랫폼과 브라우저에서 글꼴의 가독성과 가독성을 유지하기 위해 화면 디스플레이에 적합한 대체 글꼴 라이브러리 세트를 제공합니다.
    */
   fontFamily: string;
 
@@ -81,8 +78,8 @@ export interface SeedToken extends PresetColorType {
   fontFamilyCode: string;
 
   /**
-   * @nameKR 기본 폰트 크기
-   * @desc 디자인 시스템에서 가장 널리 사용되는 글꼴 크기로, 텍스트 그라데이션도 이 글꼴 크기를 기반으로 파생됩니다.
+   * @nameKR 기본 글꼴 크기
+   * @desc 디자인 시스템에서 가장 널리 사용되는 글꼴 크기로, 텍스트 그라데이션이 파생됩니다.
    * @default 14
    */
   fontSize: number;
@@ -135,8 +132,7 @@ export interface SeedToken extends PresetColorType {
 
   /**
    * @nameZH 组件箭头尺寸
-   * @desc 组件箭头的尺寸
-   * @descEN The size of the component arrow
+   * @desc 화살표 컴포넌트의 크기
    */
   sizePopupArrow: number;
 
@@ -199,14 +195,12 @@ export interface SeedToken extends PresetColorType {
   motionBase: number;
 
   /**
-   * @desc 预设动效曲率
-   * @descEN Preset motion curve.
+   * @desc 모션 커브를 미리 설정합니다.
    */
   motionEaseOutCirc: string;
 
   /**
-   * @desc 预设动效曲率
-   * @descEN Preset motion curve.
+   * @desc 모션 커브를 미리 설정합니다.
    */
   motionEaseInOutCirc: string;
 
@@ -228,14 +222,12 @@ export interface SeedToken extends PresetColorType {
   motionEaseInBack: string;
 
   /**
-   * @desc 预设动效曲率
-   * @descEN Preset motion curve.
+   * @desc 모션 커브를 미리 설정합니다.
    */
   motionEaseInQuint: string;
 
   /**
-   * @desc 预设动效曲率
-   * @descEN Preset motion curve.
+   * @desc 모션 커브를 미리 설정합니다.
    */
   motionEaseOutQuint: string;
 

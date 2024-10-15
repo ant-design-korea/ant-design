@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-特殊处理 Down icon。
-
-## en-US
-
-Specially handle Down icon.
+다운 아이콘을 다룹니다.

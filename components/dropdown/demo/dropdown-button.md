@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-左边是按钮，右边是额外的相关功能菜单。可设置 `icon` 属性来修改右边的图标。
-
-## en-US
-
-A button is on the left, and a related functional menu is on the right. You can set the icon property to modify the icon of right.
+왼쪽에는 버튼이 있고, 오른쪽에는 관련된 기능의 메뉴가 있습니다. 아이콘 속성을 설정하여 오른쪽 아이콘을 수정할 수 있습니다.

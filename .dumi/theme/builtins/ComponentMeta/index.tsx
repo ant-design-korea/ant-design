@@ -1,10 +1,12 @@
 import React from 'react';
-import { EditOutlined, GithubOutlined } from '@ant-design/icons';
+import { EditOutlined, GithubOutlined, HistoryOutlined } from '@ant-design/icons';
 import type { GetProp } from 'antd';
-import { Descriptions, theme, Tooltip, Typography } from 'antd';
+import { Descriptions, Flex, theme, Tooltip, Typography } from 'antd';
 import { createStyles, css } from 'antd-style';
 import kebabCase from 'lodash/kebabCase';
 import CopyToClipboard from 'react-copy-to-clipboard';
+
+import ComponentChangelog from '../../common/ComponentChangelog';
 
 const locales = {
   cn: {
@@ -14,6 +16,7 @@ const locales = {
     source: '源码',
     docs: '文档',
     edit: '编辑此页',
+    changelog: '更新日志',
     version: '版本',
   },
   en: {
@@ -23,6 +26,7 @@ const locales = {
     source: 'Source',
     docs: 'Docs',
     edit: 'Edit this page',
+    changelog: 'Changelog',
     version: 'Version',
   },
   ko: {
@@ -32,6 +36,7 @@ const locales = {
     source: 'Source',
     docs: 'Docs',
     edit: 'Edit this page',
+    changelog: 'Changelog',
     version: 'Version',
   },
 };
@@ -50,7 +55,7 @@ const useStyle = createStyles(({ token }) => ({
     align-items: center;
     column-gap: ${token.paddingXXS}px;
     border-radius: ${token.borderRadiusSM}px;
-    padding-inline: ${token.paddingXXS}px;
+    padding-inline: ${token.paddingXXS}px !important;
     transition: all ${token.motionDurationSlow} !important;
     font-family: ${token.codeFamily};
     color: ${token.colorTextSecondary} !important;
@@ -76,6 +81,9 @@ const useStyle = createStyles(({ token }) => ({
   `,
   semicolon: css`
     color: ${token.colorText};
+  `,
+  icon: css`
+    margin-inline-end: ${token.marginXXS}px;
   `,
 }));
 
@@ -123,7 +131,7 @@ const ComponentMeta: React.FC<ComponentMetaProps> = (props) => {
   }, [component, source]);
 
   const transformComponentName = (componentName: string) => {
-    if (componentName === 'Notifiction' || componentName === 'Message') {
+    if (componentName === 'Notification' || componentName === 'Message') {
       return componentName.toLowerCase();
     }
     return componentName;
@@ -177,7 +185,7 @@ const ComponentMeta: React.FC<ComponentMetaProps> = (props) => {
             label: locale.source,
             children: (
               <Typography.Link className={styles.code} href={filledSource} target="_blank">
-                <GithubOutlined style={{ marginInlineEnd: 4 }} />
+                <GithubOutlined className={styles.icon} />
                 <span>{abbrSource}</span>
               </Typography.Link>
             ),
@@ -185,14 +193,22 @@ const ComponentMeta: React.FC<ComponentMetaProps> = (props) => {
           filename && {
             label: locale.docs,
             children: (
-              <Typography.Link
-                className={styles.code}
-                href={`${branchUrl}${filename}`}
-                target="_blank"
-              >
-                <EditOutlined style={{ marginInlineEnd: 4 }} />
-                <span>{locale.edit}</span>
-              </Typography.Link>
+              <Flex justify="flex-start" align="center" gap="middle">
+                <Typography.Link
+                  className={styles.code}
+                  href={`${branchUrl}${filename}`}
+                  target="_blank"
+                >
+                  <EditOutlined className={styles.icon} />
+                  <span>{locale.edit}</span>
+                </Typography.Link>
+                <ComponentChangelog>
+                  <Typography.Link className={styles.code}>
+                    <HistoryOutlined className={styles.icon} />
+                    <span>{locale.changelog}</span>
+                  </Typography.Link>
+                </ComponentChangelog>
+              </Flex>
             ),
           },
           isVersionNumber(version) && {

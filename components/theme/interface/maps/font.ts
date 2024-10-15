@@ -1,8 +1,7 @@
 export interface FontMapToken {
   // Font Size
   /**
-   * @desc 小号字体大小
-   * @descEN Small font size
+   * @desc 작은 글꼴 크기
    */
   fontSizeSM: number;
   /**
@@ -64,7 +63,7 @@ export interface FontMapToken {
 
   // LineHeight
   /**
-   * @desc 텍스트의 라인 높이
+   * @desc 텍스트의 선 높이
    */
   lineHeight: number;
   /**

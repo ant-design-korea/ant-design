@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-分割线和不可用菜单项。
-
-## en-US
-
-Divider and disabled menu item.
+구분선과 비활성화된 메뉴 요소

@@ -147,7 +147,7 @@ exports[`Calendar Calendar MonthSelect should display correct label 1`] = `
           />
         </span>
         <span>
-          Month
+          월
         </span>
       </label>
       <label
@@ -166,7 +166,7 @@ exports[`Calendar Calendar MonthSelect should display correct label 1`] = `
           />
         </span>
         <span>
-          Year
+          년
         </span>
       </label>
     </div>
@@ -2035,7 +2035,7 @@ exports[`Calendar rtl render component should be rendered correctly in RTL direc
           />
         </span>
         <span>
-          Month
+          월
         </span>
       </label>
       <label
@@ -2054,7 +2054,7 @@ exports[`Calendar rtl render component should be rendered correctly in RTL direc
           />
         </span>
         <span>
-          Year
+          년
         </span>
       </label>
     </div>
@@ -2979,7 +2979,7 @@ exports[`Calendar support Calendar.generateCalendar 1`] = `
           />
         </span>
         <span>
-          Month
+          월
         </span>
       </label>
       <label
@@ -2998,7 +2998,7 @@ exports[`Calendar support Calendar.generateCalendar 1`] = `
           />
         </span>
         <span>
-          Year
+          년
         </span>
       </label>
     </div>

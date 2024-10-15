@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-添加 `menu` 中的 `selectable` 属性可以开启选择能力。
-
-## en-US
-
-Configure the `selectable` property in `menu` to enable selectable ability.
+`menu`에서 `selectable` 속성을 구성하여 선택 가능 기능을 활성화합니다.
