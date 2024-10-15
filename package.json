@@ -117,6 +117,7 @@
     "@rc-component/qrcode": "~1.0.0",
     "@rc-component/tour": "~1.15.1",
     "@rc-component/trigger": "^2.2.3",
+    "antd": "^5.21.4",
     "classnames": "^2.5.1",
     "copy-to-clipboard": "^3.3.3",
     "dayjs": "^1.11.11",
