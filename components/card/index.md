@@ -28,7 +28,7 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*5WDvQp_H7LUAAA
 
 ## API
 
-Common props ref：[Common props](/docs/react/common-props)
+공통 속성 참조：[공통 속성](/docs/react/common-props)
 
 ```jsx
 <Card title="Card title">카드 내용</Card>
@@ -56,21 +56,21 @@ Common props ref：[Common props](/docs/react/common-props)
 
 ### Card.Grid
 
-| Property  | Description                     | Type          | Default | Version |
-| --------- | ------------------------------- | ------------- | ------- | ------- |
-| className | The className of container      | string        | -       |         |
-| hoverable | Lift up when hovering card grid | boolean       | true    |         |
-| style     | The style object of container   | CSSProperties | -       |         |
+| 프로퍼티  | 설명                                              | 타입          | 기본값 | 버전 |
+| --------- | ------------------------------------------------- | ------------- | ------ | ---- |
+| className | 컨테이너의 className                              | string        | -      |      |
+| hoverable | 그리드인 카드를 호버할 때 카드가 위로 올라갑니다. | boolean       | true   |      |
+| style     | 컨테이너의 스타일 객체                            | CSSProperties | -      |      |
 
 ### Card.Meta
 
-| Property    | Description                   | Type          | Default | Version |
-| ----------- | ----------------------------- | ------------- | ------- | ------- |
-| avatar      | Avatar or icon                | ReactNode     | -       |         |
-| className   | The className of container    | string        | -       |         |
-| description | Description content           | ReactNode     | -       |         |
-| style       | The style object of container | CSSProperties | -       |         |
-| title       | Title content                 | ReactNode     | -       |         |
+| 프로퍼티    | 설명                   | 타입          | 기본값 | 버전 |
+| ----------- | ---------------------- | ------------- | ------ | ---- |
+| avatar      | 사용자 이미지나 아이콘 | ReactNode     | -      |      |
+| className   | 컨테이너의 classNamer  | string        | -      |      |
+| description | 설명 콘텐츠            | ReactNode     | -      |      |
+| style       | 컨테이너의 스타일 객체 | CSSProperties | -      |      |
+| title       | 제목 콘텐츠            | ReactNode     | -      |      |
 
 ## Semantic DOM
 
