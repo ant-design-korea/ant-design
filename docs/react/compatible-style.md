@@ -7,11 +7,11 @@ title: CSS 호환성
 
 ### 기본 스타일 호환성
 
-Ant Design은 [최신 2개 버전의 브라우저](https://browsersl.ist/#q=defaults)를 지원합니다. 만약 레거시 브라우저와의 호환성이 필요한 경우, 실제 필요사항에 따라 다운그레이드를 진행하세요:
+Ant Design은 [최근 2개 버전의 브라우저](https://browsersl.ist/#q=defaults)를 지원합니다. 만약 레거시 브라우저와의 호환성이 필요한 경우, 실제 필요사항에 따라 다운그레이드를 진행하세요:
 
 | 기능 | antd 버전 | 호환성 | 최소 Chrome 버전 | 호환성 해결 방법 |
 | --- | --- | --- | --- | --- |
-| [:where 셀렉터](https://developer.mozilla.org/en-US/docs/Web/CSS/:where) | `>=5.0.0` | [caniuse](https://caniuse.com/?search=%3Awhere) | Chrome 88 | `<StyleProvider hashPriority="high">` |
+| [:where 선택자](https://developer.mozilla.org/en-US/docs/Web/CSS/:where) | `>=5.0.0` | [caniuse](https://caniuse.com/?search=%3Awhere) | Chrome 88 | `<StyleProvider hashPriority="high">` |
 | [CSS 논리적 속성](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) | `>=5.0.0` | [caniuse](https://caniuse.com/css-logical-props) | Chrome 89 | `<StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>` |
 
 만약 더 오래된 버전을 지원해야하는 경우, [StyleProvider](https://github.com/ant-design/cssinjs#styleprovider)를 사용하여 다운그레이드를 처리하세요.
@@ -24,7 +24,7 @@ Ant Design은 [최신 2개 버전의 브라우저](https://browsersl.ist/#q=defa
 - 최소 지원 Chrome버전: 88
 - 기본 활성화: Yes
 
-Ant Design의 CSS-in-JS기능은 기본적으로 특이성을 낮추기 위해 ":where" 셀렉터를 사용합니다. 이것은 사용자가 업그레이드 시 커스텀 스타일을 조정하는 비용을 줄여줍니다. 그러나, ":where" 구문의 호환성은 구 버전의 브라우저에서 좋지 않습니다. ([compatibility](https://developer.mozilla.org/en-US/docs/Web/CSS/:where#browser_compatibility)) 특정 시나리오에서, 구버전 지원이 필요하다면, `@ant-design/cssinjs`를 사용하여 기본 특이성 낮추기를 비활성화할 수 있습니다. (antd와 버전이 일치하는지 확인하세요).
+Ant Design의 CSS-in-JS기능은 기본적으로 우선순위를 낮추기 위해 ":where" 셀렉터를 사용합니다. 이것은 사용자가 업그레이드 시 커스텀 스타일을 조정하는 비용을 줄여줍니다. 그러나, ":where" 구문의 호환성은 구 버전의 브라우저에서 좋지 않습니다. ([compatibility](https://developer.mozilla.org/en-US/docs/Web/CSS/:where#browser_compatibility)) 특정 시나리오에서, 구 버전 지원이 필요하다면, `@ant-design/cssinjs`를 사용하여 기본 우선순위 낮추기를 비활성화할 수 있습니다. (antd와 버전이 일치하는지 확인하세요).
 
 ```tsx
 import { StyleProvider } from '@ant-design/cssinjs';
@@ -47,7 +47,7 @@ export default () => (
     }
 ```
 
-참고: `:where` 다운그레이드를 끄면, 일부 스타일의 우선순위를 직접 조작해야할 수도 있습니다. **PostCSS 플러그인을 사용**하여 애플리케이션의 css선택자 우선순위를 높일 수 있습니다. PostCSS는 이를 위한 여러 플러그인을 제공합니다. 예시:
+참고: `:where` 다운그레이드를 끄면, 일부 스타일의 명시도를 직접 조작해야할 수도 있습니다. **PostCSS 플러그인을 사용**하여 애플리케이션의 css선택자 명시도를 높일 수 있습니다. PostCSS는 이를 위한 여러 플러그인을 제공합니다. 예시:
 
 - [postcss-scopify](https://www.npmjs.com/package/postcss-scopify)
 - [postcss-increase-specificity](https://www.npmjs.com/package/postcss-increase-specificity)
@@ -70,7 +70,7 @@ export default () => (
 - 최소 지원 Chrome버전: 89
 - 기본 활성화: Yes
 
-LTR과 RTL 스타일을 통일하기 위해 Ant Design은 CSS 논리적 속성을 사용합니다. 예를들어, 기존 `margin-left`는 `margin-inline-start`로 대체되었습니다. LTR과 RTL 모두에서 시작 위치 간격을 나타냅니다. 구버전 브라우저에대해 호환성이 필요한 경우, `StyleProvider` of `@ant-design/cssinjs`의 `transformers`를 구성할 수 있습니다:
+LTR과 RTL 스타일을 통일하기 위해 Ant Design은 CSS 논리적 속성을 사용합니다. 예를들어, 기존 `margin-left`는 `margin-inline-start`로 대체되었습니다. LTR과 RTL 모두에서 시작 위치 간격을 나타냅니다. 구 버전 브라우저에대해 호환성이 필요한 경우, `StyleProvider` of `@ant-design/cssinjs`의 `transformers`를 구성할 수 있습니다:
 
 ```tsx
 import { legacyLogicalPropertiesTransformer, StyleProvider } from '@ant-design/cssinjs';
@@ -103,7 +103,7 @@ export default () => (
 - 최소 지원 Chrome버전 : 99
 - 기본 활성화: No
 
-Ant Design은 `5.17.0` 버전부터 통일된 CSS 우선순위 다운그레이드를 위해 `@layer`구성을 지원합니다. 다운그레이드 후, antd의 스타일은 항상 기본 CSS 선택자 우선순위보다 낮아져 사용자가 스타일을 오버라이드 할 수 있습니다(반드시 `@layer`의 브라우저 호환성을 확인하세요):
+Ant Design은 `5.17.0` 버전부터 통일된 CSS 명시도 다운그레이드를 위해 `@layer`구성을 지원합니다. 다운그레이드 후, antd의 스타일은 항상 기본 CSS 선택자 우선순위보다 낮아져 사용자가 스타일을 오버라이드 할 수 있습니다(반드시 `@layer`의 브라우저 호환성을 확인하세요):
 
 ```tsx
 import { StyleProvider } from '@ant-design/cssinjs';

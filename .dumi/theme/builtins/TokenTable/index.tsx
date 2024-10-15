@@ -97,7 +97,7 @@ const TokenTable: FC<TokenTableProps> = ({ type }) => {
         .filter(([, meta]) => meta.source === type)
         .map(([token, meta]) => ({
           name: token,
-          desc: lang === 'cn' ? meta.desc : meta.descEn,
+          desc: meta.desc,
           type: meta.type,
           value: defaultToken[token],
         })),
