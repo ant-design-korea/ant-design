@@ -8,211 +8,207 @@ import { getLineHeight, mergeToken } from '../../theme/internal';
 /** Component only token. Which will handle additional calculation of alias token */
 export interface ComponentToken {
   /**
-   * @desc 文字字重
+   * @desc 글꼴 굵기
    * @descEN Font weight of text
    */
   fontWeight: CSSProperties['fontWeight'];
   /**
-   * @desc 默认按钮阴影
+   * @desc 기본 버튼의 그림자
    * @descEN Shadow of default button
    */
   defaultShadow: string;
   /**
-   * @desc 主要按钮阴影
+   * @desc primary 버튼의 그림자
    * @descEN Shadow of primary button
    */
   primaryShadow: string;
   /**
-   * @desc 危险按钮阴影
+   * @desc danger 버튼의 그림자
    * @descEN Shadow of danger button
    */
   dangerShadow: string;
   /**
-   * @desc 主要按钮文本颜色
+   * @desc primary 버튼의 글자 색상
    * @descEN Text color of primary button
    */
   primaryColor: string;
   /**
-   * @desc 默认按钮文本颜色
+   * @desc 기본 버튼의 글자 색상
    * @descEN Text color of default button
    */
   defaultColor: string;
   /**
-   * @desc 默认按钮背景色
+   * @desc 기본 버튼의 배경 색상
    * @descEN Background color of default button
    */
   defaultBg: string;
   /**
-   * @desc 默认按钮边框颜色
+   * @desc 기본 버튼의 테두리 색상
    * @descEN Border color of default button
    */
   defaultBorderColor: string;
   /**
-   * @desc 危险按钮文本颜色
+   * @desc danger 버튼의 글씨 색상
    * @descEN Text color of danger button
    */
   dangerColor: string;
   /**
-   * @desc 默认按钮悬浮态背景色
+   * @desc 기본 버튼에 hover 했을 때 배경 색상
    * @descEN Background color of default button when hover
    */
   defaultHoverBg: string;
   /**
-   * @desc 默认按钮悬浮态文本颜色
+   * @desc 기본 버튼에 hover 했을 때 글자 색상
    * @descEN Text color of default button when hover
    */
   defaultHoverColor: string;
   /**
-   * @desc 默认按钮悬浮态边框颜色
+   * @desc 기본 버튼에 hover 했을 때 테두리 색상
    * @descEN Border color of default button
    */
   defaultHoverBorderColor: string;
   /**
-   * @desc 默认按钮激活态背景色
+   * @desc 활성 상태일 때 기본 버튼의 배경 색상
    * @descEN Background color of default button when active
    */
   defaultActiveBg: string;
   /**
-   * @desc 默认按钮激活态文字颜色
+   * @desc 활성 상태일 때 기본 버튼의 글자 색상
    * @descEN Text color of default button when active
    */
   defaultActiveColor: string;
   /**
-   * @desc 默认按钮激活态边框颜色
+   * @desc 활성 상태일 때 기본 버튼의 테두리 색상
    * @descEN Border color of default button when active
    */
   defaultActiveBorderColor: string;
   /**
-   * @desc 禁用状态边框颜色
+   * @desc 비활성화 상태 버튼의 테두리 색상
    * @descEN Border color of disabled button
    */
   borderColorDisabled: string;
   /**
-   * @desc 默认幽灵按钮文本颜色
+   * @desc 기본적인 ghost 버튼의 글자 색상
    * @descEN Text color of default ghost button
    */
   defaultGhostColor: string;
   /**
-   * @desc 幽灵按钮背景色
+   * @desc 기본적인 ghost 버튼의 배경 색상
    * @descEN Background color of ghost button
    */
   ghostBg: string;
   /**
-   * @desc 默认幽灵按钮边框颜色
+   * @desc 기본적인 ghost 버튼의 테두리 색상
    * @descEN Border color of default ghost button
    */
   defaultGhostBorderColor: string;
   /**
-   * @desc 主要填充按钮的浅色背景颜色
-   * @descEN Background color of primary filled button
-   */
-  /**
-   * @desc 默认实心按钮的文本色
-   * @descEN Default text color for solid buttons.
+   * @desc solid 버튼의 기본 글자 색상
+   * @descEN Default text color for solid buttons
    */
   solidTextColor: string;
-  /**
-   * @desc 默认文本按钮的文本色
+  /** textTextColor
+   * @desc 글씨 버튼의 기본 글씨 색상
    * @descEN Default text color for text buttons
    */
   textTextColor: string;
-  /**
-   * @desc 默认文本按钮悬浮态文本颜色
+  /** textTextHoverColor
+   * @desc 글씨 버튼에 hover했을 때 기본 텍스트 색상
    * @descEN Default text color for text buttons on hover
    */
   textTextHoverColor: string;
-  /**
-   * @desc 默认文本按钮激活态文字颜色
-   * @descEN Default text color for text buttons on active
+  /** textTextActiveColor
+   * @desc 활성 상태의 텍스트 버튼 기본 텍스트 색상
+   * @descEN 	Default text color for text buttons on active
    */
   textTextActiveColor: string;
-  /**
-   * @desc 按钮横向内间距
+  /** paddingInline
+   * @desc 버튼의 수평 패딩
    * @descEN Horizontal padding of button
    */
   paddingInline: CSSProperties['paddingInline'];
-  /**
-   * @desc 大号按钮横向内间距
-   * @descEN Horizontal padding of large button
+  /** paddingInlineLG
+   * @desc large 버튼의 수평 패딩
+   * @descEN 	Horizontal padding of large button
    */
   paddingInlineLG: CSSProperties['paddingInline'];
-  /**
-   * @desc 小号按钮横向内间距
-   * @descEN Horizontal padding of small button
+  /** paddingInlineSM
+   * @desc small 버튼의 수평 패딩
+   * @descEN 	Horizontal padding of small button
    */
   paddingInlineSM: CSSProperties['paddingInline'];
-  /**
-   * @desc 按钮纵向内间距
+  /** paddingBlock
+   * @desc 버튼의 수직 패딩
    * @descEN Vertical padding of button
    */
   paddingBlock: CSSProperties['paddingBlock'];
-  /**
-   * @desc 大号按钮纵向内间距
+  /** paddingBlockLG
+   * @desc large 버튼의 수직 패딩
    * @descEN Vertical padding of large button
    */
   paddingBlockLG: CSSProperties['paddingBlock'];
-  /**
-   * @desc 小号按钮纵向内间距
-   * @descEN Vertical padding of small button
+  /** paddingBlockSM
+   * @desc small 버튼의 수직 패딩
+   * @descEN 	Vertical padding of small button
    */
   paddingBlockSM: CSSProperties['paddingBlock'];
   /**
-   * @desc 只有图标的按钮图标尺寸
-   * @descEN Icon size of button which only contains icon
+   * @desc 아이콘만 포함된 버튼의 아이콘 크기
+   * @descEN 	Icon size of button which only contains icon
    */
   onlyIconSize: number;
   /**
-   * @desc 大号只有图标的按钮图标尺寸
+   * @desc 아이콘만 포함된 large 버튼의 아이콘 크기
    * @descEN Icon size of large button which only contains icon
    */
   onlyIconSizeLG: number;
   /**
-   * @desc 小号只有图标的按钮图标尺寸
+   * @desc 아이콘만 포함된 small 버튼의 아이콘 크기
    * @descEN Icon size of small button which only contains icon
    */
   onlyIconSizeSM: number;
   /**
-   * @desc 按钮组边框颜色
+   * @desc 버튼 그룹의 테두리 색상
    * @descEN Border color of button group
    */
   groupBorderColor: string;
   /**
-   * @desc 链接按钮悬浮态背景色
+   * @desc 링크 버튼에 hover 했을 때 배경 색상
    * @descEN Background color of link button when hover
    */
   linkHoverBg: string;
   /**
-   * @desc 文本按钮悬浮态背景色
+   * @desc 글씨 버튼에 hover 했을 때 배경 색상
    * @descEN Background color of text button when hover
    */
   textHoverBg: string;
   /**
-   * @desc 按钮内容字体大小
+   * @desc 버튼 내용의 글꼴 크기
    * @descEN Font size of button content
    */
   contentFontSize: number;
   /**
-   * @desc 大号按钮内容字体大小
+   * @desc large 버튼 내용의 글꼴 크기
    * @descEN Font size of large button content
    */
   contentFontSizeLG: number;
   /**
-   * @desc 小号按钮内容字体大小
+   * @desc small 버튼 내용의 글꼴 크기
    * @descEN Font size of small button content
    */
   contentFontSizeSM: number;
   /**
-   * @desc 按钮内容字体行高
+   * @desc 버튼 내용의 줄 높이
    * @descEN Line height of button content
    */
   contentLineHeight: number;
   /**
-   * @desc 大号按钮内容字体行高
+   * @desc large 버튼 내용의 줄 높이
    * @descEN Line height of large button content
    */
   contentLineHeightLG: number;
   /**
-   * @desc 小号按钮内容字体行高
+   * @desc small 버튼 내용의 줄 높이
    * @descEN Line height of small button content
    */
   contentLineHeightSM: number;
@@ -230,7 +226,7 @@ export interface ButtonToken extends FullToken<'Button'> {
    */
   buttonPaddingVertical: CSSProperties['paddingBlock'];
   /**
-   * @desc 只有图标的按钮图标尺寸
+   * @desc 按钮纵向内边距
    * @descEN Icon size of button which only contains icon
    */
   buttonIconOnlyFontSize: number;
