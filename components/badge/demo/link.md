@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-用 a 标签进行包裹即可。
-
-## en-US
-
-The badge can be wrapped with `a` tag to make it linkable.
+배지를 통해 링크될 수 있도록 `a`태그로 감쌀 수 있습니다.

@@ -15,32 +15,25 @@ export interface SeedToken extends PresetColorType {
   colorPrimary: string;
 
   /**
-   * @nameZH 成功色
-   * @nameEN Success Color
-   * @desc 用于表示操作成功的 Token 序列，如 Result、Progress 等组件会使用该组梯度变量。
-   * @descEN Used to represent the token sequence of operation success, such as Result, Progress and other components will use these map tokens.
+   * @nameKR 성공 컬러
+   * @desc 작업 성공을 나타내는 토큰 시퀀스에 사용됩니다. Result, Progress 등과 같은 컴포넌트에서 이 그라데이션 변수를 사용합니다.
    */
   colorSuccess: string;
 
   /**
-   * @nameZH 警戒色
-   * @nameEN Warning Color
-   * @desc 用于表示操作警告的 Token 序列，如 Notification、 Alert等警告类组件或 Input 输入类等组件会使用该组梯度变量。
-   * @descEN Used to represent the warning map token, such as Notification, Alert, etc. Alert or Control component(like Input) will use these map tokens.
+   * @nameKR 경고 색상
+   * @desc 작업 경고를 나타내는 토큰 시퀀스입니다. Notification, Alert 등과 같은 경고 클래스 컴포넌트나 Input과 같은 입력 클래스 컴포넌트에서 이 그라데이션 변수를 사용합니다.
    */
   colorWarning: string;
 
   /**
    * @nameKR 오류 색상
-   * @desc 오류 버튼, 오류 결과 컴포넌트 등과 같은 작업 실패의 시각적 요소를 나타내는 데 사용됩니다.
    */
   colorError: string;
 
   /**
-   * @nameZH 信息色
-   * @nameEN Info Color
-   * @desc 用于表示操作信息的 Token 序列，如 Alert 、Tag、 Progress 等组件都有用到该组梯度变量。
-   * @descEN Used to represent the operation information of the Token sequence, such as Alert, Tag, Progress, and other components use these map tokens.
+   * @nameKR 정보 색상
+   * @desc Alert, Tag, Progress 등과 같은 컴포넌트에서 사용하는 토큰 시퀀스의 작업 정보를 나타내는 데 사용됩니다. 해당 그룹의 그라데이션 변수가 사용됩니다.
    */
   colorInfo: string;
 
@@ -94,10 +87,8 @@ export interface SeedToken extends PresetColorType {
   //  ----------   Line   ---------- //
 
   /**
-   * @nameZH 基础线宽
-   * @nameEN Base Line Width
-   * @desc 用于控制组件边框、分割线等的宽度
-   * @descEN Border width of base components
+   * @nameKR 기본 선 너비
+   * @desc 컴포넌트의 테두리, 구분선 등의 두너를 제어하는 데 사용됩니다.
    */
   lineWidth: number;
 
@@ -220,8 +211,7 @@ export interface SeedToken extends PresetColorType {
   motionEaseInOut: string;
 
   /**
-   * @desc 预设动效曲率
-   * @descEN Preset motion curve.
+   * @desc 기본 동작 곡선입니다.
    */
   motionEaseOutBack: string;
 

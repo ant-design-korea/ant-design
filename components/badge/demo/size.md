@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-可以设置有数字徽标的大小。
-
-## en-US
-
-Set size of numeral Badge.
+숫자 배지의 크기를 설정합니다.

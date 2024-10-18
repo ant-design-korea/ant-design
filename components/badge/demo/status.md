@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-用于表示状态的小圆点。
-
-## en-US
-
-Standalone badge with status.
+상태가 포함된 독립형 배지.
