@@ -42,7 +42,7 @@ Ant Design의 공식 웹사이트를 살펴보면, Ant Design의 컴포넌트는
 
 ## SSR HashMap
 
-`@ant-design/cssinjs` 라이브러리에서는 캐시 자체에 각 요소의 스타일과 해시 정보가 포함됩니다. 과거에는 `extractStyle` 메서드가 캐시에서 스타일만 추출하여 사용했습니다:
+[`@ant-design/cssinjs`](https://github.com/ant-design/cssinjs) 라이브러리에서는 캐시 자체에 각 요소의 스타일과 해시 정보가 포함됩니다. 과거에는 `extractStyle` 메서드가 캐시에서 스타일만 추출하여 사용했습니다:
 
 ```tsx
 // 예시입니다. 실제 경로는 훨씬 더 복잡합니다.
