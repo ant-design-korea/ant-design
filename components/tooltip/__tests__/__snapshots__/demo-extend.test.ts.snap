@@ -671,7 +671,7 @@ exports[`renders components/tooltip/demo/auto-adjust-overflow.tsx extend context
 exports[`renders components/tooltip/demo/basic.tsx extend context correctly 1`] = `
 Array [
   <span>
-    Tooltip will show on mouse enter.
+    Tooltip은 마우스를 올리면 표시됩니다.
   </span>,
   <div
     class="ant-tooltip ant-zoom-big-fast-appear ant-zoom-big-fast-appear-prepare ant-zoom-big-fast ant-tooltip-placement-top"
@@ -1268,7 +1268,7 @@ exports[`renders components/tooltip/demo/colorful.tsx extend context correctly 2
 exports[`renders components/tooltip/demo/destroy-tooltip-on-hide.tsx extend context correctly 1`] = `
 Array [
   <span>
-    Tooltip will destroy when hidden.
+    Tooltip은 숨겨지면 제거됩니다.
   </span>,
   <div
     class="ant-tooltip ant-zoom-big-fast-appear ant-zoom-big-fast-appear-prepare ant-zoom-big-fast ant-tooltip-placement-top"
@@ -1314,7 +1314,7 @@ exports[`renders components/tooltip/demo/disabled.tsx extend context correctly 1
     class="ant-space-item"
   >
     <span>
-      Tooltip will show on mouse enter.
+      Tooltip은 마우스를 올리면 표시됩니다.
     </span>
     <div
       class="ant-tooltip ant-zoom-big-fast-appear ant-zoom-big-fast-appear-prepare ant-zoom-big-fast ant-tooltip-placement-top"
