@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-使用缎带型的徽标。
-
-## en-US
-
-Use ribbon badge.
+리본 배지를 사용합니다.

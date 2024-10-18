@@ -13,7 +13,7 @@ export interface ColorNeutralMapToken {
 
   /**
    * @nameKR 텍스트 색상
-   * @desc 가장 깊은 텍스트 색상입니다. W3C 표준에 맞춰 기본 텍스트 색상으로 사용되며, 이 색상은 가장 어두운 중성 색상이기도 합니다.
+   * @desc W3C 표준을 준수하는 기본 텍스트 색상으로, 이 색상은 가장 어두운 중립적인 색상이기도 합니다.
    */
   colorText: string;
 
@@ -98,16 +98,14 @@ export interface ColorNeutralMapToken {
   colorBgLayout: string;
 
   /**
-   * @nameZH 组件容器背景色
-   * @desc 组件的容器背景色，例如：默认按钮、输入框等。务必不要将其与 `colorBgElevated` 混淆。
-   * @descEN Container background color, e.g: default button, input box, etc. Be sure not to confuse this with `colorBgElevated`.
+   * @nameKR 컨테이너 배경 색강
+   * @desc  컨테이너 배경 색상, 예: 기본 버튼, 입력 상자, 등. `colorBgElevated`와 혼동을 주의하세요.
    */
   colorBgContainer: string;
 
   /**
    * @nameZH 浮层容器背景色
-   * @desc 浮层容器背景色，在暗色模式下该 token 的色值会比 `colorBgContainer` 要亮一些。例如：模态框、弹出框、菜单等。
-   * @descEN Container background color of the popup layer, in dark mode the color value of this token will be a little brighter than `colorBgContainer`. E.g: modal, pop-up, menu, etc.
+   * @desc 팝업 레이어의 컨테이너 배경색으로, 다크 모드에서 이 토큰의 색상 값은 `colorBgContainer`보다 약간 밝습니다. 예 : modal, pop-up, menu 등
    */
   colorBgElevated: string;
 
@@ -173,10 +171,8 @@ interface ColorPrimaryMapToken {
   colorPrimaryBgHover: string; // 2
 
   /**
-   * @nameZH 主色描边色
-   * @nameEN Border color of primary color
-   * @desc 主色梯度下的描边用色，用在 Slider 等组件的描边上。
-   * @descEN The stroke color under the main color gradient, used on the stroke of components such as Slider.
+   * @nameKR 기본 색상의 테두리 색상
+   * @desc Slider와 같은 컴포넌트의 획에 사용되는 주 색상 그라데이션 아래의 획 색상입니다.
    */
   colorPrimaryBorder: string; // 3
 
@@ -509,10 +505,8 @@ interface ColorErrorMapToken {
   colorErrorBorderHover: string; // 4
 
   /**
-   * @nameZH 错误色的深色悬浮态
-   * @nameEN Error hover color
-   * @desc 错误色的深色悬浮态
-   * @descEN The hover state of the error color.
+   * @nameKR 오류의 Hover 색상
+   * @desc 오류 색상의 Hover 상태입니다.
    */
   colorErrorHover: string; // 5
 

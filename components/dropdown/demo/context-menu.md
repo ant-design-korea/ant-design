@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-默认是移入触发菜单，可以点击鼠标右键触发。弹出菜单位置会跟随右键点击位置变动。
-
-## en-US
-
-The default trigger mode is `hover`, you can change it to `contextMenu`. The pop-up menu position will follow the right-click position.
+기본 트리거 모드는 `hover`이며, `contextMenu`로 트리거 모드를 변경할 수 있습니다. 팝업 메뉴 위치는 오른쪽 클릭 위치를 따릅니다.

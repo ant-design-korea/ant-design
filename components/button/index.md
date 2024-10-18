@@ -33,7 +33,9 @@ Ant Design에서는 5가지 유형의 버튼을 제공합니다.
 ## 예시
 
 <!-- prettier-ignore -->
-<code src="./demo/basic.tsx">Type</code>
+<code src="./demo/basic.tsx">Syntactic sugar</code>
+<code src="./demo/color-variant.tsx" version="5.21.0">Color & Variant</code>
+<code src="./demo/debug-color-variant" debug>Debug Color & Variant</code>
 <code src="./demo/icon.tsx">Icon</code>
 <code src="./demo/icon-position.tsx" version="5.17.0">Icon Position</code>
 <code src="./demo/debug-icon.tsx" debug>Debug Icon</code>

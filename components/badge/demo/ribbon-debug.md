@@ -1,7 +1,3 @@
-## zh-CN
-
-Buggy!
-
-## en-US
+## ko-KR
 
 Buggy!

@@ -21,13 +21,11 @@ import genStatusStyle from './status';
 
 export interface ComponentToken extends ArrowToken, ArrowOffsetToken {
   /**
-   * @desc 下拉菜单 z-index
-   * @descEN z-index of dropdown
+   * @desc 드롭다운의 z-index
    */
   zIndexPopup: number;
   /**
-   * @desc 下拉菜单纵向内边距
-   * @descEN Vertical padding of dropdown
+   * @desc 드롭다운의 세로 안쪽 여백
    */
   paddingBlock: CSSProperties['paddingBlock'];
 }
@@ -94,6 +92,12 @@ const genBaseStyle: GenerateStyle<DropdownToken> = (token) => {
           zIndex: -9999,
           opacity: 0.0001,
           content: '""',
+        },
+
+        // Makes vertical dropdowns have a scrollbar once they become taller than the viewport.
+        '&-menu-vertical': {
+          maxHeight: '100vh',
+          overflowY: 'auto',
         },
 
         [`&-trigger${antCls}-btn`]: {

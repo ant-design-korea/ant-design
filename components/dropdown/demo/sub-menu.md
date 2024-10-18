@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-传入的菜单里有多个层级。
-
-## en-US
-
-The menu has multiple levels.
+메뉴에는 여러 단계가 있습니다.

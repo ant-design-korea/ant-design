@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-默认是移入触发菜单，可以点击触发。
-
-## en-US
-
-The default trigger mode is `hover`, you can change it to `click`.
+트리거 모드의 기본값은 `hover`이며, `click`으로 변경할 수 있습니다.

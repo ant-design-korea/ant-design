@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-在使用多彩徽标的同时，支持 count 属性显示
-
-## en-US
-
-support `count` when use colorful badge
+`Colorful badge` 사용 시 `count`를 지원합니다.

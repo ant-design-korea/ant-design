@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-展示动态变化的效果。
-
-## en-US
-
-The count will be animated as it changes.
+카운트가 변경되면 애니메이션이 적용됩니다.

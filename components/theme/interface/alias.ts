@@ -54,33 +54,25 @@ export interface AliasToken extends MapToken {
 
   // Border
   /**
-   * @nameZH 背景边框颜色
-   * @nameEN Background border color
-   * @desc 控制元素背景边框的颜色。
-   * @descEN Control the color of background border of element.
+   * @nameKR 배경 테두리 색상
+   * @desc 요소의 배경 테두리 색상을 제어합니다.
    */
   colorBorderBg: string;
   /**
-   * @nameZH 分割线颜色
-   * @nameEN Separator Color
-   * @desc 用于作为分割线的颜色，此颜色和 colorBorderSecondary 的颜色一致，但是用的是透明色。
-   * @descEN Used as the color of separator, this color is the same as colorBorderSecondary but with transparency.
+   * @nameKR 구분선 색상
+   * @desc 구분선의 색상으로 사용되며, 이 색상은 colorBorderSecondary와 동일하지만 투명도가 있습니다.
    */
   colorSplit: string;
 
   // Text
   /**
-   * @nameZH 占位文本颜色
-   * @nameEN Placeholder Text Color
-   * @desc 控制占位文本的颜色。
-   * @descEN Control the color of placeholder text.
+   * @nameKR Placeholder 텍스트 색상
+   * @desc Placeholder의 텍스트 색상을 제어합니다.
    */
   colorTextPlaceholder: string;
   /**
-   * @nameZH 禁用字体颜色
-   * @nameEN Disabled Text Color
-   * @desc 控制禁用状态下的字体颜色。
-   * @descEN Control the color of text in disabled state.
+   * @nameKR 비활성화된 텍스트 색상
+   * @desc 비활성화 상태의 텍스트 색상을 제어합니다.
    */
   colorTextDisabled: string;
   /**
@@ -96,17 +88,13 @@ export interface AliasToken extends MapToken {
    */
   colorTextLabel: string;
   /**
-   * @nameZH 文本描述字体颜色
-   * @nameEN Text description font color
-   * @desc 控制文本描述字体颜色。
-   * @descEN Control the font color of text description.
+   * @nameKR 텍스트 설명 글꼴 색상
+   * @desc 텍스트 설명의 글꼴 색상을 제어합니다.
    */
   colorTextDescription: string;
   /**
-   * @nameZH 固定文本高亮颜色
-   * @nameEN Fixed text highlight color
-   * @desc 控制带背景色的文本，例如 Primary Button 组件中的文本高亮颜色。
-   * @descEN Control the highlight color of text with background color, such as the text in Primary Button components.
+   * @nameKR 고정된 글꼴 하이라이트 색상
+   * @desc Primary Button 컴포넌트의 텍스트와 같이 배경색으로 텍스트의 하이라이트 색상을 제어합니다.
    */
   colorTextLightSolid: string;
 
@@ -158,8 +146,8 @@ export interface AliasToken extends MapToken {
 
   // Font
   /**
-   * @nameKR Select, Cascader 등의 아이콘 글꼴 크기
-   * @desc Select, Cascader 등의 아이콘 글꼴 크기를 제어합니다. 일반적으로 fontSizeSM과 동일합니다.
+   * @nameKR Select, Cascader 등에서의 작업 아이콘 글꼴 크기
+   * @desc Select, Cascader 등에서 작업 아이콘의 글꼴 크기를 제어합니다. 일반적으로 fontSizeSM과 동일합니다.
    */
   fontSizeIcon: number;
 
@@ -182,26 +170,20 @@ export interface AliasToken extends MapToken {
   controlOutlineWidth: number;
 
   /**
-   * @nameZH 控制组件项在鼠标悬浮时的背景颜色
-   * @nameEN Background color of control component item when hovering
-   * @desc 控制组件项在鼠标悬浮时的背景颜色。
-   * @descEN Control the background color of control component item when hovering.
+   * @nameKR 마우스를 올릴 때 제어 컴포넌트 요소의 배경색
+   * @desc 마우스를 올릴 때 제어 컴포넌트 요소의 배경색을 제어합니다.
    */
   controlItemBgHover: string; // Note. It also is a color
 
   /**
-   * @nameZH 控制组件项在激活状态下的背景颜色
-   * @nameEN Background color of control component item when active
-   * @desc 控制组件项在激活状态下的背景颜色。
-   * @descEN Control the background color of control component item when active.
+   * @nameKR 활성화 시 제어 컴포넌트 요소의 배경색
+   * @desc 활성화 시 제어 컴포넌트 요소의 배경색을 제어합니다.
    */
   controlItemBgActive: string; // Note. It also is a color
 
   /**
-   * @nameZH 控制组件项在鼠标悬浮且激活状态下的背景颜色
-   * @nameEN Background color of control component item when hovering and active
-   * @desc 控制组件项在鼠标悬浮且激活状态下的背景颜色。
-   * @descEN Control the background color of control component item when hovering and active.
+   * @nameKR 마우스를 올리고 활성화할 때 제어 컴포넌트 요소의 배경색
+   * @desc 마우스를 올리고 활성화할 때 제어 컴포넌트 요소의 배경색을 제어합니다.
    */
   controlItemBgActiveHover: string; // Note. It also is a color
 
@@ -223,26 +205,20 @@ export interface AliasToken extends MapToken {
 
   // Line
   /**
-   * @nameZH 线条宽度(聚焦态)
-   * @nameEN Line width(focus state)
-   * @desc 控制线条的宽度，当组件处于聚焦态时。
-   * @descEN Control the width of the line when the component is in focus state.
+   * @nameEN 선 너비(포커스 상태)
+   * @desc 컴포넌트가 포커스 상태에 있을 때 선의 너비를 제어합니다.
    */
   lineWidthFocus: number;
 
   // Padding
   /**
-   * @nameZH 极小内间距
-   * @nameEN Extra extra small padding
-   * @desc 控制元素的极小内间距。
-   * @descEN Control the extra extra small padding of the element.
+   * @nameKR 아주 매우 작은 안쪽 여백
+   * @desc 요소의 아주 매우 작은 안쪽 여백을 제어합니다.
    */
   paddingXXS: number;
   /**
-   * @nameZH 特小内间距
-   * @nameEN Extra small padding
-   * @desc 控制元素的特小内间距。
-   * @descEN Control the extra small padding of the element.
+   * @nameKR 매우 작은 안쪽 여백
+   * @desc 요소의 매우 작은 안쪽 여백을 제어합니다.
    */
   paddingXS: number;
   /**
@@ -253,10 +229,8 @@ export interface AliasToken extends MapToken {
    */
   paddingSM: number;
   /**
-   * @nameZH 内间距
-   * @nameEN Padding
-   * @desc 控制元素的内间距。
-   * @descEN Control the padding of the element.
+   * @nameKR 안쪽 여백
+   * @desc 요소의 안쪽 여백을 제어합니다.
    */
   padding: number;
   /**
@@ -327,15 +301,13 @@ export interface AliasToken extends MapToken {
 
   // Margin
   /**
-   * @nameZH 外边距 XXS
-   * @nameEN Margin XXS
-   * @desc 控制元素外边距，最小尺寸。
-   * @descEN Control the margin of an element, with the smallest size.
+   * @nameKR 여백 XXS
+   * @desc 요소의 여백을 가장 작은 크기로 제어합니다.
    */
   marginXXS: number;
   /**
-   * @nameKR 마진 XS
-   * @desc 요소의 외부 여백을 제어하며, 작은 사이즈입니다.
+   * @nameKR 여백 XS
+   * @desc 요소의 여백을 작은 크기로 제어합니다.
    */
   marginXS: number;
   /**
@@ -396,10 +368,8 @@ export interface AliasToken extends MapToken {
    */
   boxShadow: string;
   /**
-   * @nameZH 二级阴影
-   * @nameEN Secondary box shadow
-   * @desc 控制元素二级阴影样式。
-   * @descEN Control the secondary box shadow style of an element.
+   * @nameKR 보조 상자 그림자
+   * @desc 요소의 보조 상자 그림자 스타일을 제어합니다.
    */
   boxShadowSecondary: string;
   /**
@@ -433,10 +403,8 @@ export interface AliasToken extends MapToken {
   linkFocusDecoration: React.CSSProperties['textDecoration'];
 
   /**
-   * @nameZH 控制水平内间距
-   * @nameEN Control horizontal padding
-   * @desc 控制元素水平内间距。
-   * @descEN Control the horizontal padding of an element.
+   * @nameKR 가로 안쪽 여백 제어
+   * @desc 요소의 가로 안쪽 여백을 제어합니다.
    */
   controlPaddingHorizontal: number;
   /**
