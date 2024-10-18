@@ -4,55 +4,59 @@ import { Alert, Flex } from 'antd';
 const Demo = () => (
   <Flex gap="large" vertical style={{ maxWidth: 600 }}>
     <Flex gap="middle" vertical>
-      <div>成功提示</div>
+      <div>성공 메시지</div>
       <Alert
         showIcon
         type="success"
-        message="恭喜！你所提交的信息已经审核通过，如有问题请联系客服。"
+        message="축하합니다! 귀하께서 제출하신 정보가 심사를 통과했습니다. 궁금한 점이 있으시면 고객센터로 문의해주세요."
       />
       <Alert
         showIcon
         type="success"
-        message="已成功！"
-        description="你所提交的信息已经审核通过，请及时跟进申请状况。如有问题，请联系审核人员或在线客服。"
+        message="성공했습니다!"
+        description="귀하께서 제출하신 정보가 심사를 통과했습니다. 따라서 진행 상황을 수시로 확인해주시기 바랍니다. 궁금한 점이 있으시면 담당 심사관 또는 온라인 상담원에게 문의해주세요."
       />
     </Flex>
     <Flex gap="middle" vertical>
-      <div>信息提示</div>
+      <div>정보 메시지</div>
       <Alert
         showIcon
         type="info"
-        message="你好！欢迎使用专业版，你可以根据自身需求添加业务模块。"
+        message="안녕하세요! 전문 버전을 이용해주셔서 감사합니다. 귀하의 필요에 따라 비즈니스 모듈을 추가할 수 있습니다."
       />
       <Alert
         showIcon
         type="info"
-        message="帮助信息"
-        description="你好，由于你的良好信用，我们决定赠送你三个月产品会员，欲了解会员特权与活动请进首页会员专区查看。"
+        message="도움말 정보"
+        description="안녕하세요, 귀하의 좋은 신용을 고려하여 3개월의 제품 회원권을 드리기로 결정했습니다. 회원의 특권 및 활동에 대해 알아보시려면 홈페이지의 회원 전용 구역을 방문해 주시기 바랍니다."
       />
     </Flex>
     <Flex gap="middle" vertical>
-      <div>警告提示</div>
+      <div>경고 알림</div>
       <Alert
         showIcon
         type="warning"
-        message="系统将于 15 : 00 - 17 : 00 进行升级，请及时保存你的资料！"
+        message="시스템은 15:00 - 17:00에 업그레이드를 진행합니다. 자료를 신속하게 저장해 주시기 바랍니다!"
       />
       <Alert
         showIcon
         type="warning"
-        message="请注意"
-        description="你所提交的信息已经审核失败，可以进入个人信箱查看原因，如有疑问，请联系客服人员。"
+        message="주의해 주세요"
+        description="당신이 제출한 정보는 검토에 실패했습니다. 이유는 개인 사서함에서 확인할 수 있으며, 궁금한 점이 있으면 고객 서비스 직원에게 문의해 주세요."
       />
     </Flex>
     <Flex gap="middle" vertical>
-      <div>错误提示</div>
-      <Alert showIcon type="error" message="系统错误，请稍后重试。" />
+      <div>오류 메시지</div>
       <Alert
         showIcon
         type="error"
-        message="出错了！"
-        description="你的账户会员使用权限将在3天后到期，请及时跟进申请状况。如有问题，请联系审核人员。"
+        message="시스템 오류가 발생했습니다. 나중에 다시 시도해 주세요."
+      />
+      <Alert
+        showIcon
+        type="error"
+        message="오류가 발생했습니다!"
+        description="귀하의 계정 회원 사용 권한은 3일 후에 만료됩니다. 신청 상태를 신속히 확인하시기 바랍니다. 문제가 있을 경우, 심사 담당자에게 문의하십시오."
       />
     </Flex>
   </Flex>

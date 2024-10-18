@@ -27,6 +27,7 @@ export interface SeedToken extends PresetColorType {
   colorWarning: string;
 
   /**
+   * @desc 오류 버튼, 오류 결과 구성 요소 등 작업 실패의 시각적 요소를 나타내는 데 사용됩니다.
    * @nameKR 오류 색상
    */
   colorError: string;
@@ -93,10 +94,8 @@ export interface SeedToken extends PresetColorType {
   lineWidth: number;
 
   /**
-   * @nameZH 线条样式
-   * @nameEN Line Style
-   * @desc 用于控制组件边框、分割线等的样式，默认是实线
-   * @descEN Border style of base components
+   * @nameKR 라인 스타일
+   * @desc 컴포넌트의 테두리, 구분선 등의 스타일을 제어하는 데 사용되며, 기본값은 실선입니다.
    */
   lineType: string;
 

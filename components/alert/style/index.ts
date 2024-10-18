@@ -9,18 +9,15 @@ import { genStyleHooks } from '../../theme/internal';
 export interface ComponentToken {
   // Component token here
   /**
-   * @desc 默认内间距
-   * @descEN Default padding
+   * @desc 기본 패딩
    */
   defaultPadding: CSSProperties['padding'];
   /**
-   * @desc 带有描述的内间距
-   * @descEN Padding with description
+   * @desc 설명문 패딩
    */
   withDescriptionPadding: CSSProperties['padding'];
   /**
-   * @desc 带有描述时的图标尺寸
-   * @descEN Icon size with description
+   * @desc 설명이 포함된 아이콘 크기
    */
   withDescriptionIconSize: number;
 }

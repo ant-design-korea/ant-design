@@ -3,10 +3,10 @@ import { Alert, Flex } from 'antd';
 
 const Demo = () => (
   <Flex gap="middle" vertical style={{ maxWidth: 600 }}>
-    <Alert message="你好！欢迎使用专业版，你可以根据自身需求添加业务模块。" />
+    <Alert message="안녕하세요! 전문 버전을 이용해주셔서 감사합니다. 귀하의 필요에 따라 비즈니스 모듈을 추가할 수 있습니다." />
     <Alert
-      message="帮助信息"
-      description="你好，由于你的良好信用，我们决定赠送你三个月产品会员，欲了解会员特权与活动请进首页会员专区查看。"
+      message="도움말 정보"
+      description="안녕하세요. 고객님의 좋은 신용도를 인정하여, 3개월간 제품 회원 자격을 무료로 드립니다. 회원 특권 및 다양한 이벤트에 대한 자세한 내용은 홈페이지 메인 화면의 회원 전용 공간에서 확인하실 수 있습니다."
     />
   </Flex>
 );
