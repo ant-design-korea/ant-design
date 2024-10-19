@@ -226,7 +226,7 @@ export interface ButtonToken extends FullToken<'Button'> {
    */
   buttonPaddingVertical: CSSProperties['paddingBlock'];
   /**
-   * @desc 按钮纵向内边距
+   * @desc 只有图标的按钮图标尺寸
    * @descEN Icon size of button which only contains icon
    */
   buttonIconOnlyFontSize: number;
