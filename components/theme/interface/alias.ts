@@ -54,10 +54,8 @@ export interface AliasToken extends MapToken {
 
   // Border
   /**
-   * @nameZH 背景边框颜色
-   * @nameEN Background border color
-   * @desc 控制元素背景边框的颜色。
-   * @descEN Control the color of background border of element.
+   * @nameKR 배경 테두리 색상
+   * @desc 요소의 배경 테두리 색상을 제어합니다.
    */
   colorBorderBg: string;
   /**
@@ -68,10 +66,8 @@ export interface AliasToken extends MapToken {
 
   // Text
   /**
-   * @nameZH 占位文本颜色
-   * @nameEN Placeholder Text Color
-   * @desc 控制占位文本的颜色。
-   * @descEN Control the color of placeholder text.
+   * @nameKR Placeholder 텍스트 색상
+   * @desc Placeholder의 텍스트 색상을 제어합니다.
    */
   colorTextPlaceholder: string;
   /**

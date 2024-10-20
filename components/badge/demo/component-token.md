@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-Component Token Debug.
-
-## en-US
-
-Component Token Debug
+Component Token 디버그

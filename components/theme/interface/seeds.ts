@@ -16,31 +16,24 @@ export interface SeedToken extends PresetColorType {
 
   /**
    * @nameKR 성공 색상
-   * @nameEN Success Color
    * @desc 작업 성공을 나타내는 토큰 시퀀스입니다. Result, Progress 등의 컴포넌트에서 이러한 맵 토큰을 사용합니다.
-   * @descEN Used to represent the token sequence of operation success, such as Result, Progress and other components will use these map tokens.
    */
   colorSuccess: string;
 
   /**
    * @nameKR 경고 색상
-   * @nameEN Warning Color
-   * @desc 경고를 나타내는 맵 토큰으로, Notification, Alert 등의 경고성 컴포넌트나 Input 등의 제어 컴포넌트에서 이 맵 토큰을 사용합니다.
-   * @descEN Used to represent the warning map token, such as Notification, Alert, etc. Alert or Control component(like Input) will use these map tokens.
+   * @desc 경고를 나타내는 토큰 시퀀스입니다. Notification, Alert 등의 경고성 컴포넌트나 Input 등의 제어 컴포넌트에서 이 맵 토큰을 사용합니다.
    */
   colorWarning: string;
 
   /**
    * @nameKR 오류 색상
-   * @desc 오류 버튼, 오류 결과 컴포넌트 등과 같은 작업 실패의 시각적 요소를 나타내는 데 사용됩니다.
    */
   colorError: string;
 
   /**
    * @nameKR 정보 색상
-   * @nameEN Info Color
-   * @desc Alert, Tag, Progress 등 토큰 시퀀스의 작업 정보를 나타내는 데 사용되며 기타 구성 요소는 이러한 맵 토큰을 사용합니다.
-   * @descEN Used to represent the operation information of the Token sequence, such as Alert, Tag, Progress, and other components use these map tokens.
+   * @desc Alert, Tag, Progress 등과 같은 컴포넌트에서 사용하는 토큰 시퀀스의 작업 정보를 나타내는 데 사용됩니다. 해당 그룹의 그라데이션 변수가 사용됩니다.
    */
   colorInfo: string;
 
@@ -94,10 +87,8 @@ export interface SeedToken extends PresetColorType {
   //  ----------   Line   ---------- //
 
   /**
-   * @nameZH 基础线宽
-   * @nameEN Base Line Width
-   * @desc 用于控制组件边框、分割线等的宽度
-   * @descEN Border width of base components
+   * @nameKR 기본 선 너비
+   * @desc 컴포넌트의 테두리, 구분선 등의 두너를 제어하는 데 사용됩니다.
    */
   lineWidth: number;
 
@@ -220,8 +211,7 @@ export interface SeedToken extends PresetColorType {
   motionEaseInOut: string;
 
   /**
-   * @desc 预设动效曲率
-   * @descEN Preset motion curve.
+   * @desc 기본 동작 곡선입니다.
    */
   motionEaseOutBack: string;
 

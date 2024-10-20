@@ -2,19 +2,19 @@
 category: Components
 group: Data Display
 title: Tooltip
-description: Simple text popup box.
+description: 간단한 텍스트 팝업 상자.
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*9LKlRbWytugAAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*bCbPTJ7LQngAAAAAAAAAAAAADrJ8AQ/original
 demo:
   cols: 2
 ---
 
-## When To Use
+## 언제 사용하나요?
 
-- The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations.
-- To provide an explanation of a `button/text/operation`. It's often used instead of the html `title` attribute.
+- 마우스를 올리면 툴팁이 나타나고, 마우스를 떼면 툴팁이 사라집니다. 툴팁은 복잡한 텍스트나 작업을 지원하지 않습니다.
+- `button/text/operation`에 대한 설명을 제공하기 위해 사용됩니다. 종종 HTML의 `title` 속성 대신 사용됩니다.
 
-## Examples
+## 예시
 
 <!-- prettier-ignore -->
 <code src="./demo/basic.tsx">Basic</code>
@@ -33,34 +33,34 @@ demo:
 
 Common props ref：[Common props](/docs/react/common-props)
 
-| Property | Description                   | Type                         | Default |
-| -------- | ----------------------------- | ---------------------------- | ------- |
-| title    | The text shown in the tooltip | ReactNode \| () => ReactNode | -       |
+| Property | Description            | Type                         | Default |
+| -------- | ---------------------- | ---------------------------- | ------- |
+| title    | 툴팁에 표시되는 텍스트 | ReactNode \| () => ReactNode | -       |
 
-### Common API
+### 공통 API
 
-The following APIs are shared by Tooltip, Popconfirm, Popover.
+다음 API는 Tooltip, Popconfirm, Popover에서 공통으로 사용됩니다.
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
-| align | This value will be merged into placement's config, please refer to the settings [dom-align](https://github.com/yiminghe/dom-align) | object | - |  |
-| arrow | Change arrow's visible state and change whether the arrow is pointed at the center of target. | boolean \| { pointAtCenter: boolean } | true | 5.2.0 |
-| autoAdjustOverflow | Whether to adjust popup placement automatically when popup is off screen | boolean | true |  |
-| color | The background color | string | - | 4.3.0 |
-| defaultOpen | Whether the floating tooltip card is open by default | boolean | false | 4.23.0 |
-| destroyTooltipOnHide | Whether destroy tooltip when hidden | boolean | false |  |
-| fresh | Tooltip will cache content when it is closed by default. Setting this property will always keep updating | boolean | false | 5.10.0 |
-| getPopupContainer | The DOM container of the tip, the default behavior is to create a `div` element in `body` | (triggerNode: HTMLElement) => HTMLElement | () => document.body |  |
-| mouseEnterDelay | Delay in seconds, before tooltip is shown on mouse enter | number | 0.1 |  |
-| mouseLeaveDelay | Delay in seconds, before tooltip is hidden on mouse leave | number | 0.1 |  |
-| overlayClassName | Class name of the tooltip card | string | - |  |
-| overlayStyle | Style of the tooltip card | object | - |  |
-| overlayInnerStyle | Style of the tooltip inner content | object | - |  |
-| placement | The position of the tooltip relative to the target, which can be one of `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom` | string | `top` |  |
-| trigger | Tooltip trigger mode. Could be multiple by passing an array | `hover` \| `focus` \| `click` \| `contextMenu` \| Array&lt;string> | `hover` |  |
-| open | Whether the floating tooltip card is open or not. Use `visible` under 4.23.0 ([why?](/docs/react/faq#why-open)) | boolean | false | 4.23.0 |
-| zIndex | Config `z-index` of Tooltip | number | - |  |
-| onOpenChange | Callback executed when visibility of the tooltip card is changed | (open: boolean) => void | - | 4.23.0 |
+| align | 이 값은 placement 설정에 병합됩니다. 설정은 [dom-align](https://github.com/yiminghe/dom-align)을 참조하세요. | object | - |  |
+| arrow | 화살표의 가시성을 변경하고, 화살표가 대상의 중앙을 가리킬지 여부 | boolean \| { pointAtCenter: boolean } | true | 5.2.0 |
+| autoAdjustOverflow | 팝업이 화면에서 벗어날 때 팝업 위치를 자동으로 조정할지 여부 | boolean | true |  |
+| color | 배경 색상 | string | - | 4.3.0 |
+| defaultOpen | 툴팁 카드가 기본적으로 열려 있는지 여부 | boolean | false | 4.23.0 |
+| destroyTooltipOnHide | 툴팁이 숨겨질 때 삭제할지 여부 | boolean | false |  |
+| fresh | 툴팁이 닫히면 콘텐츠를 캐싱합니다. 이 속성을 설정하면 계속해서 업데이트됩니다. | boolean | false | 5.10.0 |
+| getPopupContainer | 팁이 표시될 DOM 컨테이너, 기본 동작은 `body`에 `div` 요소를 생성합니다. | (triggerNode: HTMLElement) => HTMLElement | () => document.body |  |
+| mouseEnterDelay | 마우스를 올렸을 때 툴팁이 표시되기 전까지의 지연 시간 (초) | number | 0.1 |  |
+| mouseLeaveDelay | 마우스를 뗐을 때 툴팁이 숨겨지기 전까지의 지연 시간 (초) | number | 0.1 |  |
+| overlayClassName | 툴팁 카드의 클래스명 | string | - |  |
+| overlayStyle | 툴팁 카드의 스타일 | object | - |  |
+| overlayInnerStyle | 툴팁 내부 콘텐츠의 스타일 | object | - |  |
+| placement | 대상과의 상대적 위치, 선택 가능한 값: `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom` | string | `top` |  |
+| trigger | 툴팁을 트리거하는 모드. 배열을 전달하여 여러 모드를 설정할 수 있음 | `hover` \| `focus` \| `click` \| `contextMenu` \| Array&lt;string> | `hover` |  |
+| open | 툴팁 카드가 열려 있는지 여부. 4.23.0 이하에서는 `visible` 사용([이유 보기](/docs/react/faq#why-open)) | boolean | false | 4.23.0 |
+| zIndex | 툴팁의 `z-index` 설정 | number | - |  |
+| onOpenChange | 툴팁 카드의 가시성이 변경될 때 실행되는 콜백 | (open: boolean) => void | - | 4.23.0 |
 
 ## Design Token
 
@@ -68,28 +68,28 @@ The following APIs are shared by Tooltip, Popconfirm, Popover.
 
 ## FAQ
 
-### Why does the warning `findDOMNode is deprecated` sometimes appear in strict mode?
+### 왜 strict mode에서 `findDOMNode is deprecated` 경고가 종종 발생하나요?
 
-This is due to the implementation of `rc-trigger`. `rc-trigger` forces children to accept ref, otherwise it will fall back to findDOMNode, so children need to be native html tags. If not, you need to use `React.forwardRef` transparently passes `ref` to native html tags.
+이 문제는 `rc-trigger`의 구현 방식 때문입니다. `rc-trigger`는 자식 컴포넌트가 ref를 받아들이도록 강제하며, 그렇지 않으면 `findDOMNode`로 대체됩니다. 따라서 자식 컴포넌트는 네이티브 HTML 태그여야 하며, 그렇지 않다면 `React.forwardRef`를 사용합니다. `React.forwardRef`를 사용하면 ref가 네이티브 HTML 태그로 자동으로 넘겨줍니다.
 
-- `findDOMNode is deprecated` reproduce: <https://codesandbox.io/p/sandbox/finddomnode-c5hy96>
-- Using `forwardRef` to fix: <https://codesandbox.io/p/sandbox/no-finddomnode-warning-forked-gdxczs>
+- `findDOMNode is deprecated` 재현: <https://codesandbox.io/p/sandbox/finddomnode-c5hy96>
+- `forwardRef`를 사용하여 문제 해결: <https://codesandbox.io/p/sandbox/no-finddomnode-warning-forked-gdxczs>
 
-### Why sometime not work on HOC?
+### 왜 가끔 HOC에서 작동하지 않나요?
 
-Please ensure that the child node of `Tooltip` accepts `onMouseEnter`, `onMouseLeave`, `onPointerEnter`, `onPointerLeave`, `onFocus`, `onClick` events.
+`Tooltip`의 자식 노드가 `onMouseEnter`, `onMouseLeave`, `onPointerEnter`, `onPointerLeave`, `onFocus`, `onClick` 이벤트를 받아들이는지 확인해야 합니다.
 
-### What's the placement logic?
+### placement 로직은 어떻게 되나요?
 
-It will follow `placement` config when screen has enough space. And flip when space is not enough (Such as `top` to `bottom` or `topLeft` to `bottomLeft`). Single direction such as `top` `bottom` `left` `right` will auto shift on the view:
+화면에 충분한 공간이 있으면 `placement` 설정을 따릅니다. 공간이 충분하지 않을 경우 `top`에서 `bottom` 또는 `topLeft`에서 `bottomLeft` 등으로 반전됩니다. `top`, `bottom`, `left`, `right`와 같은 단일 방향은 화면에 맞게 자동으로 이동됩니다:
 
 <img alt="shift" height="200" src="https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*sxaTTJjLtIMAAAAAAAAAAAAADrJ8AQ/original" />
 
-When `placement` is set to edge align such as `topLeft` `bottomRight`, it will only do flip but not do shift.
+`topLeft` `bottomRight`와 같이 가장자리에 맞춰진 `placement`의 경우 반전만 수행되고 이동은 하지 않습니다.
 
-### Why Tooltip not update content when close?
+### 왜 Tooltip이 닫힐 때 콘텐츠가 업데이트되지 않나요?
 
-Tooltip will cache content when it is closed to avoid flicker when content is updated:
+Tooltip은 닫힐 때 콘텐츠를 캐싱하여 콘텐츠가 업데이트될 때 깜빡임을 방지합니다:
 
 ```jsx
 // `title` will not blink when `user` is empty
@@ -100,7 +100,7 @@ Tooltip will cache content when it is closed to avoid flicker when content is up
 <img alt="no blink" height="50" src="https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*KVx7QLOYwVsAAAAAAAAAAAAADrJ8AQ/original" />
 </div>
 
-If need update content when close, you can set `fresh` property ([#44830](https://github.com/ant-design/ant-design/issues/44830)):
+닫힐 때 콘텐츠를 업데이트해야 하는 경우, `fresh` 속성을 설정할 수 있습니다. ([#44830](https://github.com/ant-design/ant-design/issues/44830)):
 
 ```jsx
 <Tooltip open={user} title={user?.name} fresh />

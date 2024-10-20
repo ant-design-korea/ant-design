@@ -14,7 +14,7 @@ import { genPresetColor, genStyleHooks, mergeToken } from '../../theme/internal'
 
 export interface ComponentToken extends ArrowOffsetToken, ArrowToken {
   /**
-   * @desc 文字提示 z-index
+   * @desc 툴팁의 z-index
    * @descEN z-index of tooltip
    */
   zIndexPopup: number;
