@@ -5,3 +5,7 @@
 ## en-US
 
 Options label Centered.
+
+## ko-KR
+
+옵션 레이블이 중앙 정렬됨.
