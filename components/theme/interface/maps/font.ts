@@ -111,9 +111,9 @@ export interface FontMapToken {
    */
   lineHeightHeading2: number;
   /**
-   * @nameZH 三级标题行高
+   * @nameKR h3 헤딩의 줄 높이
    * @nameEN Line height of heading level 3
-   * @desc h3 标签所使用的行高
+   * @desc h3 태그의 줄 높이
    * @descEN Line height of h3 tag.
    * @default 1.3
    */

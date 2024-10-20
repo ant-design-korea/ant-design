@@ -36,10 +36,10 @@ const locales = {
     value: 'Default Value',
   },
   ko: {
-    token: 'Token Name',
-    description: 'Description',
-    type: 'Type',
-    value: 'Default Value',
+    token: '토큰 이름',
+    description: '설명',
+    type: '타입',
+    value: '기본값',
   },
 };
 

@@ -15,17 +15,17 @@ export interface SeedToken extends PresetColorType {
   colorPrimary: string;
 
   /**
-   * @nameZH 成功色
+   * @nameKR 성공 색상
    * @nameEN Success Color
-   * @desc 用于表示操作成功的 Token 序列，如 Result、Progress 等组件会使用该组梯度变量。
+   * @desc 작업 성공을 나타내는 토큰 시퀀스입니다. Result, Progress 등의 컴포넌트에서 이러한 맵 토큰을 사용합니다.
    * @descEN Used to represent the token sequence of operation success, such as Result, Progress and other components will use these map tokens.
    */
   colorSuccess: string;
 
   /**
-   * @nameZH 警戒色
+   * @nameKR 경고 색상
    * @nameEN Warning Color
-   * @desc 用于表示操作警告的 Token 序列，如 Notification、 Alert等警告类组件或 Input 输入类等组件会使用该组梯度变量。
+   * @desc 경고를 나타내는 맵 토큰으로, Notification, Alert 등의 경고성 컴포넌트나 Input 등의 제어 컴포넌트에서 이 맵 토큰을 사용합니다.
    * @descEN Used to represent the warning map token, such as Notification, Alert, etc. Alert or Control component(like Input) will use these map tokens.
    */
   colorWarning: string;
@@ -37,15 +37,15 @@ export interface SeedToken extends PresetColorType {
   colorError: string;
 
   /**
-   * @nameZH 信息色
+   * @nameKR 정보 색상
    * @nameEN Info Color
-   * @desc 用于表示操作信息的 Token 序列，如 Alert 、Tag、 Progress 等组件都有用到该组梯度变量。
+   * @desc Alert, Tag, Progress 등 토큰 시퀀스의 작업 정보를 나타내는 데 사용되며 기타 구성 요소는 이러한 맵 토큰을 사용합니다.
    * @descEN Used to represent the operation information of the Token sequence, such as Alert, Tag, Progress, and other components use these map tokens.
    */
   colorInfo: string;
 
   /**
-   * @nameZH 基础文本色
+   * @nameKR 基础文本色
    * @nameEN Seed Text Color
    * @desc 用于派生文本色梯度的基础变量，v5 中我们添加了一层文本色的派生算法可以产出梯度明确的文本色的梯度变量。但请不要在代码中直接使用该 Seed Token ！
    * @descEN Used to derive the base variable of the text color gradient. In v5, we added a layer of text color derivation algorithm to produce gradient variables of text color gradient. But please do not use this Seed Token directly in the code!
