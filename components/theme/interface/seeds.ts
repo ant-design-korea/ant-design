@@ -28,6 +28,7 @@ export interface SeedToken extends PresetColorType {
 
   /**
    * @nameKR 오류 색상
+   * @desc 오류 Button, 오류 Result 컴포넌트 등 작업 실패의 시각적 요소를 나타내는 데 사용됩니다.
    */
   colorError: string;
 
