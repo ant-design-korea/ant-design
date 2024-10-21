@@ -8,27 +8,34 @@ const Demo = () => {
   return (
     <Flex gap="large" vertical style={{ maxWidth: 600 }}>
       <Flex gap="middle" vertical>
-        <div>关闭提示</div>
-        <Alert showIcon closable message="你好！欢迎使用专业版，你可以根据自身需求添加业务模块。" />
+        <div>알림 닫기</div>
         <Alert
           showIcon
           closable
-          message="帮助信息"
-          description="你好，由于你的良好信用，我们决定赠送你三个月产品会员，欲了解会员特权与活动请进首页会员专区查看。"
+          message="안녕하세요! 전문판 사용을 환영합니다. 필요에 따라 비즈니스 모듈을 추가할 수 있습니다."
+        />
+        <Alert
+          showIcon
+          closable
+          message="도움 정보"
+          description="안녕하세요, 귀하의 좋은 신용을 고려하여 3개월 제품 회원권을 드리기로 결정했습니다. 회원 특권 및 활동에 대한 자세한 내용은 홈페이지 회원 구역에서 확인하시기 바랍니다."
         />
       </Flex>
       <Flex gap="middle" vertical>
-        <div>展开/收起提示</div>
+        <div>알림 펼치기/접기</div>
         <Alert
           showIcon
           closable
           message={
             <div>
               <Typography.Paragraph ellipsis={!expandA && { rows: 2 }} style={{ marginBottom: 8 }}>
-                提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。
+                알림 정보가 2줄을 초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다. 알림
+                정보가 2줄을 초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다. 알림 정보가
+                2줄을 초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다. 알림 정보가 2줄을
+                초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다.
               </Typography.Paragraph>
               <Typography.Link onClick={() => setExpandA((prev) => !prev)}>
-                {expandA ? '收起' : '展开更多'}
+                {expandA ? '접기' : '확장'}
               </Typography.Link>
             </div>
           }
@@ -40,10 +47,13 @@ const Demo = () => {
           message={
             <div>
               <Typography.Paragraph ellipsis={!expandB && { rows: 2 }} style={{ marginBottom: 8 }}>
-                提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。提示信息超过2行时，可以使用将部分信息折叠，以减少空间占用。
+                알림 정보가 2줄을 초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다. 알림
+                정보가 2줄을 초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다. 알림 정보가
+                2줄을 초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다. 알림 정보가 2줄을
+                초과할 경우, 일부 정보를 접어서 공간을 줄일 수 있습니다.
               </Typography.Paragraph>
               <Typography.Link onClick={() => setExpandB((prev) => !prev)}>
-                {expandB ? '收起' : '展开更多'}
+                {expandB ? '접기' : '확장'}
               </Typography.Link>
             </div>
           }
@@ -51,12 +61,12 @@ const Demo = () => {
         />
       </Flex>
       <Flex gap="middle" vertical>
-        <div>执行其他操作</div>
+        <div>다른 작업 수행</div>
         <Alert
           showIcon
           closable
-          message="提示信息不超过一行时，按钮放在信息右侧。"
-          action={<Typography.Link>相关操作</Typography.Link>}
+          message="버튼 배치에 대한 명확한 설명과 추가 정보"
+          action={<Typography.Link>관련 작업</Typography.Link>}
         />
         <Alert
           showIcon
@@ -64,11 +74,13 @@ const Demo = () => {
           message={
             <div>
               <Typography.Paragraph style={{ marginBottom: 8 }}>
-                提示信息超过一行，此时按钮按照从上至下的视觉流，放置在信息区下方，这样浏览起来更流畅，即先阅读提示信息，再根据信息判断执行什么操作。
+                알림 정보가 한 줄을 초과할 경우, 버튼은 위에서 아래로의 시각적 흐름에 따라 정보 영역
+                아래에 배치되어 더 원활하게 볼 수 있습니다. 즉, 먼저 알림 정보를 읽고, 그에 따라
+                어떤 작업을 수행할지를 판단할 수 있습니다.
               </Typography.Paragraph>
               <Flex gap={8}>
-                <Typography.Link>相关操作1</Typography.Link>
-                <Typography.Link>相关操作2</Typography.Link>
+                <Typography.Link>관련 작업 1</Typography.Link>
+                <Typography.Link>관련 작업 2</Typography.Link>
               </Flex>
             </div>
           }
@@ -77,22 +89,27 @@ const Demo = () => {
         <Alert
           showIcon
           closable
-          message="提示标题"
+          message="알림 제목"
           description={
             <div>
               <Typography.Paragraph style={{ marginBottom: 8 }}>
-                提示信息超过一行，此时按钮按照从上至下的视觉流，放置在信息区下方，这样浏览起来更流畅，即先阅读提示信息，再根据信息判断执行什么操作。
+                알림 정보가 한 줄을 초과할 경우, 버튼은 위에서 아래로의 시각적 흐름에 따라 정보 영역
+                아래에 배치되어 더 원활하게 볼 수 있습니다. 즉, 먼저 알림 정보를 읽고, 그에 따라
+                어떤 작업을 수행할지를 판단할 수 있습니다.
               </Typography.Paragraph>
               <Flex gap={8}>
-                <Typography.Link>相关操作1</Typography.Link>
-                <Typography.Link>相关操作2</Typography.Link>
+                <Typography.Link>관련 작업 1</Typography.Link>
+                <Typography.Link>관련 작업 2</Typography.Link>
               </Flex>
             </div>
           }
         />
         <Typography.Paragraph type="secondary">
-          建议统一使用Link
-          Button，明确可点击的同时，整体视觉也更和谐；当提示信息不超一行时，按钮放在信息右侧；当提示信息超过一行，按钮放置在信息区下方；这样能够确保用户的浏览动线一致，即先阅读提示信息，再根据信息判断执行什么操作。
+          Link Button을 통일하여 사용하는 것이 좋습니다. 이는 클릭 가능성을 명확히 하고 전체적인
+          시각적 조화를 이루는 데 도움이 됩니다. 알림 정보가 한 줄을 초과하지 않을 때는 버튼을
+          정보의 오른쪽에 배치하고, 알림 정보가 한 줄을 초과할 경우 버튼을 정보 영역 아래에
+          배치합니다. 이렇게 하면 사용자의 탐색 흐름을 일관되게 유지할 수 있습니다. 즉, 먼저 알림
+          정보를 읽고 그에 따라 어떤 작업을 수행할지를 판단할 수 있습니다.
         </Typography.Paragraph>
       </Flex>
     </Flex>

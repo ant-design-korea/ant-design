@@ -10,8 +10,7 @@ export interface FontMapToken {
    */
   fontSize: number;
   /**
-   * @desc 大号字体大小
-   * @descEN Large font size
+   * @desc 대형 글꼴 크기
    */
   fontSizeLG: number;
   /**
