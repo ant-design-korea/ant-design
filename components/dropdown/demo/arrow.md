@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-可以展示一个箭头。
-
-## en-US
-
-You could display an arrow.
+화살표를 표시할 수 있습니다.

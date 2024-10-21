@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-带有快捷方式的下拉菜单。
-
-## en-US
-
-The dropdown menu with shortcut.
+단축어가 있는 드롭다운 메뉴입니다.

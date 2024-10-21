@@ -2,16 +2,16 @@
 category: Components
 group: Data Display
 title: Calendar
-description: A container that displays data in calendar form.
+description: 달력 형태로 데이터를 표시하는 컨테이너.
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*nF6_To7pDSAAAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*-p-wQLik200AAAAAAAAAAAAADrJ8AQ/original
 ---
 
-## When To Use
+## 언제 사용하나요?
 
-When data is in the form of dates, such as schedules, timetables, prices calendar, lunar calendar. This component also supports Year/Month switch.
+스케줄, 시간표, 가격 캘린더, 음력 달력과 같은 날짜 형태의 데이터가 있는 경우 사용합니다. 또한 `Calendar` 컴포넌트는 연/월 전환을 지원합니다.
 
-## Examples
+## 예시
 
 <!-- prettier-ignore -->
 <code src="./demo/basic.tsx" clientOnly>Basic</code>
@@ -24,43 +24,35 @@ When data is in the form of dates, such as schedules, timetables, prices calenda
 
 ## API
 
-Common props ref：[Common props](/docs/react/common-props)
+공통 props 참조：[공통 props](/docs/react/common-props)
 
-**Note:** Part of the Calendar's locale is read from `value`. So, please set the locale of `dayjs` correctly.
+**참고:** 캘린더의 일부 locale은 `value`에서 읽혀집니다. 따라서, `dayjs`의 locale을 올바르게 설정해주세요.
 
 ```jsx
-// The default locale is en-US, if you want to use other locale, just set locale in entry file globally.
+// 기본 locale은 en-US 입니다. 다른 locale을 사용하고 싶다면, 전역적으로 entry file 에서 locale을 설정하세요.
 // import dayjs from 'dayjs';
 // import 'dayjs/locale/zh-cn';
 // dayjs.locale('zh-cn');
 
-<Calendar
-  dateCellRender={dateCellRender}
-  monthCellRender={monthCellRender}
-  onPanelChange={onPanelChange}
-  onSelect={onSelect}
-/>
+<Calendar cellRender={cellRender} onPanelChange={onPanelChange} onSelect={onSelect} />
 ```
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
-| dateCellRender | Customize the display of the date cell, the returned content will be appended to the cell | function(date: Dayjs): ReactNode | - |  |
-| cellRender | Customize cell content | function(current: dayjs, today: dayjs, info: { originNode: React.ReactElement,today: DateType, range?: 'start' \| 'end', type: PanelMode, locale?: Locale, subType?: 'hour' \| 'minute' \| 'second' \| 'meridiem' }) => React.ReactNode | - | 5.4.0 |
-| dateFullCellRender | Customize the display of the date cell, the returned content will override the cell | function(date: Dayjs): ReactNode | - |  |
-| fullCellRender | Customize cell content | function(current: dayjs, today: dayjs, info: { originNode: React.ReactElement,today: DateType, range?: 'start' \| 'end', type: PanelMode, locale?: Locale, subType?: 'hour' \| 'minute' \| 'second' \| 'meridiem' }) => React.ReactNode | - | 5.4.0 |
-| defaultValue | The date selected by default | [dayjs](https://day.js.org/) | - |  |
-| disabledDate | Function that specifies the dates that cannot be selected, `currentDate` is same dayjs object as `value` prop which you shouldn't mutate it](https://github.com/ant-design/ant-design/issues/30987) | (currentDate: Dayjs) => boolean | - |  |
-| fullscreen | Whether to display in full-screen | boolean | true |  |
-| headerRender | Render custom header in panel | function(object:{value: Dayjs, type: string, onChange: f(), onTypeChange: f()}) | - |  |
-| locale | The calendar's locale | object | [(default)](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json) |  |
-| mode | The display mode of the calendar | `month` \| `year` | `month` |  |
-| monthCellRender | Customize the display of the month cell, the returned content will be appended to the cell | function(date: Dayjs): ReactNode | - |  |
-| monthFullCellRender | Customize the display of the month cell, the returned content will override the cell | function(date: Dayjs): ReactNode | - |  |
-| validRange | To set valid range | \[[dayjs](https://day.js.org/), [dayjs](https://day.js.org/)] | - |  |
-| value | The current selected date | [dayjs](https://day.js.org/) | - |  |
-| onChange | Callback for when date changes | function(date: Dayjs) | - |  |
-| onPanelChange | Callback for when panel changes | function(date: Dayjs, mode: string) | - |  |
-| onSelect | Callback for when a date is selected, include source info | function(date: Dayjs, info: { source: 'year' \| 'month' \| 'date' \| 'customize' }) | - | `info`: 5.6.0 |
+| cellRender | 셀 내용 커스텀 | function(current: dayjs, today: dayjs, info: { originNode: React.ReactElement,today: DateType, range?: 'start' \| 'end', type: PanelMode, locale?: Locale, subType?: 'hour' \| 'minute' \| 'second' \| 'meridiem' }) => React.ReactNode | - | 5.4.0 |
+| dateFullCellRender | 날짜 셀의 외형를 커스텀하여 셀을 덮어씁니다. | function(date: Dayjs): ReactNode | - |  |
+| fullCellRender | 셀 내용 커스텀 | function(current: dayjs, today: dayjs, info: { originNode: React.ReactElement,today: DateType, range?: 'start' \| 'end', type: PanelMode, locale?: Locale, subType?: 'hour' \| 'minute' \| 'second' \| 'meridiem' }) => React.ReactNode | - | 5.4.0 |
+| defaultValue | 기본으로 선택된 날짜 | [dayjs](https://day.js.org/) | - |  |
+| disabledDate | 선택할 수 없는 날짜를 지정하는 함수, `currentDate`는 `value` 속성과 동일한 dayjs 객체입니다 (이 객체를 변형해서는 안 됩니다)](https://github.com/ant-design/ant-design/issues/30987) | (currentDate: Dayjs) => boolean | - |  |
+| fullscreen | 전체 화면으로 표시 여부 | boolean | true |  |
+| headerRender | 패널에 사용자 정의 헤더 렌더링 | function(object:{value: Dayjs, type: string, onChange: f(), onTypeChange: f()}) | - |  |
+| locale | 달력의 locale | object | [(default)](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json) |  |
+| mode | 달력의 표시 모드 | `month` \| `year` | `month` |  |
+| validRange | 유효 범위 설정 | \[[dayjs](https://day.js.org/), [dayjs](https://day.js.org/)] | - |  |
+| value | 현재 선택된 날짜 | [dayjs](https://day.js.org/) | - |  |
+| onChange | 날짜 변경 시 콜백 | function(date: Dayjs) | - |  |
+| onPanelChange | 패널 변경 시 콜백 | function(date: Dayjs, mode: string) | - |  |
+| onSelect | source info 를 포함하는 날짜를 선택할 시 콜백 | function(date: Dayjs, info: { source: 'year' \| 'month' \| 'date' \| 'customize' }) | - | `info`: 5.6.0 |
 
 ## Design Token
 
@@ -68,21 +60,21 @@ Common props ref：[Common props](/docs/react/common-props)
 
 ## FAQ
 
-### How to use Calendar with customize date library?
+### 어떻게 커스텀 날짜 라이브러리로 `Calendar`를 사용하나요?
 
-See [Use custom date library](/docs/react/use-custom-date-library#calendar)
+[커스텀 날짜 라이브러리 사용하기](/docs/react/use-custom-date-library#calendar)를 참조하세요.
 
-### How to set locale for date-related components?
+### 어떻게 날짜 관련 컴포넌트의 locale을 설정하나요?
 
-See [How to set locale for date-related components](/components/date-picker/#localization)
+[날짜 관련 컴포넌트의 로케일 설정 방법](/components/date-picker/#localization)을 참조하세요.
 
-### Date-related components locale is not working?
+### 날짜 관련 컴포넌트의 로케일이 작동하지 않나요?
 
-See FAQ [Date-related-components-locale-is-not-working?](/docs/react/faq#date-related-components-locale-is-not-working)
+자주 묻는 질문 [날짜 관련 컴포넌트의 로케일이 작동하지 않나요?](/docs/react/faq#date-related-components-locale-is-not-working)을 참조하세요.
 
-### How to get date from panel click?
+### 패널 클릭으로 날짜를 어떻게 얻나요?
 
-`onSelect` provide `info.source` to help on this:
+`onSelect`는 이를 위해 `info.source`를 제공합니다.
 
 ```tsx
 <Calendar

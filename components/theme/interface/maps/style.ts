@@ -9,26 +9,20 @@ export interface StyleMapToken {
   lineWidthBold: number;
 
   /**
-   * @nameZH XS号圆角
-   * @nameEN XS Border Radius
-   * @desc XS 크기의 모서리, 예를 들어 Segmented, Arrow 등의 내부 모서리를 가진 컴포넌트에서 사용하는 작은 모서리.
-   * @descEN XS size border radius, used in some small border radius components, such as Segmented, Arrow and other components with small border radius.
+   * @nameKR XS 테두리 반경
+   * @desc Segmented, Arrow 및 테두리 반경이 작은 다른 컴포넌트와 같이 테두리 반경이 작은 일부 컴포넌트에 사용되는 XS 크기 테두리 반경입니다.
    * @default 2
    */
   borderRadiusXS: number;
   /**
-   * @nameZH SM号圆角
-   * @nameEN SM Border Radius
-   * @desc SM 크기의 모서리, 예를 들어 Button, Input, Select 등의 입력형 컨트롤이 small 사이즈일 때 사용하는 모서리.
-   * @descEN SM size border radius, used in small size components, such as Button, Input, Select and other input components in small size
+   * @nameKR SM 테두리 반경
+   * @desc Button, Input, Select 및 작은 크기의 다른 입력 컴포넌트와 같이 작은 크기의 컴포넌트에 사용되는 SM 크기 테두리 반경입니다.
    * @default 4
    */
   borderRadiusSM: number;
   /**
-   * @nameZH LG号圆角
-   * @nameEN LG Border Radius
-   * @desc LG 크기의 모서리, 예를 들어 Card, Modal 등 일부 큰 모서리 스타일의 컴포넌트에 사용됩니다.
-   * @descEN LG size border radius, used in some large border radius components, such as Card, Modal and other components.
+   * @nameKR LG 테두리 반경
+   * @desc Card, Modal 및 다른 컴포넌트와 같이 테두리 반경이 큰 일부 컴포넌트에 사용되는 LG 크기 테두리 반경입니다.
    * @default 8
    */
   borderRadiusLG: number;

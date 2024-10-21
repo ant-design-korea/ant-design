@@ -1,8 +1,7 @@
 export interface FontMapToken {
   // Font Size
   /**
-   * @desc SM 폰트 크기
-   * @descEN Small font size
+   * @desc 작은 글꼴 크기
    */
   fontSizeSM: number;
   /**
