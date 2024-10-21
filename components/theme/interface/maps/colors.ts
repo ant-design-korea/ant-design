@@ -27,14 +27,14 @@ export interface ColorNeutralMapToken {
 
   /**
    * @nameZH 三级文本色
-   * @desc 第三级文本色一般用于描述性文本，例如表单的中的补充说明文本、列表的描述性文本等场景。
+   * @desc 3차 텍스트 색상은 주로 설명 텍스트에 사용됩니다. 예: 폼의 보충 설명 텍스트, 목록의 설명 텍스트 등 장면
    * @descEN The third level of text color is generally used for descriptive text, such as form supplementary explanation text, list descriptive text, etc.
    */
   colorTextTertiary: string;
 
   /**
    * @nameZH 四级文本色
-   * @desc 第四级文本色是最浅的文本色，例如表单的输入提示文本、禁用色文本等。
+   * @desc 4차 텍스트 색상은 가장 연한 텍스트 색상으로, 예를 들어 폼의 입력 힌트 텍스트, 비활성화된 텍스트 등이 해당됩니다.
    * @descEN The fourth level of text color is the lightest text color, such as form input prompt text, disabled color text, etc.
    */
   colorTextQuaternary: string;
@@ -44,7 +44,7 @@ export interface ColorNeutralMapToken {
   /**
    * @nameZH 一级边框色
    * @nameEN Default Border Color
-   * @desc 默认使用的边框颜色, 用于分割不同的元素，例如：表单的分割线、卡片的分割线等。
+   * @desc 기본적으로 사용되는 테두리 색상은 서로 다른 요소를 구분하는 데 사용됩니다. 예: 폼의 구분선, 카드의 구분선 등.
    * @descEN Default border color, used to separate different elements, such as: form separator, card separator, etc.
    */
   colorBorder: string;
@@ -68,14 +68,14 @@ export interface ColorNeutralMapToken {
 
   /**
    * @nameZH 二级填充色
-   * @desc 二级填充色可以较为明显地勾勒出元素形体，如 Rate、Skeleton 等。也可以作为三级填充色的 Hover 状态，如 Table 等。
+   * @desc 2차 채우기 색상은 Rate, Skeleton 등의 요소의 형체를 더 명확하게 윤곽을 그릴 수 있습니다. 또한 Table 등에서 3차 채우기 색상의 호버 상태로 사용할 수도 있습니다.
    * @descEN The second level of fill color can outline the shape of the element more clearly, such as Rate, Skeleton, etc. It can also be used as the Hover state of the third level of fill color, such as Table, etc.
    */
   colorFillSecondary: string;
 
   /**
    * @nameZH 三级填充色
-   * @desc 三级填充色用于勾勒出元素形体的场景，如 Slider、Segmented 等。如无强调需求的情况下，建议使用三级填色作为默认填色。
+   * @desc 3차 채우기 색상은 Slider, Segmented 등의 요소 형체를 윤곽 그리는 데 사용됩니다. 특별한 강조가 필요하지 않다면 3차 채우기 색상을 기본 채우기 색상으로 사용하는 것을 권장합니다.
    * @descEN The third level of fill color is used to outline the shape of the element, such as Slider, Segmented, etc. If there is no emphasis requirement, it is recommended to use the third level of fill color as the default fill color.
    */
   colorFillTertiary: string;
@@ -187,7 +187,7 @@ interface ColorPrimaryMapToken {
   /**
    * @nameZH 主色悬浮态
    * @nameEN Hover state of primary color
-   * @desc 主色梯度下的悬浮态。
+   * @desc 주요 색상의 그라데이션의 호버 상태.
    * @descEN Hover state under the main color gradient.
    */
   colorPrimaryHover: string; // 5
@@ -311,7 +311,7 @@ interface ColorWarningMapToken {
   /**
    * @nameZH 警戒色的浅色背景颜色
    * @nameEN Warning background color
-   * @desc 警戒色的浅色背景颜色
+   * @desc 경고 배경색
    * @descEN The background color of the warning state.
    */
   colorWarningBg: string; // 1
@@ -319,7 +319,7 @@ interface ColorWarningMapToken {
   /**
    * @nameZH 警戒色的浅色背景色悬浮态
    * @nameEN Warning background color hover state
-   * @desc 警戒色的浅色背景色悬浮态
+   * @desc 경고 배경색의 호버 상태
    * @descEN The hover state background color of the warning state.
    */
   colorWarningBgHover: string; // 2
@@ -343,7 +343,7 @@ interface ColorWarningMapToken {
   /**
    * @nameZH 警戒色的深色悬浮态
    * @nameEN Warning hover color
-   * @desc 警戒色的深色悬浮态
+   * @desc 경고 색상의 호버 상태
    * @descEN The hover state of the warning color.
    */
   colorWarningHover: string; // 5
@@ -475,7 +475,7 @@ interface ColorErrorMapToken {
   /**
    * @nameZH 错误色的浅色背景颜色
    * @nameEN Error background color
-   * @desc 错误色的浅色背景颜色
+   * @desc 오류 배경색.
    * @descEN The background color of the error state.
    */
   colorErrorBg: string; // 1
@@ -483,7 +483,7 @@ interface ColorErrorMapToken {
   /**
    * @nameZH 错误色的浅色背景色悬浮态
    * @nameEN Error background color hover state
-   * @desc 错误色的浅色背景色悬浮态
+   * @desc 오류 배경색의 호버 상태.
    * @descEN The hover state background color of the error state.
    */
   colorErrorBgHover: string; // 2

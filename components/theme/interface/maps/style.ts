@@ -11,7 +11,7 @@ export interface StyleMapToken {
   /**
    * @nameZH XS号圆角
    * @nameEN XS Border Radius
-   * @desc XS号圆角，用于组件中的一些小圆角，如 Segmented 、Arrow 等一些内部圆角的组件样式中。
+   * @desc XS 크기의 모서리, 예를 들어 Segmented, Arrow 등의 내부 모서리를 가진 컴포넌트에서 사용하는 작은 모서리.
    * @descEN XS size border radius, used in some small border radius components, such as Segmented, Arrow and other components with small border radius.
    * @default 2
    */
@@ -19,7 +19,7 @@ export interface StyleMapToken {
   /**
    * @nameZH SM号圆角
    * @nameEN SM Border Radius
-   * @desc SM号圆角，用于组件小尺寸下的圆角，如 Button、Input、Select 等输入类控件在 small size 下的圆角
+   * @desc SM 크기의 모서리, 예를 들어 Button, Input, Select 등의 입력형 컨트롤이 small 사이즈일 때 사용하는 모서리.
    * @descEN SM size border radius, used in small size components, such as Button, Input, Select and other input components in small size
    * @default 4
    */
@@ -27,7 +27,7 @@ export interface StyleMapToken {
   /**
    * @nameZH LG号圆角
    * @nameEN LG Border Radius
-   * @desc LG号圆角，用于组件中的一些大圆角，如 Card、Modal 等一些组件样式。
+   * @desc LG 크기의 모서리, 예를 들어 Card, Modal 등 일부 큰 모서리 스타일의 컴포넌트에 사용됩니다.
    * @descEN LG size border radius, used in some large border radius components, such as Card, Modal and other components.
    * @default 8
    */

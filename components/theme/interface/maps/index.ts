@@ -18,12 +18,12 @@ export interface CommonMapToken extends StyleMapToken {
    */
   motionDurationFast: string;
   /**
-   * @desc 动效播放速度，中速。用于中型元素动画交互
+   * @desc 애니메이션 재생 속도는 중간 속도로, 중간 크기의 요소 애니메이션 상호작용에 사용됩니다.
    * @descEN Motion speed, medium speed. Used for medium element animation interaction.
    */
   motionDurationMid: string;
   /**
-   * @desc 动效播放速度，慢速。用于大型元素如面板动画交互
+   * @desc 애니메이션 재생 속도는 느린 속도로, 대형 요소(예: 패널)의 애니메이션 상호작용에 사용됩니다.
    * @descEN Motion speed, slow speed. Used for large element animation interaction.
    */
   motionDurationSlow: string;

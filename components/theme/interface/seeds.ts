@@ -48,7 +48,7 @@ export interface SeedToken extends PresetColorType {
   /**
    * @nameZH 基础背景色
    * @nameEN Seed Background Color
-   * @desc 用于派生背景色梯度的基础变量，v5 中我们添加了一层背景色的派生算法可以产出梯度明确的背景色的梯度变量。但请不要在代码中直接使用该 Seed Token ！
+   * @desc 배경색 그라데이션을 파생시키는 기본 변수를 사용하여, v5에서는 배경색의 파생 알고리즘을 추가하여 명확한 그라데이션의 배경색을 생성할 수 있는 그라데이션 변수를 도출할 수 있습니다. 하지만 코드 내에서 해당 Seed Token을 직접 사용하지 마세요!
    * @descEN Used to derive the base variable of the background color gradient. In v5, we added a layer of background color derivation algorithm to produce map token of background color. But PLEASE DO NOT USE this Seed Token directly in the code!
    */
   colorBgBase: string;
@@ -95,7 +95,7 @@ export interface SeedToken extends PresetColorType {
   /**
    * @nameZH 线条样式
    * @nameEN Line Style
-   * @desc 用于控制组件边框、分割线等的样式，默认是实线
+   * @desc 컴포넌트의 테두리, 분할선 등의 스타일을 제어하는 데 사용되며, 기본값은 실선입니다.
    * @descEN Border style of base components
    */
   lineType: string;
@@ -106,7 +106,7 @@ export interface SeedToken extends PresetColorType {
    * @nameZH 基础圆角
    * @nameEN Base Border Radius
    * @descEN Border radius of base components
-   * @desc 基础组件的圆角大小，例如按钮、输入框、卡片等
+   * @desc 기본 컴포넌트의 모서리 크기, 예: 버튼, 입력 창, 카드 등.
    */
   borderRadius: number;
 
@@ -139,7 +139,7 @@ export interface SeedToken extends PresetColorType {
   /**
    * @nameZH 基础高度
    * @nameEN Base Control Height
-   * @desc Ant Design 中按钮和输入框等基础控件的高度
+   * @desc Ant Design에서 버튼과 입력 창 등 기본 컨트롤의 높이
    * @descEN The height of the basic controls such as buttons and input boxes in Ant Design
    * @default 32
    */
@@ -205,7 +205,7 @@ export interface SeedToken extends PresetColorType {
   motionEaseInOutCirc: string;
 
   /**
-   * @desc 预设动效曲率
+   * @desc 미리 설정된 애니메이션 곡률.
    * @descEN Preset motion curve.
    */
   motionEaseInOut: string;
