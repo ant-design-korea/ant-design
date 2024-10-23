@@ -15,19 +15,20 @@ export interface SeedToken extends PresetColorType {
   colorPrimary: string;
 
   /**
-   * @nameKR 성공 컬러
-   * @desc 작업 성공을 나타내는 토큰 시퀀스에 사용됩니다. Result, Progress 등과 같은 컴포넌트에서 이 그라데이션 변수를 사용합니다.
+   * @nameKR 성공 색상
+   * @desc 작업 성공을 나타내는 토큰 시퀀스입니다. Result, Progress 등의 컴포넌트에서 이 맵 토큰을 사용합니다.
    */
   colorSuccess: string;
 
   /**
    * @nameKR 경고 색상
-   * @desc 작업 경고를 나타내는 토큰 시퀀스입니다. Notification, Alert 등과 같은 경고 클래스 컴포넌트나 Input과 같은 입력 클래스 컴포넌트에서 이 그라데이션 변수를 사용합니다.
+   * @desc 경고를 나타내는 토큰 시퀀스입니다. Notification, Alert 등의 경고성 컴포넌트나 Input 등의 제어 컴포넌트에서 이 맵 토큰을 사용합니다.
    */
   colorWarning: string;
 
   /**
    * @nameKR 오류 색상
+   * @desc 오류 Button, 오류 Result 컴포넌트 등 작업 실패의 시각적 요소를 나타내는 데 사용됩니다.
    */
   colorError: string;
 

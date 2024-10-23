@@ -17,9 +17,9 @@ export interface AliasToken extends MapToken {
    */
   colorFillContentHover: string;
   /**
-   * @nameZH 替代背景色
+   * @nameKR 대체 배경색
    * @nameEN Alternative background color
-   * @desc 控制元素替代背景色。
+   * @desc 요소의 대체할 배경색을 제어합니다.
    * @descEN Control the alternative background color of element.
    */
   colorFillAlter: string;
@@ -76,17 +76,15 @@ export interface AliasToken extends MapToken {
    */
   colorTextDisabled: string;
   /**
-   * @nameZH 标题字体颜色
+   * @nameKR 헤딩 텍스트 색상
    * @nameEN Heading Text Color
-   * @desc 控制标题字体颜色。
+   * @desc 헤딩의 텍스트 색상을 제어합니다.
    * @descEN Control the font color of heading.
    */
   colorTextHeading: string;
   /**
-   * @nameZH 文本标签字体颜色
-   * @nameEN Text label font color
-   * @desc 控制文本标签字体颜色。
-   * @descEN Control the font color of text label.
+   * @nameKR 텍스트 레이블 글꼴 색상
+   * @desc 텍스트 레이블의 글꼴 색상을 제어합니다.
    */
   colorTextLabel: string;
   /**
@@ -247,16 +245,16 @@ export interface AliasToken extends MapToken {
    */
   paddingMD: number;
   /**
-   * @nameZH 大内间距
+   * @nameKR 패딩 LG
    * @nameEN Large padding
-   * @desc 控制元素的大内间距。
+   * @desc 요소의 큰 패딩을 제어합니다.
    * @descEN Control the large padding of the element.
    */
   paddingLG: number;
   /**
-   * @nameZH 特大内间距
+   * @nameZH 패딩 XL
    * @nameEN Extra large padding
-   * @desc 控制元素的特大内间距。
+   * @desc 요소의 매우 큰 패딩을 제어합니다.
    * @descEN Control the extra large padding of the element.
    */
   paddingXL: number;

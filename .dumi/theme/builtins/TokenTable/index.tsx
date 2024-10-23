@@ -24,7 +24,7 @@ const defaultToken = getDesignToken();
 
 const locales = {
   ko: {
-    token: 'Token 이름',
+    token: '토큰 이름',
     description: '설명',
     type: '타입',
     value: '기본값',

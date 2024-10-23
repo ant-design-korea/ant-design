@@ -7,22 +7,22 @@ import { genStyleHooks, mergeToken } from '../../theme/internal';
 
 export interface ComponentToken {
   /**
-   * @desc 标题字体大小
+   * @desc 제목 글꼴 크기
    * @descEN Title font size
    */
   titleFontSize: number;
   /**
-   * @desc 副标题字体大小
+   * @desc 부제목 글꼴 크기
    * @descEN Subtitle font size
    */
   subtitleFontSize: number;
   /**
-   * @desc 图标大小
+   * @desc 아이콘 크기
    * @descEN Icon size
    */
   iconFontSize: number;
   /**
-   * @desc 额外区域外间距
+   * @desc 추가 영역의 외부 여백
    * @descEN Margin of extra area
    */
   extraMargin: CSSProperties['margin'];

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { BugOutlined, CodeOutlined, ExperimentOutlined } from '@ant-design/icons';
-import { ConfigProvider, Tooltip, Button } from 'antd';
+import { Button, ConfigProvider, Tooltip } from 'antd';
 import classNames from 'classnames';
 import { DumiDemoGrid, FormattedMessage } from 'dumi';
 
@@ -17,8 +17,8 @@ const locales = {
     disableCssVar: 'Disable CSS Var',
   },
   ko: {
-    enableCssVar: 'Enable CSS Var',
-    disableCssVar: 'Disable CSS Var',
+    enableCssVar: 'CSS 변수 활성화',
+    disableCssVar: 'CSS 변수 비활성화',
   },
 };
 

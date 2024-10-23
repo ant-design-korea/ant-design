@@ -4,10 +4,10 @@ import { Button, Result } from 'antd';
 const App: React.FC = () => (
   <Result
     status="warning"
-    title="There are some problems with your operation."
+    title="작업에 문제가 발생했습니다."
     extra={
       <Button type="primary" key="console">
-        Go Console
+        콘솔로 이동
       </Button>
     }
   />

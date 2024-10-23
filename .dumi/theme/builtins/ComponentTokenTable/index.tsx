@@ -25,15 +25,15 @@ const defaultToken = getDesignToken();
 
 const locales = {
   ko: {
-    token: 'Token 이름',
+    token: '토큰 이름',
     description: '설명',
     type: '타입',
     value: '기본값',
-    componentToken: 'Component Token',
-    globalToken: 'Global Token',
-    componentComment: 'here is your component tokens',
-    globalComment: 'here is your global tokens',
-    help: 'How to use?',
+    componentToken: '컴포넌트 토큰',
+    globalToken: '글로벌 토큰',
+    componentComment: '컴포넌트 토큰이 여기에 들어갑니다.',
+    globalComment: '글로벌 토큰이 여기에 들어갑니다.',
+    help: '어떻게 사용하나요?',
     customizeTokenLink: '/docs/react/customize-theme#customize-design-token',
     customizeComponentTokenLink: 'docs/react/customize-theme#customize-component-token',
   },
