@@ -34,10 +34,11 @@ const locales = {
     designDesc: 'Supporting ecology, allowing you to quickly build website applications',
   },
   ko: {
-    assetsTitle: 'Rich components',
-    assetsDesc: 'Practical components to meet your needs, flexible customization and expansion',
-    designTitle: 'Design and framework',
-    designDesc: 'Supporting ecology, allowing you to quickly build website applications',
+    assetsTitle: '다양한 컴포넌트',
+    assetsDesc: '여러 가지 요구를 충족하는 실용적인 컴포넌트, 유연한 사용자 정의 및 확장',
+    designTitle: '디자인 및 프레임워크',
+    designDesc:
+      '다양한 도구와 라이브러리를 지원하여 웹사이트 애플리케이션을 신속하게 구축할 수 있도록 돕습니다.',
   },
 };
 

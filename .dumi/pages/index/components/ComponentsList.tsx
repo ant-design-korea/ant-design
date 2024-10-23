@@ -31,6 +31,9 @@ const SAMPLE_CONTENT_EN =
 const SAMPLE_CONTENT_CN =
   'Ant Design 5.0 使用 CSS-in-JS 技术以提供动态与混合主题的能力。与此同时，我们使用组件级别的 CSS-in-JS 解决方案，让你的应用获得更好的性能。';
 
+const SAMPLE_CONTENT_KO =
+  'Ant Design 5.0은 CSS-in-JS 기술을 사용하여 동적이고 혼합된 테마 기능을 제공합니다. 또한 구성 요소 수준의 CSS-in-JS 솔루션을 사용하여 애플리케이션의 성능을 향상시킵니다.';
+
 const locales = {
   cn: {
     yesterday: '昨天',
@@ -59,17 +62,17 @@ const locales = {
     tour: 'A quick guide for new come user about how to use app.',
   },
   ko: {
-    yesterday: 'Yesterday',
-    lastWeek: 'Last Week',
-    lastMonth: 'Last Month',
-    lastYear: 'Last Year',
-    new: 'New',
-    update: 'Update',
-    sampleContent: SAMPLE_CONTENT_EN,
-    inProgress: 'In Progress',
-    success: 'Success',
-    taskFailed: 'Task Failed',
-    tour: 'A quick guide for new come user about how to use app.',
+    yesterday: '어제',
+    lastWeek: '지난주',
+    lastMonth: '지난달',
+    lastYear: '작년',
+    new: '신규',
+    update: '업데이트',
+    sampleContent: SAMPLE_CONTENT_KO,
+    inProgress: '진행 중',
+    success: '성공',
+    taskFailed: '작업 실패',
+    tour: '앱 사용 방법에 대한 새로운 사용자 위한 간단한 가이드.',
   },
 };
 
