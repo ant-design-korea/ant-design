@@ -5,3 +5,7 @@
 ## en-US
 
 suffix icon.
+
+## ko-KR
+
+접미사 아이콘

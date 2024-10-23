@@ -10,7 +10,7 @@ export interface FontMapToken {
    */
   fontSize: number;
   /**
-   * @desc 大号字体大小
+   * @desc LG 폰트 크기
    * @descEN Large font size
    */
   fontSizeLG: number;
@@ -63,7 +63,8 @@ export interface FontMapToken {
 
   // LineHeight
   /**
-   * @desc 텍스트의 선 높이
+   * @desc 텍스트의 행간
+   * @descEN Line height of text.
    */
   lineHeight: number;
   /**
