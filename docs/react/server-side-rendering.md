@@ -151,7 +151,7 @@ fs.writeFileSync(outputPath, css);
 }
 ```
 
-그리고 `pages/_app.tsx`파일에 이 파일을 임포트 하면 됩니다:
+그리고 `pages/_app.tsx`파일에 이 파일을 불러오면 됩니다:
 
 ```tsx
 import { StyleProvider } from '@ant-design/cssinjs';
@@ -278,7 +278,7 @@ export function doExtraStyle({
 }
 ```
 
-위의 `_document.tsx`의 도구를 사용하여 필요에 따른 export를 하세요
+위의 `_document.tsx`의 도구를 사용하여 필요에 따른 내보내기를 하세요
 
 ```tsx
 // _document.tsx
@@ -333,4 +333,4 @@ export default class MyDocument extends Document {
 }
 ```
 
-데모는 여기서 볼 수 있습니다:[필요에 따른 css파일 익스포트하기 데모](https://github.com/ant-design/ant-design-examples/tree/main/examples/with-nextjs-generate-css-on-demand)
+데모는 여기서 볼 수 있습니다:[필요에 따른 css파일 내보내기 데모](https://github.com/ant-design/ant-design-examples/tree/main/examples/with-nextjs-generate-css-on-demand)
