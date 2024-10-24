@@ -1,18 +1,19 @@
 ---
 group:
-  title: 进阶使用
+  title: 고급기능
 order: 2
-title: 服务端渲染
+title: 서버 사이드 렌더링
 ---
 
-服务端渲染样式有两种方案，它们各有优缺点：
+서버 사이드 렌더링 스타일에는 두가지 옵션이 있습니다. 각각에는 장단점이 존재합니다:
 
-- **内联样式**：在渲染时无需额外请求样式文件，好处是减少额外的网络请求，缺点则是会使得 HTML 体积增大，影响首屏渲染速度，相关讨论参考：[#39891](https://github.com/ant-design/ant-design/issues/39891)
-- **整体导出**：提前烘焙 antd 组件样式为 css 文件，在页面中时引入。好处是打开任意页面时如传统 css 方案一样都会复用同一套 css 文件以命中缓存，缺点是如果页面中存在多主题，则需要额外进行烘焙
+- **인라인 모드**: 추가 스타일 파일을 렌더링 중에 요청할 필요가 없습니다. 이 모드는 추가 네트워크 요청을 줄이는 것이 장점입니다. 단점은 HTML용량이 증가하고 첫 화면 렌더링의 속도에 영향을 미칠 수 있습니다. 관련 논의: [#39891](https://github.com/ant-design/ant-design/issues/39891)
 
-## 内联样式
+- **전체 내보내기(Whole export)**: antd 컴포넌트는 미리 생성된 css파일로 스타일링 되어 페이지에 포함됩니다. 이 모드는 어떤 페이지를 열 때도 동일한 css파일 세트가 전통적인 css방식 처럼 캐시되어 재사용할 수 있다는 장점이 있습니다. 단점은 여러개의 테마가 한 페이지에 있는 경우, 추가적인 스타일 생성이 필요할 수 있다는 것입니다.
 
-使用 `@ant-design/cssinjs` 将所需样式抽离：
+## 인라인 스타일
+
+스타일 추출을 위해 `@ant-design/cssinjs`를 사용하세요:
 
 ```tsx
 import React from 'react';
@@ -21,7 +22,7 @@ import type Entity from '@ant-design/cssinjs/es/Cache';
 import { renderToString } from 'react-dom/server';
 
 const App = () => {
-  // SSR Render
+  // SSR 렌더링
   const cache = React.useMemo<Entity>(() => createCache(), []);
   const html = renderToString(
     <StyleProvider cache={cache}>
@@ -29,10 +30,10 @@ const App = () => {
     </StyleProvider>,
   );
 
-  // Grab style from cache
+  // 캐시에서 스타일 가져오기
   const styleText = extractStyle(cache);
 
-  // Mix with style
+  // 스타일 혼합시키기
   return `
     <!DOCTYPE html>
     <html>
@@ -49,17 +50,17 @@ const App = () => {
 export default App;
 ```
 
-## 整体导出
+## 전체 내보내기(Whole export)
 
-如果你想要将样式文件抽离到 css 文件中，可以尝试使用以下方案：
+css파일에 스타일 파일을 첨부하고 싶다면 아래의 방식을 시도해보세요:
 
-1. 安装依赖
+1. 디펜던시 설치
 
 ```bash
 npm install ts-node tslib cross-env --save-dev
 ```
 
-2. 新增 `tsconfig.node.json` 文件
+2. `tsconfig.node.json`파일 추가
 
 ```json
 {
@@ -73,7 +74,7 @@ npm install ts-node tslib cross-env --save-dev
 }
 ```
 
-3. 新增 `scripts/genAntdCss.tsx` 文件
+3. `scripts/genAntdCss.tsx`파일 추가
 
 ```tsx
 // scripts/genAntdCss.tsx
@@ -87,7 +88,7 @@ const css = extractStyle();
 fs.writeFileSync(outputPath, css);
 ```
 
-若你想使用混合主题或自定义主题，可采用以下脚本：
+혼합된 테마나 커스텀 테마를 사용하고 싶다면 아래의 스크립트를 사용할 수 있습니다:
 
 ```tsx
 import fs from 'fs';
@@ -134,9 +135,7 @@ const css = extractStyle((node) => (
 fs.writeFileSync(outputPath, css);
 ```
 
-你可以选择在启动开发命令或编译前执行这个脚本，运行上述脚本将会在当前项目的指定（如： public 目录）目录下直接生成一个全量的 antd.min.css 文件。
-
-以 Next.js 为例（[参考示例](https://github.com/ant-design/ant-design-examples/tree/main/examples/with-nextjs-inline-style)）：
+개발 명령어를 시작하기 전이나 컴파일링 이전에 이 스크립트를 실행하는 선택을 할 수 있습니다. 이 스크립트를 실행하면 현재 프로젝트의 명시된 폴더(예: public)에 완전한 antd.min.css파일이 직접적으로 생성됩니다. Next.js 예제 （[예제](https://github.com/ant-design/ant-design-examples/tree/main/examples/with-nextjs-inline-style)）：
 
 ```json
 // package.json
@@ -152,13 +151,13 @@ fs.writeFileSync(outputPath, css);
 }
 ```
 
-然后，你只需要在`pages/_app.tsx`文件中引入这个文件即可：
+그리고 `pages/_app.tsx`파일에 이 파일을 불러오면 됩니다:
 
 ```tsx
 import { StyleProvider } from '@ant-design/cssinjs';
 import type { AppProps } from 'next/app';
 
-import '../public/antd.min.css'; // 添加这行
+import '../public/antd.min.css'; // 이 라인을 추가하세요
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -170,9 +169,9 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 ```
 
-### 自定义主题
+### 커스텀 테마
 
-如果你的项目中使用了自定义主题，可以尝试通过以下方式进行烘焙：
+프로젝트에 커스텀 테마를 사용하고 있다면, 다음 방식으로 적용해보세요:
 
 ```tsx
 import { extractStyle } from '@ant-design/static-style-extract';
@@ -191,9 +190,9 @@ const cssText = extractStyle((node) => (
 ));
 ```
 
-### 混合主题
+### 혼합 테마
 
-如果你的项目中使用了混合主题，可以尝试通过以下方式进行烘焙：
+프로젝트에 혼합 테마를 사용하고 있다면, 다음 방식으로 적용해보세요:
 
 ```tsx
 import { extractStyle } from '@ant-design/static-style-extract';
@@ -231,9 +230,9 @@ const cssText = extractStyle((node) => (
 ));
 ```
 
-更多`static-style-extract`的实现细节请看：[static-style-extract](https://github.com/ant-design/static-style-extract)。
+static-style-extract에 대해 더 알고 싶다면, [static-style-extract](https://github.com/ant-design/static-style-extract)을 참고해주세요.
 
-## 按需抽取
+## 필요에 따른 추출
 
 ```tsx
 // scripts/genAntdCss.tsx
@@ -279,7 +278,7 @@ export function doExtraStyle({
 }
 ```
 
-在 `_document.tsx` 中使用上述工具进行按需导出：
+위의 `_document.tsx`의 도구를 사용하여 필요에 따른 내보내기를 하세요
 
 ```tsx
 // _document.tsx
@@ -304,7 +303,7 @@ export default class MyDocument extends Document {
       });
 
     const initialProps = await Document.getInitialProps(ctx);
-    // 1.1 extract style which had been used
+    // 1.1 사용된 스타일 추출
     fileName = doExtraStyle({
       cache,
     });
@@ -313,7 +312,7 @@ export default class MyDocument extends Document {
       styles: (
         <>
           {initialProps.styles}
-          {/* 1.2 inject css */}
+          {/* 1.2 css 주입 */}
           {fileName && <link rel="stylesheet" href={`/${fileName}`} />}
         </>
       ),
@@ -334,4 +333,4 @@ export default class MyDocument extends Document {
 }
 ```
 
-演示示例请看：[按需抽取样式示例](https://github.com/ant-design/ant-design-examples/tree/main/examples/with-nextjs-generate-css-on-demand)
+데모는 여기서 볼 수 있습니다:[필요에 따른 css파일 내보내기 데모](https://github.com/ant-design/ant-design-examples/tree/main/examples/with-nextjs-generate-css-on-demand)
