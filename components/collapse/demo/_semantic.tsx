@@ -14,8 +14,8 @@ const locales = {
     body: 'Body element',
   },
   ko: {
-    header: 'Header element',
-    body: 'Body element',
+    header: '헤더 요소',
+    body: '내용 요소',
   },
 };
 

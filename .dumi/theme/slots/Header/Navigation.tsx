@@ -26,11 +26,11 @@ const locales = {
     blog: 'Blog',
   },
   ko: {
-    design: 'Design',
-    development: 'Development',
-    components: 'Components',
-    resources: 'Resources',
-    blog: 'Blog',
+    design: '디자인',
+    development: '개발',
+    components: '컴포넌트',
+    resources: '자료',
+    blog: '블로그',
   },
 };
 

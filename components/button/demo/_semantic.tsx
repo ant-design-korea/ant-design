@@ -12,7 +12,7 @@ const locales = {
     icon: 'Icon element',
   },
   ko: {
-    icon: 'Icon element',
+    icon: '아이콘 요소',
   },
 };
 

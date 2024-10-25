@@ -115,11 +115,11 @@ const locales = {
     bugList: 'Bug Versions',
   },
   ko: {
-    full: 'Full Changelog',
-    changelog: 'Changelog',
-    loading: 'loading...',
-    empty: 'Nothing update',
-    bugList: 'Bug Versions',
+    full: '전체 변경 로그',
+    changelog: '변경 로그',
+    loading: '로딩 중...',
+    empty: '업데이트 없음',
+    bugList: '버그 버전',
   },
 };
 

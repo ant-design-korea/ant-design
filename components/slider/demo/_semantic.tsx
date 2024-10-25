@@ -17,10 +17,10 @@ const locales = {
     handle: 'Grab handle element',
   },
   ko: {
-    track: 'The selection bar between points and points under the range selection',
-    tracks: 'The entire range selection bar under the range selection',
-    rail: 'Background rail element',
-    handle: 'Grab handle element',
+    track: '범위 선택 아래 점과 점 사이의 선택 막대',
+    tracks: '범위 선택 아래 범위 전체 선택 막대',
+    rail: '배경 레일 요소',
+    handle: '잡기 핸들 요소',
   },
 };
 

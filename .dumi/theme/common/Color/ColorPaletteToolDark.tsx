@@ -21,9 +21,9 @@ const locales = {
   },
   ko: {
     saturation: (s: string) =>
-      `Saturation is recommended not to be lower than ${primaryMinSaturation}（currently${s}）`,
+      `채도는 ${primaryMinSaturation}보다 낮지 않도록 권장됩니다（현재${s}）`,
     brightness: (b: string) =>
-      `Brightness is recommended not to be lower than ${primaryMinBrightness}（currently${b}）`,
+      `밝기는 ${primaryMinBrightness}보다 낮지 않도록 권장됩니다（현재${b}）`,
   },
 };
 

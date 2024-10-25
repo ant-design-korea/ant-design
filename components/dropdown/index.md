@@ -27,11 +27,11 @@ demo:
 <code src="./demo/dropdown-button.tsx">드롭다운 메뉴가 있는 버튼</code>
 <code src="./demo/custom-dropdown.tsx">사용자 지정 드롭다운</code>
 <code src="./demo/sub-menu.tsx">계단식 메뉴</code>
+
 <!-- <code src="./demo/sub-menu-debug.tsx" debug>계단식 메뉴</code> -->
-<code src="./demo/overlay-open.tsx">메뉴를 숨기는 방법</code>
-<code src="./demo/context-menu.tsx">바로 가기 메뉴</code>
-<code src="./demo/loading.tsx">로딩</code>
-<code src="./demo/selectable.tsx">선택 가능한 메뉴</code>
+
+<code src="./demo/overlay-open.tsx">메뉴를 숨기는 방법</code> <code src="./demo/context-menu.tsx">바로 가기 메뉴</code> <code src="./demo/loading.tsx">로딩</code> <code src="./demo/selectable.tsx">선택 가능한 메뉴</code>
+
 <!-- <code src="./demo/menu-full.tsx" debug>메뉴 전체 스타일</code> -->
 <!-- <code src="./demo/render-panel.tsx" debug>\_InternalPanelDoNotUseOrYouWillBeFired</code> -->
 <!-- <code src="./demo/icon-debug.tsx" debug>아이콘 디버그</code> -->

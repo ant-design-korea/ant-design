@@ -19,11 +19,11 @@ const locales = {
     footer: 'Footer element',
   },
   ko: {
-    mask: 'Mask element',
-    content: 'Drawer container element',
-    header: 'Header element',
-    body: 'Body element',
-    footer: 'Footer element',
+    mask: '마스크 요소',
+    content: 'Drawer 컨테이너 요소',
+    header: '헤더 요소',
+    body: '내용 요소',
+    footer: '푸터 요소',
   },
 };
 

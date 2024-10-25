@@ -10,7 +10,7 @@ const locales = {
     tip: 'Preview',
   },
   ko: {
-    tip: 'Preview',
+    tip: '미리보기',
   },
 };
 

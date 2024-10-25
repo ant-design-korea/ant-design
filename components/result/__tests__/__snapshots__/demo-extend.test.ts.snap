@@ -299,7 +299,7 @@ exports[`renders components/result/demo/403.tsx extend context correctly 1`] = `
   <div
     class="ant-result-subtitle"
   >
-    Sorry, you are not authorized to access this page.
+    죄송합니다. 이 페이지에 접근할 수 있는 권한이 없습니다.
   </div>
   <div
     class="ant-result-extra"
@@ -309,7 +309,7 @@ exports[`renders components/result/demo/403.tsx extend context correctly 1`] = `
       type="button"
     >
       <span>
-        Back Home
+        홈으로 돌아가기
       </span>
     </button>
   </div>
@@ -635,7 +635,7 @@ exports[`renders components/result/demo/404.tsx extend context correctly 1`] = `
   <div
     class="ant-result-subtitle"
   >
-    Sorry, the page you visited does not exist.
+    죄송합니다. 방문하신 페이지를 찾을 수 없습니다.
   </div>
   <div
     class="ant-result-extra"
@@ -645,7 +645,7 @@ exports[`renders components/result/demo/404.tsx extend context correctly 1`] = `
       type="button"
     >
       <span>
-        Back Home
+        홈으로 돌아가기
       </span>
     </button>
   </div>
@@ -1018,7 +1018,7 @@ exports[`renders components/result/demo/500.tsx extend context correctly 1`] = `
   <div
     class="ant-result-subtitle"
   >
-    Sorry, something went wrong.
+    죄송합니다. 알 수 없는 문제가 발생했습니다.
   </div>
   <div
     class="ant-result-extra"
@@ -1028,7 +1028,7 @@ exports[`renders components/result/demo/500.tsx extend context correctly 1`] = `
       type="button"
     >
       <span>
-        Back Home
+        홈으로 돌아가기
       </span>
     </button>
   </div>
@@ -1067,12 +1067,12 @@ exports[`renders components/result/demo/component-token.tsx extend context corre
   <div
     class="ant-result-title"
   >
-    Successfully Purchased Cloud Server ECS!
+    클라우드 서버 ECS 구매에 성공했습니다!
   </div>
   <div
     class="ant-result-subtitle"
   >
-    Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait.
+    주문 번호: 2017182818828182881 클라우드 서버 설정에는 1-5분이 소요됩니다. 잠시만 기다려 주세요.
   </div>
   <div
     class="ant-result-extra"
@@ -1082,7 +1082,7 @@ exports[`renders components/result/demo/component-token.tsx extend context corre
       type="button"
     >
       <span>
-        Go Console
+        콘솔로 이동
       </span>
     </button>
     <button
@@ -1090,7 +1090,7 @@ exports[`renders components/result/demo/component-token.tsx extend context corre
       type="button"
     >
       <span>
-        Buy Again
+        다시 구매하기
       </span>
     </button>
   </div>
@@ -1129,7 +1129,7 @@ exports[`renders components/result/demo/customIcon.tsx extend context correctly 
   <div
     class="ant-result-title"
   >
-    Great, we have done all the operations!
+    좋아요, 모든 작업이 완료되었습니다!
   </div>
   <div
     class="ant-result-extra"
@@ -1139,7 +1139,7 @@ exports[`renders components/result/demo/customIcon.tsx extend context correctly 
       type="button"
     >
       <span>
-        Next
+        다음
       </span>
     </button>
   </div>
@@ -1179,12 +1179,12 @@ exports[`renders components/result/demo/error.tsx extend context correctly 1`] =
   <div
     class="ant-result-title"
   >
-    Submission Failed
+    제출 실패
   </div>
   <div
     class="ant-result-subtitle"
   >
-    Please check and modify the following information before resubmitting.
+    다음 정보를 확인하고 수정한 후 다시 제출해 주세요.
   </div>
   <div
     class="ant-result-extra"
@@ -1194,7 +1194,7 @@ exports[`renders components/result/demo/error.tsx extend context correctly 1`] =
       type="button"
     >
       <span>
-        Go Console
+        콘솔로 이동
       </span>
     </button>
     <button
@@ -1202,7 +1202,7 @@ exports[`renders components/result/demo/error.tsx extend context correctly 1`] =
       type="button"
     >
       <span>
-        Buy Again
+        다시 구매하기
       </span>
     </button>
   </div>
@@ -1220,7 +1220,7 @@ exports[`renders components/result/demo/error.tsx extend context correctly 1`] =
           style="font-size: 16px;"
         >
           <strong>
-            The content you submitted has the following error:
+            제출한 내용에 다음 오류가 있습니다:
           </strong>
         </span>
       </div>
@@ -1247,9 +1247,9 @@ exports[`renders components/result/demo/error.tsx extend context correctly 1`] =
             />
           </svg>
         </span>
-         Your account has been frozen. 
+         계정이 동결되었습니다. 
         <a>
-          Thaw immediately &gt;
+          즉시 해제하기 &gt;
         </a>
       </div>
       <div
@@ -1275,9 +1275,9 @@ exports[`renders components/result/demo/error.tsx extend context correctly 1`] =
             />
           </svg>
         </span>
-         Your account is not yet eligible to apply. 
+         계정이 아직 신청 자격이 없습니다. 
         <a>
-          Apply Unlock &gt;
+          신청 자격 얻기 &gt;
         </a>
       </div>
     </div>
@@ -1317,7 +1317,7 @@ exports[`renders components/result/demo/info.tsx extend context correctly 1`] = 
   <div
     class="ant-result-title"
   >
-    Your operation has been executed
+    작업이 완료되었습니다
   </div>
   <div
     class="ant-result-extra"
@@ -1327,7 +1327,7 @@ exports[`renders components/result/demo/info.tsx extend context correctly 1`] = 
       type="button"
     >
       <span>
-        Go Console
+        콘솔로 이동
       </span>
     </button>
   </div>
@@ -1366,12 +1366,12 @@ exports[`renders components/result/demo/success.tsx extend context correctly 1`]
   <div
     class="ant-result-title"
   >
-    Successfully Purchased Cloud Server ECS!
+    클라우드 서버 ECS 구매에 성공했습니다!
   </div>
   <div
     class="ant-result-subtitle"
   >
-    Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait.
+    주문 번호: 2017182818828182881 클라우드 서버 설정에는 1-5분이 소요됩니다. 잠시만 기다려 주세요.
   </div>
   <div
     class="ant-result-extra"
@@ -1381,7 +1381,7 @@ exports[`renders components/result/demo/success.tsx extend context correctly 1`]
       type="button"
     >
       <span>
-        Go Console
+        콘솔로 이동
       </span>
     </button>
     <button
@@ -1389,7 +1389,7 @@ exports[`renders components/result/demo/success.tsx extend context correctly 1`]
       type="button"
     >
       <span>
-        Buy Again
+        다시 구매하기
       </span>
     </button>
   </div>
@@ -1428,7 +1428,7 @@ exports[`renders components/result/demo/warning.tsx extend context correctly 1`]
   <div
     class="ant-result-title"
   >
-    There are some problems with your operation.
+    작업에 문제가 발생했습니다.
   </div>
   <div
     class="ant-result-extra"
@@ -1438,7 +1438,7 @@ exports[`renders components/result/demo/warning.tsx extend context correctly 1`]
       type="button"
     >
       <span>
-        Go Console
+        콘솔로 이동
       </span>
     </button>
   </div>

@@ -13,8 +13,8 @@ const locales = {
     count: 'count element',
   },
   ko: {
-    textarea: 'textarea element',
-    count: 'count element',
+    textarea: '텍스트 영역 요소',
+    count: '글자 수 요소',
   },
 };
 

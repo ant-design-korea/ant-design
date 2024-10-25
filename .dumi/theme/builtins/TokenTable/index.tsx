@@ -91,7 +91,7 @@ const TokenTable: FC<TokenTableProps> = ({ type }) => {
           name: token,
           desc: meta.desc,
           type: meta.type,
-          value: defaultToken[token],
+          value: defaultToken[token as keyof typeof defaultToken],
         })),
     [type],
   );

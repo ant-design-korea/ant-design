@@ -96,8 +96,10 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
     .sort(component ? undefined : compare)
     .map<TokenData>((name) => {
       const meta = component
-        ? tokenMeta.components[component].find((item) => item.token === name)
-        : tokenMeta.global[name];
+        ? tokenMeta.components[component as keyof typeof tokenMeta.components].find(
+            (item) => item.token === name,
+          )
+        : tokenMeta.global[name as keyof typeof tokenMeta.global];
 
       if (!meta) {
         return null as unknown as TokenData;
@@ -107,7 +109,11 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
         name,
         desc: meta.desc,
         type: meta.type,
-        value: component ? tokenData[component].component[name] : defaultToken[name],
+        value: component
+          ? (tokenData[component as keyof typeof tokenData] as any).component[
+              name as keyof (typeof tokenData)[keyof typeof tokenData]['component']
+            ]
+          : defaultToken[name as keyof typeof defaultToken],
       };
     })
     .filter(Boolean);
@@ -179,7 +185,7 @@ const SubTokenTable: React.FC<SubTokenTableProps> = (props) => {
 };
 
 export interface ComponentTokenTableProps {
-  component: string;
+  component: keyof typeof tokenMeta.components;
 }
 
 const ComponentTokenTable: React.FC<ComponentTokenTableProps> = ({ component }) => {
@@ -187,7 +193,7 @@ const ComponentTokenTable: React.FC<ComponentTokenTableProps> = ({ component }) 
   const [mergedGlobalTokens] = useMemo(() => {
     const globalTokenSet = new Set<string>();
 
-    component.split(',').forEach((comp) => {
+    (component.split(',') as (keyof typeof tokenData)[]).forEach((comp) => {
       const { global: globalTokens = [] } = tokenData[comp] || {};
 
       globalTokens.forEach((token: string) => {

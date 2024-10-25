@@ -14,8 +14,8 @@ const locales = {
     actions: 'set `actions` of List.Item',
   },
   ko: {
-    extra: 'set `extra` of List.Item',
-    actions: 'set `actions` of List.Item',
+    extra: 'List.Item의 `추가` 설정',
+    actions: 'List.Item의 `작업` 설정',
   },
 };
 
