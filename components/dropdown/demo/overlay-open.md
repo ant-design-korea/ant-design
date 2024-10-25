@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-默认是点击关闭菜单，可以关闭此功能。
-
-## en-US
-
-The default is to close the menu when you click on menu items, this feature can be turned off.
+메뉴 요소를 클릭할 때 메뉴를 닫는 것이 기본값이며, 이 기능은 끌 수 있습니다.

@@ -8,7 +8,7 @@ const App: React.FC = () => {
     <Space>
       <Button onClick={() => setDisabled(!disabled)}>{disabled ? 'Enable' : 'Disable'}</Button>
       <Tooltip title={disabled ? '' : 'prompt text'}>
-        <span>Tooltip will show on mouse enter.</span>
+        <span>Tooltip은 마우스를 올리면 표시됩니다.</span>
       </Tooltip>
     </Space>
   );

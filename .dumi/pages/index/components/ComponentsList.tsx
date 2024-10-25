@@ -25,19 +25,55 @@ const { _InternalPanelDoNotUseOrYouWillBeFired: DatePickerDoNotUseOrYouWillBeFir
 const { _InternalPanelDoNotUseOrYouWillBeFired: TourDoNotUseOrYouWillBeFired } = Tour;
 const { _InternalPanelDoNotUseOrYouWillBeFired: FloatButtonDoNotUseOrYouWillBeFired } = FloatButton;
 
-const locale = {
-  yesterday: '어제',
-  lastWeek: '지난 주',
-  lastMonth: '지난 달',
-  lastYear: '작년',
-  new: '신규',
-  update: '업데이트',
-  sampleContent:
-    'Ant Design 5.0은 동적 및 혼합 테마 기능을 제공하기 위해 CSS-in-JS 기술을 사용합니다. 동시에, 우리는 컴포넌트 수준의 CSS-in-JS 솔루션을 사용하여 애플리케이션의 성능을 향상시킵니다.',
-  inProgress: '진행 중',
-  success: '성공',
-  taskFailed: '작업 실패',
-  tour: '새로운 사용자에게 앱 사용 방법에 대한 빠른 안내',
+const SAMPLE_CONTENT_EN =
+  'Ant Design 5.0 use CSS-in-JS technology to provide dynamic & mix theme ability. And which use component level CSS-in-JS solution get your application a better performance.';
+
+const SAMPLE_CONTENT_CN =
+  'Ant Design 5.0 使用 CSS-in-JS 技术以提供动态与混合主题的能力。与此同时，我们使用组件级别的 CSS-in-JS 解决方案，让你的应用获得更好的性能。';
+
+const SAMPLE_CONTENT_KO =
+  'Ant Design 5.0은 CSS-in-JS 기술을 사용하여 동적이고 혼합된 테마 기능을 제공합니다. 또한 구성 요소 수준의 CSS-in-JS 솔루션을 사용하여 애플리케이션의 성능을 향상시킵니다.';
+
+const locales = {
+  cn: {
+    yesterday: '昨天',
+    lastWeek: '上周',
+    lastMonth: '上月',
+    lastYear: '去年',
+    new: '新增',
+    update: '更新',
+    sampleContent: SAMPLE_CONTENT_CN,
+    inProgress: '进行中',
+    success: '成功',
+    taskFailed: '任务失败',
+    tour: '漫游导览帮助用户对新加的功能进行快速了解',
+  },
+  en: {
+    yesterday: 'Yesterday',
+    lastWeek: 'Last Week',
+    lastMonth: 'Last Month',
+    lastYear: 'Last Year',
+    new: 'New',
+    update: 'Update',
+    sampleContent: SAMPLE_CONTENT_EN,
+    inProgress: 'In Progress',
+    success: 'Success',
+    taskFailed: 'Task Failed',
+    tour: 'A quick guide for new come user about how to use app.',
+  },
+  ko: {
+    yesterday: '어제',
+    lastWeek: '지난주',
+    lastMonth: '지난달',
+    lastYear: '작년',
+    new: '신규',
+    update: '업데이트',
+    sampleContent: SAMPLE_CONTENT_KO,
+    inProgress: '진행 중',
+    success: '성공',
+    taskFailed: '작업 실패',
+    tour: '앱 사용 방법에 대한 새로운 사용자 위한 간단한 가이드.',
+  },
 };
 
 const useStyle = () => {

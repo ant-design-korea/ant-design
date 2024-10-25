@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-设置鼠标放在状态点上时显示的文字。
-
-## en-US
-
-The badge will display `title` when hovered over, instead of `count`.
+커서가 올라갔을 때 배지가 `count` 대신 `title`를 표시합니다.

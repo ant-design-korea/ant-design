@@ -3,10 +3,10 @@ import { Button, Result } from 'antd';
 
 const App: React.FC = () => (
   <Result
-    title="Your operation has been executed"
+    title="작업이 완료되었습니다"
     extra={
       <Button type="primary" key="console">
-        Go Console
+        콘솔로 이동
       </Button>
     }
   />

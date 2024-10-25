@@ -5,3 +5,7 @@
 ## en-US
 
 Search the options while expanded.
+
+## ko-KR
+
+확장된 상태에서 옵션을 검색합니다.

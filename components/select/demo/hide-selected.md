@@ -5,3 +5,7 @@
 ## en-US
 
 Hide already selected options in the dropdown.
+
+## ko-KR
+
+이미 선택된 드롭다운 옵션을 숨깁니다.

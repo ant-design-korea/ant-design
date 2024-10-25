@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-最简单的下拉菜单。
-
-## en-US
-
-The most basic dropdown menu.
+가장 기본적인 드롭다운 메뉴입니다.

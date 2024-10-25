@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-支持 6 个弹出位置。
-
-## en-US
-
-Support 6 placements.
+6개의 배치 위치를 지원합니다.

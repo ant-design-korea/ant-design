@@ -4,13 +4,13 @@ import { Button, Result } from 'antd';
 const App: React.FC = () => (
   <Result
     status="success"
-    title="Successfully Purchased Cloud Server ECS!"
-    subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+    title="클라우드 서버 ECS 구매에 성공했습니다!"
+    subTitle="주문 번호: 2017182818828182881 클라우드 서버 설정에는 1-5분이 소요됩니다. 잠시만 기다려 주세요."
     extra={[
       <Button type="primary" key="console">
-        Go Console
+        콘솔로 이동
       </Button>,
-      <Button key="buy">Buy Again</Button>,
+      <Button key="buy">다시 구매하기</Button>,
     ]}
   />
 );

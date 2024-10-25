@@ -2,16 +2,16 @@
 group: Feedback
 category: Components
 title: Result
-description: Used to feedback the processing results of a series of operations.
+description: 일련의 작업 처리 결과를 피드백하는 데 사용됩니다.
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*-e2IRroDJyEAAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*-0kxQrbHx2kAAAAAAAAAAAAADrJ8AQ/original
 ---
 
-## When To Use
+## 이럴 때 사용하세요
 
-Use when important operations need to inform the user to process the results and the feedback is more complicated.
+중요한 작업의 결과를 사용자에게 알릴 필요가 있을 때나, 복잡한 피드백을 제공해야 할 때 사용합니다.
 
-## Examples
+## 예시
 
 <!-- prettier-ignore -->
 <code src="./demo/success.tsx">Success</code>
@@ -26,16 +26,16 @@ Use when important operations need to inform the user to process the results and
 
 ## API
 
-Common props ref：[Common props](/docs/react/common-props)
+공통 props 참조：[공통 props](/docs/react/common-props)
 
-| Property | Description | Type | Default |
+| 프로퍼티 | 설명 | 타입 | 기본값 |
 | --- | --- | --- | --- |
-| extra | Operating area | ReactNode | - |
-| icon | Custom back icon | ReactNode | - |
-| status | Result status, decide icons and colors | `success` \| `error` \| `info` \| `warning` \| `404` \| `403` \| `500` | `info` |
-| subTitle | The subTitle | ReactNode | - |
-| title | The title | ReactNode | - |
+| extra | 작업 영역 | ReactNode | - |
+| icon | 사용자 지정 백 아이콘 | ReactNode | - |
+| status | 결과 상태, 아이콘 및 색상을 결정합니다. | `success` \| `error` \| `info` \| `warning` \| `404` \| `403` \| `500` | `info` |
+| subTitle | 부제목 | ReactNode | - |
+| title | 제목 | ReactNode | - |
 
-## Design Token
+## 디자인 토큰
 
 <ComponentTokenTable component="Result"></ComponentTokenTable>

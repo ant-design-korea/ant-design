@@ -1,7 +1,3 @@
-## zh-CN
+## ko-KR
 
-我们添加了多种预设色彩的徽标样式，用作不同场景使用。如果预设值不能满足你的需求，可以设置为具体的色值。
-
-## en-US
-
-We preset a series of colorful Badge styles for use in different situations. You can also set it to a hex color string for custom color.
+다양한 상황에서 사용할 수 있는 다양한 색상의 배지 스타일이 설정되어 있습니다. 사용자 지정 색상을 위해 헥스 색상 문자열로 설정할 수도 있습니다.

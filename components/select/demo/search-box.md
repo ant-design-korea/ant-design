@@ -5,3 +5,7 @@
 ## en-US
 
 Search with remote data.
+
+## ko-KR
+
+원격 데이터를 사용하여 검색.

@@ -1,6 +1,6 @@
-## zh-CN
+## ko-KR
 
-Component Token Debug.
+컴포넌트 토큰 디버그
 
 ## en-US
 

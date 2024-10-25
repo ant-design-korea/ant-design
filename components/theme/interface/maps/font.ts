@@ -1,8 +1,7 @@
 export interface FontMapToken {
   // Font Size
   /**
-   * @desc 小号字体大小
-   * @descEN Small font size
+   * @desc 작은 글꼴 크기
    */
   fontSizeSM: number;
   /**
@@ -11,7 +10,7 @@ export interface FontMapToken {
    */
   fontSize: number;
   /**
-   * @desc 大号字体大小
+   * @desc LG 폰트 크기
    * @descEN Large font size
    */
   fontSizeLG: number;
@@ -64,7 +63,7 @@ export interface FontMapToken {
 
   // LineHeight
   /**
-   * @desc 文本行高
+   * @desc 텍스트의 행간
    * @descEN Line height of text.
    */
   lineHeight: number;
@@ -113,9 +112,9 @@ export interface FontMapToken {
    */
   lineHeightHeading2: number;
   /**
-   * @nameZH 三级标题行高
+   * @nameKR h3 헤딩의 줄 높이
    * @nameEN Line height of heading level 3
-   * @desc h3 标签所使用的行高
+   * @desc h3 태그의 줄 높이
    * @descEN Line height of h3 tag.
    * @default 1.3
    */
